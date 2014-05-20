@@ -1,0 +1,240 @@
+.titles_table tr td
+{
+	color:#fff;
+	text-align:center;
+}
+
+.options_table tr
+{
+	cursor:pointer;
+}
+
+.options_table tr td
+{
+	background:#fff;
+	color:inherit;
+	text-align:center;
+	border:1px solid #555;
+}
+
+.options_table tr .checkbox_input_cell
+{
+	background:none;
+	border:none;
+	-border-radius:10px;
+	-moz-border-radius : 10px;
+	-webkit-border-radius:10px;
+}
+
+.options_table tr .view_cell
+{
+	background:none;
+	border:none;
+	-border-radius:10px;
+	-moz-border-radius : 10px;
+	-webkit-border-radius:10px;
+}
+
+.options_table tr .edit_cell
+{
+	background:none;
+	border:none;
+	-border-radius:10px;
+	-moz-border-radius : 10px;
+	-webkit-border-radius:10px;
+}
+
+.options_table tr .delete_cell
+{
+	background:none;
+	border:none;
+	-border-radius:10px;
+	-moz-border-radius : 10px;
+	-webkit-border-radius:10px;
+}
+
+.search_table tr td .search_field
+{
+	background:none;
+	border:1px solid #555;
+}
+
+#calendar table tr th
+{
+	padding:2px;
+	margin:0;
+	border:none;
+        color: #fff;
+	background:#555;
+	font:normal normal normal 13px Arial , sans-serif;
+}
+
+#calendar table tr .header_day
+{
+	margin:0;
+	padding:2px;
+	border:none;
+	color: #fff;
+	text-align:center;
+	font:normal normal normal 13px Arial , sans-serif;
+}
+
+#calendar table tr .day
+{
+	margin:0;
+	padding:5px;
+	border:none;
+	background:#eee;
+        color: #fff;
+	text-align:center;
+	background:#555;
+	cursor:pointer;
+	font:normal normal normal 13px Arial , sans-serif;
+}
+
+.tabla_de_prestamo tr .title
+{
+	border:none;
+	background:#555;
+	color:#fff;
+	text-align:center;
+}
+
+.tabla_de_prestamo tr .column_title
+{
+	border:none;
+	color:#fff;
+	text-align:center;
+}
+
+.tabla_de_prestamo tr .button
+{
+	border:none;
+	color:#fff;
+	text-align:center;
+	cursor:pointer;
+}
+
+.tabla_de_prestamo tr td
+{
+	border:1px solid #555;
+	background:#fff;
+}
+
+.tabla_de_prestamo tr td textarea
+{
+	border:none;
+	background:#fff;
+	color:#333;
+	text-align:center;
+	height:18px;
+	padding:0;
+	margin:0;
+}
+
+.tabla tr .title
+{
+	border:none;
+	background:#555;
+	padding:0;
+	margin:0;
+	white-space:nowrap;
+	text-align:center;
+	color:#fff;
+}
+
+.tabla tr .title textarea
+{
+	border:2px solid #555;
+	background:#fff;
+	color:#555;
+	text-align:center;
+	height:14px;
+	padding:0;
+	margin:0;
+	white-space:nowrap;
+	width:30%;
+}
+
+.tabla tr .column_title
+{
+	border:none;
+	color:#fff;
+	text-align:center;
+	white-space:nowrap;
+	padding:0;
+	margin:0;
+}
+
+.tabla tr .column_title textarea
+{
+	border:none;
+	color:#fff;
+	text-align:center;
+	height:18px;
+	padding:0;
+	margin:0;
+	white-space:nowrap;
+	width:auto;
+	overflow:visible;
+}
+
+.tabla tr .button
+{
+	border:none;
+	color:#fff;
+	text-align:center;
+	cursor:pointer;
+}
+
+.tabla tr td
+{
+	border:1px solid #555;
+	background:none;
+	padding:0;
+	margin:0;
+}
+
+.tabla tr td .hidden_textarea
+{
+	display:block;
+	visibility:hidden;
+	width:0px;
+	height:0px;
+	top:0px;
+	left:0px;
+	padding:0;
+	margin:0;
+}
+
+.tabla tr td textarea
+{
+	border:none;
+	background:#fff;
+	color:#555;
+	text-align:center;
+	height:18px;
+	padding:0;
+	margin:0;
+	white-space:nowrap;
+}
+
+.workers_titles tr td
+{
+	color:#fff;
+	text-align:center;
+}
+
+.workers_options tr .checkbox_cell
+{
+	background:none;
+}
+
+.workers_options tr td
+{
+	border:none;
+	background:#fff;
+	color:#333;
+	padding:0;
+	margin:0;
+}

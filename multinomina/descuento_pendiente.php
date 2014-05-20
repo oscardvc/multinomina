@@ -1,0 +1,137 @@
+<?php
+	include_once('connection.php');
+
+//Class Descuento_pendiente definition
+
+	class Descuento_pendiente
+	{
+		//class properties
+		//data
+		private $Cantidad;
+		private $Motivo;
+		private $Numero_de_descuentos;
+		private $Fecha_de_inicio = 'AAAA-MM-DD';
+		private $Fecha_de_termino = 'AAAA-MM-DD';
+		private $Nomina;
+		private $Retencion;
+		private $id;
+		private $Trabajador;
+		//database connection
+		private $conn;
+
+		//class methods
+		public function __construct()
+		{
+
+			if(!isset($_SESSION))
+				session_start();
+
+			$this->conn = new Connection();
+		}
+
+		public function __destruct()
+		{
+		}
+
+		public function set($name, $value) //sets property named $name with value $value
+		{
+			$this->$name = $value;
+		}
+
+		public function get($name)//gets property named $name
+		{
+			return $this->$name;
+		}
+
+		public function setFromBrowser()//sets properties from superglobal $_POST
+		{
+			foreach($this as $key => $value)
+
+				if(isset($_POST["$key"]))
+					$this->$key = trim($_POST["$key"]);
+
+		}
+
+		public function showProperties()//prints properties values
+		{
+
+			foreach($this as $key => $value)
+
+				if($key != 'conn')
+					echo "$key = $value <br />";
+
+		}
+
+		public function setFromDb()//sets properties from data base, but $Nomina, $Retencion, $id and $Trabajador have to be set before
+		{
+			$result = $this->conn->query("SELECT * FROM Descuento_pendiente WHERE Nomina = '{$this->Nomina}' AND Retencion = '{$this->Retencion}' AND id = '{$this->id}' AND Trabajador = '{$this->Trabajador}' AND Cuenta = '{$_SESSION['cuenta']}'");
+
+			while($row = $this->conn->fetchRow($result,'ASSOC'))
+
+				foreach($row as $key => $value)
+
+					if($key != 'Cuenta')
+						$this->$key = $value;
+
+		}
+
+		public function dbStore($update)//if $update is false it stores a new database register with $this' properties if $update is true it updates all database registers (professedly one) with $this' Nomina, Retencion, id and Trabajador
+		{
+
+			foreach($this as $key => $value)
+
+				if(isset($this->$key) && $key != 'conn' && $key != 'Nomina' && $key != 'Retencion' && $key != 'id' && $key != 'Trabajador')
+					$this->conn->query("UPDATE Descuento_pendiente SET $key  = '$value' WHERE Nomina = '{$this->Nomina}' AND Retencion = '{$this->Retencion}' AND id = '{$this->id}' AND Trabajador = '{$this->Trabajador}' AND Cuenta = '{$_SESSION['cuenta']}'");
+
+			return true;
+		}
+
+		public function dbDelete()//delete this entity from database but Nomina, Retencion, id and Trabajador have to be set before
+		{
+
+			if(isset($this->Nomina) && isset($this->Retencion) && isset($this->id) && isset($this->Trabajador))
+				$this->conn->query("DELETE FROM Descuento_pendiente WHERE Nomina = '{$this->Nomina}' AND Retencion = '{$this->Retencion}' AND id = '{$this->id}' AND Trabajador = '{$this->Trabajador}' AND Cuenta = '{$_SESSION['cuenta']}'");
+
+		}
+
+		public function draw($act)//draws $this Descuento_pendiente. if $act == 'EDIT' the fields can be edited and the form is submitted to store.php. if $act == 'DRAW' the fields can't be edited and the form is not submitted
+		{
+			echo "<div class = \"datos_tab\">Datos</div>";
+			echo "<form class = \"show_form\">";
+				echo "<fieldset class = \"Datos_fieldset\" style = \"visibility:visible\"\>";
+					echo "<textarea class=\"hidden_textarea\" name = \"Trabajador\" readonly=true>{$this->Trabajador}</textarea>";
+					echo "<label class = \"cantidad_label\">Cantidad</label>";
+					echo "<textarea class=\"cantidad_textarea\" name = \"Cantidad\" title = \"Cantidad\" readonly=true>{$this->Cantidad}</textarea>";
+					echo "<label class = \"motivo_label\">Motivo</label>";
+					echo "<textarea class=\"motivo_textarea\" name = \"Motivo\" title = \"Motivo\"" . ($act == 'EDIT' || $act == 'ADD'? ">":"readonly=true>") . "{$this->Motivo}</textarea>";
+					echo "<label class = \"numero_de_descuentos_label\">Número de descuentos</label>";
+					echo "<textarea class=\"numero_de_descuentos_textarea\" name = \"Numero_de_descuentos\" title = \"Número de descuentos\" " . ($act == 'EDIT' || $act == 'ADD'? "required=true>":"readonly=true>") . "{$this->Numero_de_descuentos}</textarea>";
+					echo "<label class = \"fecha_de_inicio_label\">Fecha de inicio</label>";
+					echo "<textarea class=\"fecha_de_inicio_textarea\" name = \"Fecha_de_inicio\" title = \"Fecha de inicio\" " . ($act == 'EDIT' || $act == 'ADD'? "required=true>":"readonly=true>") . "{$this->Fecha_de_inicio}</textarea>";
+
+					if($act != 'DRAW')
+						echo "<img class = 'calendar_button' onclick = 'show_cal(this)' \>";//show_calendar() at calendar.js
+
+					echo "<label class = \"fecha_de_termino_label\">Fecha de término</label>";
+					echo "<textarea class=\"fecha_de_termino_textarea\" name = \"Fecha_de_termino\" title = \"Fecha de término\" " . ($act == 'EDIT' || $act == 'ADD'? "required=true>":"readonly=true>") . "{$this->Fecha_de_termino}</textarea>";
+
+					if($act != 'DRAW')
+						echo "<img class = 'calendar_button' onclick = 'show_cal(this)' \>";//show_calendar() at calendar.js
+
+					echo "<label class = \"nomina_label\">Nómina</label>";
+					echo "<textarea class=\"nomina_textarea\" name = \"Nomina\" title = \"Nómina\" readonly=true>{$this->Nomina}</textarea>";
+					echo "<label class = \"retencion_label\">Retención</label>";
+					echo "<textarea class=\"retencion_textarea\" name = \"Retencion\" title = \"Retención\" readonly=true>{$this->Retencion}</textarea>";
+					echo "<label class = \"id_label\">id</label>";
+					echo "<textarea class=\"id_textarea\" name = \"id\" title = \"id\" readonly=true>{$this->id}</textarea>";
+				echo "</fieldset>";
+
+			if($act == 'EDIT' || $act == 'ADD')
+				echo "<img title = \"Guardar\"class = \"submit_button\" onclick = \"_submit('$act',this.parentNode,'Descuento_pendiente')\" />";//_submit() at common_entities.js
+
+			echo "</form>";
+		}
+
+	}
+
+?>

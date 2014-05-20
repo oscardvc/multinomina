@@ -1,0 +1,138 @@
+<?php
+	include_once('connection.php');
+
+	if(!isset($_SESSION))
+		session_start();
+
+	$conn = new Connection();
+	date_default_timezone_set('America/Mexico_City');
+	$fecha_de_pago = $_GET['fecha_de_pago'];
+	$_fecha_de_pago = date_create($fecha_de_pago);
+	$year = date('Y', $_fecha_de_pago->format('U'));
+	$firstday = $year . '-01-01';//YYYY-01-01
+	$lastday = $year . '-12-31';//YYYY-01-01
+	$_firstday = date_create($firstday);
+	$_lastday = date_create($lastday);
+	$servicio = $_GET['servicio'];
+	$_id = $_GET['id'];
+	$mode = $_GET['mode'];
+	$result = $conn->query("SELECT id FROM Aguinaldo WHERE YEAR(Fecha_de_pago) = '$year' AND Servicio = '$servicio' AND Cuenta = '{$_SESSION['cuenta']}'");
+	list($sign) = $conn->fetchRow($result);
+
+	if(isset($sign) && $mode == 'ADD')
+		echo "<label>error</label>";
+	else
+	{
+		$result = $conn->query("SELECT Trabajador.Nombre AS Nombre,Trabajador.RFC AS RFC FROM (Trabajador LEFT JOIN Servicio_Trabajador ON Trabajador.RFC = Servicio_Trabajador.Trabajador) LEFT JOIN Servicio ON Servicio_Trabajador.Servicio = Servicio.id WHERE Servicio.id = '$servicio' AND Trabajador.Cuenta = '{$_SESSION['cuenta']}' AND Servicio_Trabajador.Cuenta = '{$_SESSION['cuenta']}' AND Servicio.Cuenta = '{$_SESSION['cuenta']}' AND YEAR(Servicio_Trabajador.Fecha_de_ingreso_servicio) <= '$year' ORDER BY Trabajador.Nombre ASC");
+		$txt = "";
+
+		if(isset($result))
+		{
+			$dias = array();
+			$txt = '<table class = "workers_options">';
+
+			while(list($nombre,$rfc) = $conn->fetchRow($result))
+			{
+				$result1 = $conn->query("SELECT Tipo FROM Tipo WHERE Trabajador = '$rfc' AND Servicio = '$servicio' AND Cuenta = '{$_SESSION['cuenta']}' AND DATEDIFF('$fecha_de_pago', Fecha) >= 0 ORDER BY Fecha DESC LIMIT 1");
+				list($tipo) = $conn->fetchRow($result1);
+
+				if(!isset($tipo) || (isset($tipo) && $tipo == 'Asimilable'))
+					continue;
+
+				$result1 = $conn->query("SELECT id FROM Baja WHERE Trabajador = '$rfc' AND Servicio = '$servicio' AND Cuenta = '{$_SESSION['cuenta']}' AND DATEDIFF(Fecha_de_baja, '$fecha_de_pago') <= 0 AND Fecha_de_reingreso = '0000-00-00'");
+				list($baja) = $conn->fetchRow($result1);
+
+				if(isset($baja))
+					continue;
+
+				$dias_del_periodo = 365;
+
+				$result1 = $conn->query("SELECT Fecha_de_baja, Fecha_de_reingreso FROM Baja WHERE Trabajador = '$rfc' AND Servicio = '$servicio' AND Cuenta = '{$_SESSION['cuenta']}' AND ((DATEDIFF(Fecha_de_baja, '$firstday') <= 0 AND (Fecha_de_reingreso = '0000-00-00' OR DATEDIFF(Fecha_de_reingreso,'$firstday') > 0)) OR (DATEDIFF(Fecha_de_baja, '$firstday') > 0 AND (DATEDIFF(Fecha_de_baja, '$lastday') <= 0 OR Fecha_de_reingreso = '0000-00-00' )))");
+				$dias_del_periodo = 365;
+
+				while(list($fecha_de_baja,$fecha_de_reingreso) = $conn->fetchRow($result1))
+				{
+					//número de días
+					$numero_de_dias = 0;
+					$baja = date_create($fecha_de_baja);
+
+					if($fecha_de_reingreso = '0000-00-00')
+					{
+
+						if($baja >= $_firstday)
+						{
+							$interval = $baja->diff($_lastday);
+							$numero_de_dias = $interval->days;
+						}
+						else
+						{
+							$interval = $_firstday->diff($_lastday);
+							$numero_de_dias = $interval->days + 1;
+						}
+
+					}
+					else
+					{
+						$reingreso = date_create($fecha_de_reingreso);
+
+						if($reingreso > $baja)
+						{
+
+							if($baja >= $_firstday)
+							{
+								$interval = $baja->diff($reingreso);
+								$numero_de_dias = $interval->days;
+							}
+							else
+							{
+								$interval = $_firstday->diff($reingreso);
+								$numero_de_dias = $interval->days + 1;
+							}
+
+						}
+						else
+							$numero_de_dias = 0;
+
+					}
+
+					$dias_del_periodo -= $numero_de_dias;
+				}
+
+				if($dias_del_periodo == 0)
+					continue;
+
+				$txt .= "<tr onmouseover=\"option_bright(this)\" onmouseout=\"option_opaque(this)\">";//option_bright() and option_opaque() at presentation.js
+				$gratificacion_adicional = '';
+
+				if($mode == 'EDIT')
+				{
+					//getting gratificación adicional
+					$result1 = $conn->query("SELECT Gratificacion_adicional FROM aguinaldo_asalariados WHERE Trabajador = '$rfc' AND Aguinaldo = '$_id' AND Cuenta = '{$_SESSION['cuenta']}'");
+					list($gratificacion_adicional) = $conn->fetchRow($result1);
+					$gratificacion_adicional = isset($gratificacion_adicional) ? $gratificacion_adicional : 0.00;
+					$conn->freeResult($result1);
+					//getting pago neto
+					$result1 = $conn->query("SELECT Pago_neto FROM aguinaldo_asalariados WHERE Trabajador = '$rfc' AND Aguinaldo = '$_id' AND Cuenta = '{$_SESSION['cuenta']}'");
+					list($pago_neto) = $conn->fetchRow($result1);
+					$pago_neto = isset($pago_neto) ? $pago_neto : 0.00;
+					$conn->freeResult($result1);
+				}
+				else
+				{
+					$pago_neto = 0.00;
+					$gratificacion_adicional = 0.00;
+				}
+
+				$txt .= "<td title = 'Al desmarcar esta casilla el trabajador no saldrá en el pago de aguinaldo' class = 'checkbox_cell'><input type = 'checkbox' checked/></td><td>" . $nombre . "</td>" . "<td>" . $rfc . '</td>' . "<td value = '$gratificacion_adicional' name = 'Gratificacion_adicional' title = 'Gratificación adicional' onclick = '_capture(this)'>" . (strlen($gratificacion_adicional) > 6 ? substr ($gratificacion_adicional, 0, 6) . '...' : $gratificacion_adicional) . "</td>" . "<td value = '$pago_neto' name = 'Pago_neto' title = 'Pago neto' onclick = '_capture(this)'>" . (strlen($pago_neto) > 6 ? substr ($pago_neto, 0, 6) . '...' : $pago_neto) . "</td>";
+				
+				$txt .= "</tr>";
+			}
+
+			$txt .= '</table>';
+		}
+
+		echo '<table class = "workers_titles"><tr class = "column_titles"><td>Nombre</td><td>RFC</td><td>Gratificación adicional</td><td>Pago neto</td></tr></table>';
+		echo $txt;
+	}
+
+?>

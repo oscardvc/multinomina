@@ -1,0 +1,29 @@
+function mark_report(obj)
+{
+	obj.style.background = '#f00';
+}
+
+function unmark_report(obj)
+{
+	obj.style.background = '#3399cc';
+}
+
+function del_report(obj)
+{
+	var cols = obj.parentNode.getElementsByTagName('td');
+
+	for(var i=0; i<cols.length; i++)
+
+		if(cols[i] == obj)
+			break;
+
+	var tables = document.getElementsByTagName('table');
+
+	for(var j=0; j<tables.length; j++)
+
+		for(var k=5; k<tables[j].rows.length; k++)
+
+			if(tables[j].rows[k].cells[i])
+				tables[j].rows[k].cells[i].style.background = '#ccc';
+
+}

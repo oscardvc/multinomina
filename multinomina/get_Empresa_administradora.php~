@@ -1,0 +1,131 @@
+<?php
+	//This page is called by an AJAX function at entities.js and gets some values from table Empresa_administradora
+
+	include_once('connection.php');
+	$conn = new Connection('multinomina');
+	$values = explode(',',$_POST['values']);//values is set at javascript function get_options() at entities.js
+
+	if($_GET['time'] != 'First' && ($_GET['mode'] == 'ADD' || $_GET['mode'] == 'EDIT'))
+	{
+
+		if($_GET['dbtable'] == 'Socio')
+			$result = $conn->query("SELECT Empresa_administradora.RFC, Empresa_administradora.Razon_social FROM Empresa_administradora LEFT JOIN Empresa_administradora_Socio ON Empresa_administradora.RFC = Empresa_administradora_Socio.Empresa_administradora WHERE (Empresa_administradora.RFC LIKE '%{$values[0]}%' AND Empresa_administradora.Razon_social LIKE '%{$values[1]}%') OR Empresa_administradora_Socio.Socio = '{$_GET['id']}' GROUP BY Empresa_administradora.RFC");
+		elseif($_GET['dbtable'] == 'Apoderado')
+			$result = $conn->query("SELECT Empresa_administradora.RFC, Empresa_administradora.Razon_social FROM Empresa_administradora LEFT JOIN Empresa_administradora_Apoderado ON Empresa_administradora.RFC = Empresa_administradora_Apoderado.Empresa_administradora WHERE (Empresa_administradora.RFC LIKE '%{$values[0]}%' AND Empresa_administradora.Razon_social LIKE '%{$values[1]}%') OR Empresa_administradora_Apoderado.Apoderado = '{$_GET['id']}' GROUP BY Empresa_administradora.RFC");
+		else
+			$result = $conn->query("SELECT RFC,Razon_social FROM Empresa_administradora WHERE RFC LIKE '%{$values[0]}%' AND Razon_social LIKE '%{$values[1]}%'");
+
+	}
+	elseif($_GET['mode'] == 'DRAW' || ($_GET['mode'] == 'EDIT' && $_GET['time'] == 'First'))
+	{
+
+		if($_GET['dbtable'] == 'Instrumento_notarial')
+		{
+
+			if($values[0] == '' && $values[1] == '')
+				$result = $conn->query("SELECT Empresa_administradora.RFC,Empresa_administradora.Razon_social FROM Empresa_administradora LEFT JOIN Instrumento_notarial ON Empresa_administradora.RFC = Instrumento_notarial.Empresa_administradora WHERE Instrumento_notarial.Numero_de_instrumento = '{$_GET['id']}'");
+			elseif($values[0] == '' && $values[1] != '')
+				$result = $conn->query("SELECT Empresa_administradora.RFC,Empresa_administradora.Razon_social FROM Empresa_administradora LEFT JOIN Instrumento_notarial ON Empresa_administradora.RFC = Instrumento_notarial.Empresa_administradora WHERE Instrumento_notarial.Numero_de_instrumento = '{$_GET['id']}' AND Empresa_administradora.Razon_social LIKE '%{$values[1]}%'");
+			elseif($values[0] != '' && $values[1] == '')
+				$result = $conn->query("SELECT Empresa_administradora.RFC,Empresa_administradora.Razon_social FROM Empresa_administradora LEFT JOIN Instrumento_notarial ON Empresa_administradora.RFC = Instrumento_notarial.Empresa_administradora WHERE Instrumento_notarial.Numero_de_instrumento = '{$_GET['id']}' AND Empresa_administradora.RFC LIKE '%{$values[0]}%'");
+			elseif($values[0] != '' && $values[1] != '')
+				$result = $conn->query("SELECT Empresa_administradora.RFC,Empresa_administradora.Razon_social FROM Empresa_administradora LEFT JOIN Instrumento_notarial ON Empresa_administradora.RFC = Instrumento_notarial.Empresa_administradora WHERE Instrumento_notarial.Numero_de_instrumento = '{$_GET['id']}' AND Empresa_administradora.RFC LIKE '%{$values[1]}%' AND Empresa_administradora.Razon_social LIKE '%{$values[1]}%'");
+
+		}
+		elseif($_GET['dbtable'] == 'Socio')
+		{
+
+			if($values[0] == '' && $values[1] == '')
+				$result = $conn->query("SELECT Empresa_administradora.RFC,Empresa_administradora.Razon_social FROM Empresa_administradora_Socio LEFT JOIN Empresa_administradora ON Empresa_administradora_Socio.Empresa_administradora = Empresa_administradora.RFC WHERE Empresa_administradora_Socio.Socio = '{$_GET['id']}'");
+			elseif($values[0] == '' && $values[1] != '')
+				$result = $conn->query("SELECT Empresa_administradora.RFC,Empresa_administradora.Razon_social FROM Empresa_administradora_Socio LEFT JOIN Empresa_administradora ON Empresa_administradora_Socio.Empresa_administradora = Empresa_administradora.RFC WHERE Empresa_administradora_Socio.Socio = '{$_GET['id']}' AND Empresa_administradora.Razon_social LIKE '%{$values[1]}%'");
+			elseif($values[0] != '' && $values[1] == '')
+				$result = $conn->query("SELECT Empresa_administradora.RFC,Empresa_administradora.Razon_social FROM Empresa_administradora_Socio LEFT JOIN Empresa_administradora ON Empresa_administradora_Socio.Empresa_administradora = Empresa_administradora.RFC WHERE Empresa_administradora_Socio.Socio = '{$_GET['id']}' AND Empresa_administradora.RFC LIKE '%{$values[0]}%'");
+			elseif($values[0] != '' && $values[1] != '')
+				$result = $conn->query("SELECT Empresa_administradora.RFC,Empresa_administradora.Razon_social FROM Empresa_administradora_Socio LEFT JOIN Empresa_administradora ON Empresa_administradora_Socio.Empresa_administradora = Empresa_administradora.RFC WHERE Empresa_administradora_Socio.Socio = '{$_GET['id']}' AND Empresa_administradora.RFC LIKE '%{$values[1]}%' AND Empresa_administradora.Razon_social LIKE '%{$values[1]}%'");
+
+		}
+		elseif($_GET['dbtable'] == 'Apoderado')
+		{
+
+			if($values[0] == '' && $values[1] == '')
+				$result = $conn->query("SELECT Empresa_administradora.RFC,Empresa_administradora.Razon_social FROM Empresa_administradora_Apoderado LEFT JOIN Empresa_administradora ON Empresa_administradora_Apoderado.Empresa_administradora = Empresa_administradora.RFC WHERE Empresa_administradora_Apoderado.Apoderado = '{$_GET['id']}'");
+			elseif($values[0] == '' && $values[1] != '')
+				$result = $conn->query("SELECT Empresa_administradora.RFC,Empresa_administradora.Razon_social FROM Empresa_administradora_Apoderado LEFT JOIN Empresa_administradora ON Empresa_administradora_Apoderado.Empresa_administradora = Empresa_administradora.RFC WHERE Empresa_administradora_Apoderado.Apoderado = '{$_GET['id']}' AND Empresa_administradora.Razon_social LIKE '%{$values[1]}%'");
+			elseif($values[0] != '' && $values[1] == '')
+				$result = $conn->query("SELECT Empresa_administradora.RFC,Empresa_administradora.Razon_social FROM Empresa_administradora_Apoderado LEFT JOIN Empresa_administradora ON Empresa_administradora_Apoderado.Empresa_administradora = Empresa_administradora.RFC WHERE Empresa_administradora_Apoderado.Apoderado = '{$_GET['id']}' AND Empresa_administradora.RFC LIKE '%{$values[0]}%'");
+			elseif($values[0] != '' && $values[1] != '')
+				$result = $conn->query("SELECT Empresa_administradora.RFC,Empresa_administradora.Razon_social FROM Empresa_administradora_Apoderado LEFT JOIN Empresa_administradora ON Empresa_administradora_Apoderado.Empresa_administradora = Empresa_administradora.RFC WHERE Empresa_administradora_Apoderado.Apoderado = '{$_GET['id']}' AND Empresa_administradora.RFC LIKE '%{$values[1]}%' AND Empresa_administradora.Razon_social LIKE '%{$values[1]}%'");
+
+		}
+		elseif($_GET['dbtable'] == 'Archivo_digital')
+		{
+
+			if($values[0] == '' && $values[1] == '')
+				$result = $conn->query("SELECT Empresa_administradora.RFC,Empresa_administradora.Razon_social FROM Archivo_digital LEFT JOIN Empresa_administradora ON Archivo_digital.Empresa_administradora = Empresa_administradora.RFC WHERE Archivo_digital.Nombre = '{$_GET['id']}' AND Archivo_digital.Empresa_administradora IS NOT NULL");
+			elseif($values[0] == '' && $values[1] != '')
+				$result = $conn->query("SELECT Empresa_administradora.RFC,Empresa_administradora.Razon_social FROM Archivo_digital LEFT JOIN Empresa_administradora ON Archivo_digital.Empresa_administradora = Empresa_administradora.RFC WHERE Archivo_digital.Nombre = '{$_GET['id']}' AND Empresa_administradora.Razon_social LIKE '%{$values[1]}%' AND Archivo_digital.Empresa_administradora IS NOT NULL");
+			elseif($values[0] != '' && $values[1] == '')
+				$result = $conn->query("SELECT Empresa_administradora.RFC,Empresa_administradora.Razon_social FROM Archivo_digital LEFT JOIN Empresa_administradora ON Archivo_digital.Empresa_administradora = Empresa_administradora.RFC WHERE Archivo_digital.Nombre = '{$_GET['id']}' AND Empresa_administradora.RFC LIKE '%{$values[0]}%' AND Archivo_digital.Empresa_administradora IS NOT NULL");
+			elseif($values[0] != '' && $values[1] != '')
+				$result = $conn->query("SELECT Empresa_administradora.RFC,Empresa_administradora.Razon_social FROM Archivo_digital LEFT JOIN Empresa_administradora ON Archivo_digital.Empresa_administradora = Empresa_administradora.RFC WHERE Archivo_digital.Nombre = '{$_GET['id']}' AND Empresa_administradora.RFC LIKE '%{$values[1]}%' AND Empresa_administradora.Razon_social LIKE '%{$values[1]}%' AND Archivo_digital.Empresa_administradora IS NOT NULL");
+
+		}
+		elseif($_GET['dbtable'] == 'Establecimiento')
+		{
+
+			if($values[0] == '' && $values[1] == '')
+				$result = $conn->query("SELECT Empresa_administradora.RFC,Empresa_administradora.Razon_social FROM Establecimiento LEFT JOIN Empresa_administradora ON Establecimiento.Empresa_administradora = Empresa_administradora.RFC WHERE Establecimiento.Domicilio = '{$_GET['id']}' AND Establecimiento.Empresa_administradora IS NOT NULL");
+			elseif($values[0] == '' && $values[1] != '')
+				$result = $conn->query("SELECT Empresa_administradora.RFC,Empresa_administradora.Razon_social FROM Establecimiento LEFT JOIN Empresa_administradora ON Establecimiento.Empresa_administradora = Empresa_administradora.RFC WHERE Establecimiento.Domicilio = '{$_GET['id']}' AND Empresa_administradora.Razon_social LIKE '%{$values[1]}%' AND Establecimiento.Empresa_administradora IS NOT NULL");
+			elseif($values[0] != '' && $values[1] == '')
+				$result = $conn->query("SELECT Empresa_administradora.RFC,Empresa_administradora.Razon_social FROM Establecimiento LEFT JOIN Empresa_administradora ON Establecimiento.Empresa_administradora = Empresa_administradora.RFC WHERE Establecimiento.Domicilio = '{$_GET['id']}' AND Empresa_administradora.RFC LIKE '%{$values[0]}%' AND Establecimiento.Empresa_administradora IS NOT NULL");
+			elseif($values[0] != '' && $values[1] != '')
+				$result = $conn->query("SELECT Empresa_administradora.RFC,Empresa_administradora.Razon_social FROM Establecimiento LEFT JOIN Empresa_administradora ON Establecimiento.Empresa_administradora = Empresa_administradora.RFC WHERE Establecimiento.Domicilio = '{$_GET['id']}' AND Empresa_administradora.RFC LIKE '%{$values[1]}%' AND Empresa_administradora.Razon_social LIKE '%{$values[1]}%' AND Establecimiento.Empresa_administradora IS NOT NULL");
+
+		}
+
+	}
+
+	$i = 0;
+	$txt = "";
+
+	if(isset($result))
+	{
+		while($row = $conn->fetchRow($result))
+		{
+
+			foreach($row as $value)
+
+				if(!isset($val[$i]))
+					$val[$i] = "<td class = \"checkbox_input_cell\">" . ($_GET['mode'] != 'DRAW' ? "<input type= \"checkbox\" class = \"checkbox_input\" name=" . ($_GET['dbtable'] == 'Instrumento_notarial' || $_GET['dbtable'] == 'Archivo_digital' || $_GET['dbtable'] == 'Establecimiento' ? "\"Empresa_administradora\"" : "\"Empresa_administradora[]\"") . " value = \"$value\"/>" : "") . "</td><td>" . $value . '</td>';
+				else
+					$val[$i] .= "<td>" . $value . '</td>';
+
+			$i++;
+		}
+
+		if(isset($val))
+		{
+
+			$len = count($val);
+
+			for($i = 0; $i < $len; $i++)
+
+				if($_GET['mode'] != 'DRAW')
+					$val[$i] = "<tr onmouseover=\"option_bright(this)\" onmouseout=\"option_opaque(this)\" onclick= " . ($_GET['dbtable'] == 'Socio' ? "'select_multiple_option(this)'" : "'select_option(this)'") . ">{$val[$i]}<td onmouseover = 'om_bright(this)' onmouseout = 'om_opaque(this)' onclick = \"_view(this,'Empresa_administradora')\" title = 'Ver' class = 'view_cell'><img src = 'images/view.png'/></td><td onmouseover = 'om_bright(this)' onmouseout = 'om_opaque(this)' onclick = \"_edit(this,'Empresa_administradora')\" title = 'Editar' class = 'edit_cell'><img src = 'images/edit.png'/></td><td onmouseover = 'om_bright(this)' onmouseout = 'om_opaque(this)' onclick = \"_delete(this,'Empresa_administradora')\" title = 'Eliminar' class = 'delete_cell'><img src = 'images/delete.png'/></td></tr>";//option_bright() and option_opaque() at presentation.js. select_optio() at general.js
+				else
+					$val[$i] = "<tr onmouseover=\"option_bright(this)\" onmouseout=\"option_opaque(this)\">{$val[$i]}<td onmouseover = 'om_bright(this)' onmouseout = 'om_opaque(this)' onclick = \"_view(this,'Empresa_administradora')\" title = 'Ver' class = 'view_cell'><img src = 'images/view.png'/></td></tr>";
+
+			$val[0] = '<table class = "options_table">' . $val[0];
+			$val[$len-1] .= '</table>';
+
+			for($i=0; $i<$len; $i++)
+				$txt .= $val[$i];
+
+		}
+
+	}
+
+	echo $txt;
+?>

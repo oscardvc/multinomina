@@ -1,0 +1,77 @@
+<?php
+	//This page is called by an AJAX function at some concept's .js and gets some values from a table Servicio from database multinomina
+
+	include_once('connection.php');
+
+	if(!isset($_SESSION))
+		session_start();
+
+	$conn = new Connection();
+	$id = utf8_encode(html_entity_decode(urldecode($_GET['id'])));
+
+	if($_GET['dbtable'] == 'Trabajador')
+		$result = $conn->query("SELECT Servicio FROM Servicio_Trabajador WHERE Trabajador = '$id' AND Cuenta = '{$_SESSION['cuenta']}'");
+	elseif($_GET['dbtable'] == 'Servicio_adicional')
+		$result = $conn->query("SELECT Servicio FROM Servicio_adicional WHERE Servicio_adicional = '$id' AND Cuenta = '{$_SESSION['cuenta']}'");
+	elseif($_GET['dbtable'] == 'Prevision_social')
+		$result = $conn->query("SELECT Servicio FROM Servicio_Prevision_social WHERE Prevision_social = '$id' AND Cuenta = '{$_SESSION['cuenta']}'");
+	elseif($_GET['dbtable'] == 'Aportacion_del_trabajador_al_fondo_de_ahorro')
+		$result = $conn->query("SELECT Servicio FROM Aportacion_del_trabajador_al_fondo_de_ahorro WHERE id = '$id' AND Cuenta = '{$_SESSION['cuenta']}'");
+	elseif($_GET['dbtable'] == 'Incapacidad')
+		$result = $conn->query("SELECT Servicio FROM Incapacidad WHERE id = '$id' AND Cuenta = '{$_SESSION['cuenta']}'");
+	elseif($_GET['dbtable'] == 'Vacaciones')
+		$result = $conn->query("SELECT Servicio FROM Vacaciones WHERE id = '$id' AND Cuenta = '{$_SESSION['cuenta']}'");
+	elseif($_GET['dbtable'] == 'Pension_alimenticia')
+		$result = $conn->query("SELECT Servicio FROM Pension_alimenticia WHERE id = '$id' AND Cuenta = '{$_SESSION['cuenta']}'");
+	elseif($_GET['dbtable'] == 'Prestamo_administradora')
+		$result = $conn->query("SELECT Servicio FROM Trabajador_Prestamo_administradora WHERE Prestamo_administradora = '$id' AND Cuenta = '{$_SESSION['cuenta']}' LIMIT 1");
+	elseif($_GET['dbtable'] == 'Prestamo_caja')
+		$result = $conn->query("SELECT Servicio FROM Trabajador_Prestamo_caja WHERE Prestamo_caja = '$id' AND Cuenta = '{$_SESSION['cuenta']}' LIMIT 1");
+	elseif($_GET['dbtable'] == 'Prestamo_cliente')
+		$result = $conn->query("SELECT Servicio FROM Trabajador_Prestamo_cliente WHERE Prestamo_cliente = '$id' AND Cuenta = '{$_SESSION['cuenta']}' LIMIT 1");
+	elseif($_GET['dbtable'] == 'Prestamo_del_fondo_de_ahorro')
+		$result = $conn->query("SELECT Servicio FROM Trabajador_Prestamo_del_fondo_de_ahorro WHERE Prestamo_del_fondo_de_ahorro = '$id' AND Cuenta = '{$_SESSION['cuenta']}' LIMIT 1");
+	elseif($_GET['dbtable'] == 'Retencion_FONACOT')
+		$result = $conn->query("SELECT Servicio FROM Retencion_FONACOT WHERE id = '$id' AND Cuenta = '{$_SESSION['cuenta']}'");
+	elseif($_GET['dbtable'] == 'Retencion_INFONAVIT')
+		$result = $conn->query("SELECT Servicio FROM Retencion_INFONAVIT WHERE id = '$id' AND Cuenta = '{$_SESSION['cuenta']}'");
+	elseif($_GET['dbtable'] == 'Pago_por_seguro_de_vida')
+		$result = $conn->query("SELECT Servicio FROM Pago_por_seguro_de_vida WHERE id = '$id' AND Cuenta = '{$_SESSION['cuenta']}'");
+	elseif($_GET['dbtable'] == 'Salario_diario')
+		$result = $conn->query("SELECT Servicio FROM Salario_diario WHERE id = '$id' AND Cuenta = '{$_SESSION['cuenta']}'");
+	elseif($_GET['dbtable'] == 'Servicio_Trabajador')
+	{
+		$data = explode(',',$id);
+		$result = $conn->query("SELECT Servicio FROM Servicio_Trabajador WHERE Servicio_Trabajador.Servicio = '{$data[0]}' AND Servicio_Trabajador.Trabajador = '{$data[1]}' AND Cuenta = '{$_SESSION['cuenta']}'");
+	}
+	elseif($_GET['dbtable'] == 'Trabajador_Salario_minimo')
+	{
+		$data = explode(',',$id);
+		$result = $conn->query("SELECT Servicio FROM Trabajador_Salario_minimo WHERE Trabajador_Salario_minimo.Trabajador = '{$data[0]}' AND Trabajador_Salario_minimo.Servicio = '{$data[1]}' AND Trabajador_Salario_minimo.Fecha = '{$data[2]}' AND Cuenta = '{$_SESSION['cuenta']}'");
+	}
+	elseif($_GET['dbtable'] == 'Trabajador_Sucursal')
+	{
+		$data = explode(',',$id);
+		$result = $conn->query("SELECT Servicio FROM Trabajador_Sucursal WHERE Trabajador_Sucursal.Trabajador = '{$data[0]}' AND Trabajador_Sucursal.Nombre = '{$data[1]}' AND Trabajador_Sucursal.Empresa = '{$data[2]}' AND Cuenta = '{$_SESSION['cuenta']}'");
+	}
+	elseif($_GET['dbtable'] == 'Baja')
+		$result = $conn->query("SELECT Servicio FROM Baja WHERE id = '$id' AND Cuenta = '{$_SESSION['cuenta']}'");
+	elseif($_GET['dbtable'] == 'Contrato')
+		$result = $conn->query("SELECT Servicio FROM Contrato WHERE id = '$id' AND Cuenta = '{$_SESSION['cuenta']}'");
+	elseif($_GET['dbtable'] == 'Banco')
+		$result = $conn->query("SELECT Servicio FROM Banco WHERE id = '$id' AND Cuenta = '{$_SESSION['cuenta']}'");
+	elseif($_GET['dbtable'] == 'UMF')
+		$result = $conn->query("SELECT Servicio FROM UMF WHERE id = '$id' AND Cuenta = '{$_SESSION['cuenta']}'");
+	elseif($_GET['dbtable'] == 'Tipo')
+		$result = $conn->query("SELECT Servicio FROM Tipo WHERE id = '$id' AND Cuenta = '{$_SESSION['cuenta']}'");
+	elseif($_GET['dbtable'] == 'Base')
+		$result = $conn->query("SELECT Servicio FROM Base WHERE id = '$id' AND Cuenta = '{$_SESSION['cuenta']}'");
+	elseif($_GET['dbtable'] == 'Fondo_de_garantia')
+		$result = $conn->query("SELECT Servicio FROM Fondo_de_garantia WHERE id = '$id' AND Cuenta = '{$_SESSION['cuenta']}'");
+
+	if(isset($result))
+
+		while(list($servicio) = $conn->fetchRow($result))
+			echo "$servicio>>";
+
+?>

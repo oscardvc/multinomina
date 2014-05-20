@@ -1,0 +1,162 @@
+<?php
+	include_once('connection.php');
+
+//Class Prima definition
+
+	class Prima
+	{
+		//class properties
+		//data
+		private $id;
+		private $Valor;
+		private $Fecha;
+		private $Empresa;
+		private $Registro_patronal;
+		//database connection
+		private $conn;
+
+		//class methods
+		public function __construct()
+		{
+
+			if(!isset($_SESSION))
+				session_start();
+
+			$this->conn = new Connection();
+		}
+
+		public function __destruct()
+		{
+		}
+
+		public function set($name, $value) //sets property named $name with value $value
+		{
+			$this->$name = $value;
+		}
+
+		private function setID()
+		{
+			$result = $this->conn->query("SELECT id FROM Prima WHERE Cuenta = '{$_SESSION['cuenta']}' ORDER BY id DESC LIMIT 1");
+			$row = $this->conn->fetchRow($result);
+
+			if(isset($row))
+			{
+				list($this->id) = $row;
+				$this->id ++;
+			}
+			else
+				$this->id = 1;
+		}
+
+		public function get($name)//gets property named $name
+		{
+			return $this->$name;
+		}
+
+		public function setFromBrowser()//sets properties from superglobal $_POST
+		{
+			foreach($this as $key => $value)
+
+				if(isset($_POST["$key"]))
+					$this->$key = trim($_POST["$key"]);
+
+		}
+
+		public function showProperties()//prints properties values
+		{
+
+			foreach($this as $key => $value)
+
+				if($key != 'conn')
+					echo "$key = $value <br />";
+
+		}
+
+		public function setFromDb()//sets properties from data base, but $id has to be set before
+		{
+			$result = $this->conn->query("SELECT * FROM Prima WHERE id = '{$this->id}' AND Cuenta = '{$_SESSION['cuenta']}'");
+
+			while($row = $this->conn->fetchRow($result,'ASSOC'))
+
+				foreach($row as $key => $value)
+
+					if($key != 'Cuenta')
+						$this->$key = $value;
+
+		}
+
+		public function dbStore($update)//if $update is false it stores a new database register with $this' properties. if $update is true it updates all database registers (professedly one) with $this' id
+		{
+
+			if($update == 'false')
+			{
+				$this->setID();
+				$this->conn->query("INSERT INTO Prima (id, Cuenta) VALUES ('{$this->id}', '{$_SESSION['cuenta']}')");
+			}
+
+			foreach($this as $key => $value)
+
+				if(isset($this->$key))
+				{
+
+					if($key != 'conn' && $key != 'id')
+						$this->conn->query("UPDATE Prima SET $key  = '$value' WHERE id = '{$this->id}' AND Cuenta = '{$_SESSION['cuenta']}'");
+
+				}
+				elseif($key == 'Registro_patronal')
+					$this->conn->query("UPDATE Prima SET $key = NULL WHERE id = '{$this->id}' AND Cuenta = '{$_SESSION['cuenta']}'");
+
+			return true;
+		}
+
+		public function dbDelete()//delete this entity from database but id has to be set before
+		{
+
+			if(isset($this->id))
+				$this->conn->query("DELETE FROM Prima WHERE id = '{$this->id}' AND Cuenta = '{$_SESSION['cuenta']}'");
+
+		}
+
+		public function draw($act)//draws $this Prima. if $act == 'EDIT' or $act == 'ADD' the fields can be edited and the form is submitted. if $act == 'DRAW' the fields can't be edited and the form is not submitted
+		{
+			echo "<div onclick = \"show('Datos_fieldset',this)\" class = \"datos_tab\">Datos</div>";
+			echo "<div onclick = \"show('Registro_patronal_fieldset',this)\" class = \"registro_patronal_tab\">Registro patronal</div>";
+
+			echo '<form class = "show_form">';
+				echo "<fieldset class = \"Datos_fieldset\" style = \"visibility:visible\"\>";
+					echo "<textarea name = \"id\" class=\"hidden_textarea\" readonly=true>"."{$this->id}</textarea>";
+					echo "<textarea name = \"Empresa\" class=\"hidden_textarea\" readonly=true>"."{$this->Empresa}</textarea>";
+					echo "<label class = \"valor_label\">Valor</label>";
+					echo "<textarea class=\"valor_textarea\" name = \"Valor\" title = \"Valor\"". ($act == 'EDIT' || $act == 'ADD'? "required=true>":"readonly=true>")."{$this->Valor}</textarea>";
+					echo "<label class = \"fecha_label\">Fecha</label>";
+					echo "<textarea class=\"fecha_textarea\" name = \"Fecha\" title = \"Fecha\"". ($act == 'EDIT' || $act == 'ADD'? "required=true>":"readonly=true>")."{$this->Fecha}</textarea>";
+
+					if($act != 'DRAW')
+						echo "<img class = 'calendar_button' onclick = 'show_cal(this)' \>";//show_calendar() at calendar.js
+
+				echo "</fieldset>";
+				echo "<fieldset class =  \"Registro_patronal_fieldset\" style = \"visibility:hidden\"\>";
+					echo "<table class = 'titles_table'><tr><td class = 'button_cell'></td><td>Número</td><td>Empresa</td><td>Sucursal</td></tr></table>";
+					echo "<div class = 'options' mode = '$act' dbtable1 = 'Prima' dbtable2 = 'Registro_patronal' _id = '{$this->id}'></div>";
+					echo "<table class = \"search_table\"><tr>";
+
+					for($i=0; $i<3; $i++)
+
+						if($i == 0)
+							echo "<td class = 'search_button_cell'><input type='button' value='' class = 'search_button' onmouseover = \"search_button_bright(this)\" onmouseout = \"search_button_opaque(this)\" onclick = \"get_options('$act','Prima','Registro_patronal','{$this->id}',null,this.parentNode.parentNode.parentNode.parentNode.parentNode)\"/></td><td><input type = 'text' class = 'search_field'  id = 'search_field" . $i . "'/></td>";
+						else
+							echo "<td><input type = 'text' class = 'search_field'" . $i . "'/></td>";
+
+					echo "</tr></table>";
+				echo "</fieldset>";
+
+			if($act == 'EDIT' || $act == 'ADD')
+				echo "<img title = \"Guardar\"class = \"submit_button\" onclick = \"_submit('$act',this.parentNode,'Prima')\" />";//_submit() at common_entities.js
+
+			echo "</form>";
+
+		}
+
+	}
+
+?>

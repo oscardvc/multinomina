@@ -1,0 +1,15 @@
+<?php
+	//This page is called by an AJAX function at some concept's .js and gets some values from table Instrumento_notarial
+
+	include_once('connection.php');
+	$conn = new Connection('multinomina');
+
+	if($_GET['dbtable'] == 'Archivo_digital')
+		$result = $conn->query("SELECT Instrumento_notarial FROM Archivo_digital WHERE Nombre = '{$_GET['id']}'");
+
+	if(isset($result))
+
+		while(list($instrumento) = $conn->fetchRow($result))
+			echo "$instrumento,";
+
+?>

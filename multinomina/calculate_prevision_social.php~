@@ -1,0 +1,24 @@
+<?php
+//This page is called from an ajax function named calculate at nomina.js
+include_once('nomina.php');
+
+$nomina = new Nomina();
+$nomina->set('id',$_GET['id']);//identifier
+$nomina->set('Limite_inferior_del_periodo',$_GET['Limite_inferior_del_periodo']);
+$nomina->set('Limite_superior_del_periodo',$_GET['Limite_superior_del_periodo']);
+$nomina->set('Servicio',$_GET['Servicio']);
+$trabajador = $_GET['trabajador'];
+$sueldo = $_GET['sueldo'];
+$numero_de_dias_del_periodo  = $_GET['numero_de_dias_del_periodo'];
+$numero_de_dias_laborados  = $_GET['numero_de_dias_laborados'];
+$saldo = $_GET['saldo'];
+$pago_neto = $_GET['pago_neto'];
+$total_de_percepciones = $_GET['total_de_percepciones'];
+$subsidio = $_GET['subsidio_al_empleo'];
+$total_de_deducciones = $_GET['total_de_deducciones'];
+$isr = $_GET['isr'];
+$base_ISR = $_GET['base_ISR'];
+//$nomina->showProperties();
+list($alimentacion,$retencion_por_alimentacion,$habitacion,$retencion_por_habitacion,$psg,$base,$li,$eli,$pseli,$im,$cf,$id,$se,$isr,$subsidio,$tp,$td,$s,$dif,$ps) = $nomina->calculate_prevision_social($trabajador,$sueldo,$numero_de_dias_del_periodo,$numero_de_dias_laborados,$pago_neto,$total_de_percepciones-$subsidio,$total_de_deducciones-$isr,$base_ISR);
+echo "$trabajador,$alimentacion,$retencion_por_alimentacion,$habitacion,$retencion_por_habitacion,$psg,$base,$li,$eli,$pseli,$im,$cf,$id,$se,$isr,$subsidio,$tp,$td,$s,$dif,$ps";
+?>

@@ -1,0 +1,190 @@
+<?php
+	include_once('connection.php');
+
+//Class Pension_alimenticia definition
+
+	class Pension_alimenticia
+	{
+		//class properties
+		//data
+		private $id;
+		private $Cantidad;
+		private $Fecha_de_inicio = 'AAAA-MM-DD';
+		private $Fecha_de_termino = 'AAAA-MM-DD';
+		private $Beneficiario;
+		private $Folio_IFE;
+		private $No_de_expediente;
+		private $No_de_oficio;
+		private $Porcentaje_del_salario;
+		private $Trabajador;
+		private $Servicio;
+		//database connection
+		private $conn;
+
+		//class methods
+		public function __construct()
+		{
+
+			if(!isset($_SESSION))
+				session_start();
+
+			$this->conn = new Connection();
+		}
+
+		public function __destruct()
+		{
+		}
+
+		public function set($name, $value) //sets property named $name with value $value
+		{
+			$this->$name = $value;
+		}
+
+		private function setID()
+		{
+			$result = $this->conn->query("SELECT id FROM Pension_alimenticia WHERE Cuenta = '{$_SESSION['cuenta']}' ORDER BY id DESC LIMIT 1");
+			$row = $this->conn->fetchRow($result);
+
+			if(isset($row))
+			{
+				list($this->id) = $row;
+				$this->id ++;
+			}
+			else
+				$this->id = 1;
+
+		}
+
+		public function get($name)//gets property named $name
+		{
+			return $this->$name;
+		}
+
+		public function setFromBrowser()//sets properties from superglobal $_POST
+		{
+
+			foreach($this as $key => $value)
+
+				if(isset($_POST["$key"]))
+					$this->$key = trim($_POST["$key"]);
+
+		}
+
+		public function showProperties()//prints properties values
+		{
+
+			foreach($this as $key => $value)
+
+				if($key != 'conn')
+					echo "$key = $value <br />";
+
+		}
+
+		public function setFromDb()//sets properties from data base, but $id has to be set before
+		{
+			$result = $this->conn->query("SELECT * FROM Pension_alimenticia WHERE id = '{$this->id}' AND Cuenta = '{$_SESSION['cuenta']}'");
+
+			while($row = $this->conn->fetchRow($result,'ASSOC'))
+
+				foreach($row as $key => $value)
+
+					if($key != 'Cuenta')
+						$this->$key = $value;
+
+		}
+
+		public function dbStore($update)//if $update is false it stores a new database register with $this' properties if $update is true it updates all database registers (professedly one) with $this' id
+		{
+
+			if($update == 'false')
+			{
+				$this->setID();
+				$this->conn->query("INSERT INTO Pension_alimenticia(id, Cuenta) VALUES ('{$this->id}', '{$_SESSION['cuenta']}')");
+			}
+
+			foreach($this as $key => $value)
+
+				if(isset($this->$key))
+				{
+
+					if($key != 'conn' && $key != 'id')
+						$this->conn->query("UPDATE Pension_alimenticia SET $key = '$value' WHERE id = '{$this->id}' AND Cuenta = '{$_SESSION['cuenta']}'");
+
+				}
+				elseif($key == 'Servicio')
+					$this->conn->query("UPDATE Pension_alimenticia SET Servicio = NULL WHERE id = '{$this->id}' AND Cuenta = '{$_SESSION['cuenta']}'");
+
+			return true;
+		}
+
+		public function dbDelete()//delete this entity from database but id has to be set before
+		{
+
+			if(isset($this->id))
+			{
+				$this->conn->query("DELETE FROM Pension_alimenticia WHERE id = '{$this->id}' AND Cuenta = '{$_SESSION['cuenta']}'");
+				$this->conn->query("DELETE FROM Descuento_pendiente WHERE Retencion = 'Pensión alimenticia' AND id = '{$this->id}' AND Cuenta = '{$_SESSION['cuenta']}'");
+			}
+
+		}
+
+		public function draw($act)//draws $this Pension_alimenticia. if $act == 'EDIT' or $act == 'ADD' the fields can be edited and the form is submitted. if $act == 'DRAW' the fields can't be edited and the form is not submitted
+		{
+			echo "<div onclick = \"show('Datos_fieldset',this)\" class = \"datos_tab\">Datos</div>";
+
+			if($act != 'ADD')
+				echo "<div onclick = \"show('Servicio_fieldset',this)\" class = \"servicio_tab\">Servicio</div>";
+
+			echo "<form class = \"show_form\">";
+				echo "<fieldset class = \"Datos_fieldset\" style = \"visibility:visible\"\>";
+					echo "<textarea name = \"id\" class=\"hidden_textarea\" readonly=true>{$this->id}</textarea>";
+					echo "<textarea name = \"Trabajador\" class=\"hidden_textarea\" readonly=true>{$this->Trabajador}</textarea>";
+					echo "<label class = \"cantidad_label\">Cantidad</label>";
+					echo "<textarea class=\"cantidad_textarea\" name = \"Cantidad\" title = \"Cantidad\" " .  ($act == 'EDIT' || $act == 'ADD'? ">":"readonly=true>")."{$this->Cantidad}</textarea>";
+					echo "<label class = \"fecha_de_inicio_label\">Fecha de inicio</label>";
+					echo "<textarea class=\"fecha_de_inicio_textarea\" name = \"Fecha_de_inicio\" title = \"Fecha de inicio\"" . ($act == 'EDIT' || $act == 'ADD'? ">":"readonly=true>") . "{$this->Fecha_de_inicio}</textarea>";
+
+					if($act != 'DRAW')
+						echo "<img class = 'calendar_button' onclick = 'show_cal(this)' \>";//show_calendar() at calendar.js
+
+					echo "<label class = \"beneficiario_label\">Beneficiario</label>";
+					echo "<textarea class=\"beneficiario_textarea\" name = \"Beneficiario\" title = \"Beneficiario\"" . ($act == 'EDIT' || $act == 'ADD'? ">":"readonly=true>") . "{$this->Beneficiario}</textarea>";
+					echo "<label class = \"fecha_de_termino_label\">Fecha de término</label>";
+					echo "<textarea class=\"fecha_de_termino_textarea\" name = \"Fecha_de_termino\" title = \"Fecha de término\"" . ($act == 'EDIT' || $act == 'ADD'? ">":"readonly=true>") . "{$this->Fecha_de_termino}</textarea>";
+
+					if($act != 'DRAW')
+						echo "<img class = 'calendar_button' onclick = 'show_cal(this)' \>";//show_calendar() at calendar.js
+
+					echo "<label class = \"folio_ife_label\">Folio IFE</label>";
+					echo "<textarea class=\"folio_ife_textarea\" name = \"Folio_IFE\" title = \"Folio IFE\"" . ($act == 'EDIT' || $act == 'ADD'? ">":"readonly=true>") . "{$this->Folio_IFE}</textarea>";
+					echo "<label class = \"no_de_expediente_label\">No. de expediente</label>";
+					echo "<textarea class=\"no_de_expediente_textarea\" name = \"No_de_expediente\" title = \"No. de expediente\"" . ($act == 'EDIT' || $act == 'ADD'? ">":"readonly=true>") . "{$this->No_de_expediente}</textarea>";
+					echo "<label class = \"no_de_oficio_label\">No. de oficio</label>";
+					echo "<textarea class=\"no_de_oficio_textarea\" name = \"No_de_oficio\" title = \"No. de oficio\"" . ($act == 'EDIT' || $act == 'ADD'? ">":"readonly=true>") . "{$this->No_de_oficio}</textarea>";
+					echo "<label class = \"porcentaje_del_salario_label\">Porcentaje del salario</label>";
+					echo "<textarea class=\"porcentaje_del_salario_textarea\" name = \"Porcentaje_del_salario\" title = \"Porcentaje del salario\"" . ($act == 'EDIT' || $act == 'ADD'? ">":"readonly=true>") . "{$this->Porcentaje_del_salario}</textarea>";
+				echo "</fieldset>";
+				echo "<fieldset class = \"Servicio_fieldset\" style = \"visibility:hidden\"\>";
+					echo "<table class = 'titles_table'><tr><td class = 'button_cell'></td><td>id</td><td>Periodo de la nómina</td><td>Registro patronal</td><td>Empresa</td></tr></table>";
+					echo "<div class = 'options' mode = '$act' dbtable1 = 'Pension_alimenticia' dbtable2 = 'Servicio' _id = '$this->id'></div>";
+					echo "<table class = \"search_table\"><tr>";
+
+					for($i=0; $i<4; $i++)
+
+						if($i == 0)
+							echo "<td class = 'search_button_cell'><input type='button' value='' class = 'search_button' onmouseover = \"search_button_bright(this)\" onmouseout = \"search_button_opaque(this)\" onclick = \"get_options('$act','Pension_alimenticia','Servicio','$this->id',null,this.parentNode.parentNode.parentNode.parentNode.parentNode)\"/></td><td><input type = 'text' class = 'search_field'  id = 'search_field" . $i . "'/></td>";
+						else
+							echo "<td><input type = 'text' class = 'search_field'" . $i . "'/></td>";
+
+					echo "</tr></table>";
+				echo "</fieldset>";
+
+			if($act == 'EDIT' || $act == 'ADD')
+				echo "<img title = \"Guardar\"class = \"submit_button\" onclick = \"_submit('$act',this.parentNode,'Pension_alimenticia')\" />";//_submit() at common_entities.js
+
+			echo "</form>";
+		}
+
+	}
+
+?>

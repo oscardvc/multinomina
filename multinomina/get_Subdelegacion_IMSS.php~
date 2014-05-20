@@ -1,0 +1,59 @@
+<?php
+	//This page is called by an AJAX function at entities.js and gets some values from table Establecimiento
+
+	include_once('connection.php');
+	$conn = new Connection('multinomina');
+	$values = explode(',',$_POST['values']);//values is set at javascript function get_options() at entities.js
+
+	if($_GET['time'] != 'First' && ($_GET['mode'] == 'ADD' || $_GET['mode'] == 'EDIT'))
+		$result = $conn->query("SELECT Nombre,Delegacion_IMSS FROM Subdelegacion_IMSS WHERE Nombre LIKE '%{$values[0]}%' AND Delegacion_IMSS LIKE '%{$values[1]}%'");
+	elseif($_GET['mode'] == 'DRAW' || ($_GET['mode'] == 'EDIT' && $_GET['time'] == 'First'))
+	{
+
+		if($_GET['dbtable'] == 'Registro_patronal')
+			$result = $conn->query("SELECT Nombre,Delegacion_IMSS FROM Registro_patronal LEFT JOIN Subdelegacion_IMSS ON Registro_patronal.Subdelegacion_IMSS = Subdelegacion_IMSS.Nombre WHERE Subdelegacion_IMSS.Nombre LIKE '%{$values[0]}%' AND Subdelegacion_IMSS.Delegacion_IMSS LIKE '%{$values[1]}%' AND Registro_patronal.Numero = '{$_GET['id']}' AND Registro_patronal.Subdelegaion_IMSS IS NOT NULL");
+
+	}
+
+	$i = 0;
+	$txt = "";
+
+	if(isset($result))
+	{
+		while($row = $conn->fetchRow($result))
+		{
+
+			foreach($row as $value)
+
+				if(!isset($val[$i]))
+					$val[$i] = "<td class = \"checkbox_input_cell\">" . ($_GET['mode'] != 'DRAW' ? "<input type= \"checkbox\" class = \"checkbox_input\" name=\"Subdelegacion_IMSS\" value = \"$value\"/>" : "") . "</td><td>" . $value . '</td>';
+				else
+					$val[$i] .= "<td>" . $value . '</td>';
+
+			$i++;
+		}
+
+		if(isset($val))
+		{
+
+			$len = count($val);
+
+			for($i = 0; $i < $len; $i++)
+
+				if($_GET['mode'] != 'DRAW')
+					$val[$i] = "<tr onmouseover=\"option_bright(this)\" onmouseout=\"option_opaque(this)\" onclick='select_option(this)'>{$val[$i]}<td onmouseover = 'om_bright(this)' onmouseout = 'om_opaque(this)' onclick = \"_view(this,'Subdelegacion_IMSS')\" title = 'Ver' class = 'view_cell'><img src = 'images/view.png'/></td><td onmouseover = 'om_bright(this)' onmouseout = 'om_opaque(this)' onclick = \"_edit(this,'Subdelegacion_IMSS')\" title = 'Editar' class = 'edit_cell'><img src = 'images/edit.png'/></td><td onmouseover = 'om_bright(this)' onmouseout = 'om_opaque(this)' onclick = \"_delete(this,'Subdelegacion_IMSS')\" title = 'Eliminar' class = 'delete_cell'><img src = 'images/delete.png'/></td></tr>";//option_bright() and option_opaque() at presentation.js. select_optio() at general.js
+				else
+					$val[$i] = "<tr onmouseover=\"option_bright(this)\" onmouseout=\"option_opaque(this)\">{$val[$i]}<td onmouseover = 'om_bright(this)' onmouseout = 'om_opaque(this)' onclick = \"_view(this,'Subdelegacion_IMSS')\" title = 'Ver' class = 'view_cell'><img src = 'images/view.png'/></td></tr>";
+
+			$val[0] = '<table class = "options_table">' . $val[0];
+			$val[$len-1] .= '</table>';
+
+			for($i=0; $i<$len; $i++)
+				$txt .= $val[$i];
+
+		}
+
+	}
+
+	echo $txt;
+?>

@@ -1,0 +1,18 @@
+<?php
+	include_once('connection.php');
+
+	if(!isset($_SESSION))
+		session_start();
+
+	$conn = new Connection();
+	$txt = '';
+	$table = utf8_encode(html_entity_decode(urldecode($_GET['table'])));
+	$column = utf8_encode(html_entity_decode(urldecode($_GET['column'])));
+	$val = $_POST['val'];
+	$result = $conn->query("SELECT DISTINCT $column FROM $table WHERE $column LIKE '%$val%'");// AND Cuenta = '{$_SESSION['cuenta']}'");
+
+	while(list($nombre) = $conn->fetchRow($result))
+		$txt .= "<span style = 'white-space:nowrap;cursor:pointer' onmouseover = '_mark(this)' onmouseout = '_unmark(this)'>$nombre</span>";
+
+	echo $txt;
+?>

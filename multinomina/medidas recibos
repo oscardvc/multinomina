@@ -1,0 +1,479 @@
+*Recibo de nomina para asalariados
+
+::relative positions::
+
+-container
+
+	width = 215,9mm
+	height = 279,4mm / 2 = 139,7mm
+
+-Logo
+	width = 50mm
+	height = 10mm
+	normal_top = 0mm//sum of all heights of elements above
+	absolut_top = 5mm// height where you wanna place it
+	top = 5mm//difference between normal and absolut
+	left = 5mm
+
+-Titulo administradora
+
+	width = 205,9mm
+	height = 9mm
+	normal_top = 10mm
+	absolut_top = 20mm
+	top = 10mm
+	left = 5mm
+
+-RFC
+
+	width = 205,9mm
+	height = 3mm
+	normal_top = 19mm
+	absolut_top = 29mm
+	top = 10mm
+	left = 5mm
+
+-Registro patronal
+
+	width = 205,9mm
+	height = 3mm
+	normal_top = 22mm
+	absolut_top = 32mm
+	top = 10mm
+	left = 5mm
+
+-numero de trabajador
+
+	width = 205,9mm
+	height = 3mm
+	normal_top = 25mm
+	absolut_top = 35mm
+	top = 10mm
+	left = 5mm
+
+-sucursal
+
+	width = 205,9mm
+	height = 3mm
+	normal_top = 28mm
+	absolut_top = 38mm
+	top = 10mm
+	left = 5mm
+
+-titulo del recibo
+
+	width = 205,9mm
+	height = 3mm
+	normal_top = 31mm
+	absolut_top = 41mm
+	top = 10mm
+	left = 5mm
+
+-limites
+
+	width = 205,9mm
+	height = 3mm
+	normal_top = 34mm
+	absolut_top = 44mm
+	top = 10mm
+	left = 5mm
+
+-texto
+
+	width = 205,9mm
+	height = 10mm
+	normal_top = 37mm
+	absolut_top = 52mm
+	top = 15mm
+	left = 5mm
+
+-tabla datos del trabajador
+
+	width = 80mm
+	height = 50mm
+	normal_top = 47mm
+	absolut_top = 67mm
+	top = 20mm
+	left = 5mm
+
+-tabla de nomina
+
+	width = 120,9mm
+	height = 50mm
+	normal_top = 97mm
+	absolut_top = 67mm
+	top = -30mm
+	left = 90mm
+
+-firma
+
+	width = 215,9mm
+	height = 8mm
+	normal_top = 147mm
+	absolut_top = 116mm
+	top = -16mm
+	left = 0mm
+
+*Recibo de nomina para asimilables
+
+::relative positions::
+
+-container
+
+	width = 215,9mm
+	height = 279,4mm / 2 = 139,7mm
+
+-Logo
+	width = 50mm
+	height = 10mm
+	normal_top = 0mm//sum of all heights of elements above
+	absolut_top = 5mm// height where you wanna place it
+	top = 5mm//difference between normal and absolut
+	left = 5mm
+
+-Titulo recibo
+
+	width = 205,9mm
+	height = 9mm
+	normal_top = 10mm
+	absolut_top = 20mm
+	top = 10mm
+	left = 5mm
+
+-fecha de pago
+
+	width = 205,9mm
+	height = 3mm
+	normal_top = 19mm
+	absolut_top = 29mm
+	top = 10mm
+	left = 5mm
+
+-número de trabajador
+
+	width = 205,9mm
+	height = 3mm
+	normal_top = 22mm
+	absolut_top = 32mm
+	top = 10mm
+	left = 5mm
+
+-texto
+
+	width = 205,9mm
+	height = 20mm
+	normal_top = 25mm
+	absolut_top = 40mm
+	top = 15mm
+	left = 5mm
+
+-nomina
+
+	width = 80mm
+	height = 30mm
+	normal_top = 45mm
+	absolut_top = 65mm
+	top = 20mm
+	left = 5mm
+
+-art 113
+
+	width = 80mm
+	height = 6mm
+	normal_top = 75mm
+	absolut_top = 100mm
+	top = 25mm
+	left = 5mm
+
+-firma
+
+	width = 215,9mm
+	height = 8mm
+	normal_top = 81mm
+	absolut_top = 131mm
+	top = 50mm
+	left = 0mm
+
+*Recibo de pensión alimenticia
+
+::relative positions::
+
+-container
+
+	width = 215,9mm
+	height = 279,4mm / 2 = 139,7mm
+
+-Logo
+
+	width = 50mm
+	height = 10mm
+	normal_top = 0mm//sum of all heights of elements above
+	absolut_top = 5mm// height where you wanna place it
+	top = 5mm//difference between normal and absolut
+	left = 5mm
+
+-Titulo administradora
+
+	width = 205,9mm
+	height = 9mm
+	normal_top = 10mm
+	absolut_top = 20mm
+	top = 10mm
+	left = 5mm
+
+-RFC
+
+	width = 205,9mm
+	height = 3mm
+	normal_top = 19mm
+	absolut_top = 29mm
+	top = 10mm
+	left = 5mm
+
+-Registro patronal
+
+	width = 205,9mm
+	height = 3mm
+	normal_top = 22mm
+	absolut_top = 32mm
+	top = 10mm
+	left = 5mm
+
+-trabajador
+
+	width = 205,9mm
+	height = 3mm
+	normal_top = 25mm
+	absolut_top = 35mm
+	top = 10mm
+	left = 5mm
+
+-no. de expediente
+
+	width = 205,9mm
+	height = 3mm
+	normal_top = 28mm
+	absolut_top = 38mm
+	top = 10mm
+	left = 5mm
+
+-no. de oficio
+
+	width = 205,9mm
+	height = 3mm
+	normal_top = 31mm
+	absolut_top = 41mm
+	top = 10mm
+	left = 5mm
+
+-porcentaje del salario
+
+	width = 205,9mm
+	height = 3mm
+	normal_top = 34mm
+	absolut_top = 44mm
+	top = 10mm
+	left = 5mm
+
+-titulo del recibo
+
+	width = 205,9mm
+	height = 3mm
+	normal_top = 37mm
+	absolut_top = 47mm
+	top = 10mm
+	left = 5mm
+
+-limites
+
+	width = 205,9mm
+	height = 3mm
+	normal_top = 40mm
+	absolut_top = 50mm
+	top = 10mm
+	left = 5mm
+
+-texto
+
+	width = 205,9mm
+	height = 20mm
+	normal_top = 43mm
+	absolut_top = 58mm
+	top = 15mm
+	left = 5mm
+
+-beneficiario
+
+	width = 215,9mm
+	height = 8mm
+	normal_top = 63mm
+	absolut_top = 131,7mm
+	top = 67,7mm
+	left = 0mm
+
+*Recibo de préstamo de cliente
+
+::relative positions::
+
+-container
+
+	width = 215,9mm
+	height = 279,4mm / 2 = 139,7mm
+
+-Logo
+
+	width = 50mm
+	height = 10mm
+	normal_top = 0mm//sum of all heights of elements above
+	absolut_top = 5mm// height where you wanna place it
+	top = 5mm//difference between normal and absolut
+	left = 5mm
+
+-Titulo
+
+	width = 205,9mm
+	height = 9mm
+	normal_top = 10mm
+	absolut_top = 20mm
+	top = 10mm
+	left = 5mm
+
+-Lugar y fecha
+
+	width = 205,9mm
+	height = 3mm
+	normal_top = 19mm
+	absolut_top = 29mm
+	top = 10mm
+	left = 5mm
+
+-texto
+
+	width = 205,9mm
+	height = 20mm
+	normal_top = 22mm
+	absolut_top = 49mm
+	top = 27mm
+	left = 5mm
+
+-administradora
+
+	width = 215,9mm
+	height = 8mm
+	normal_top = 42mm
+	absolut_top = 131,7mm
+	top = 88,7mm
+	left = 0mm
+
+*Recibo de aguinaldo
+
+::relative positions::
+
+-container
+
+	width = 215,9mm
+	height = 279,4mm / 2 = 139,7mm
+
+-Logo
+	width = 50mm
+	height = 10mm
+	normal_top = 0mm//sum of all heights of elements above
+	absolut_top = 5mm// height where you wanna place it
+	top = 5mm//difference between normal and absolut
+	left = 5mm
+
+-Titulo administradora
+
+	width = 205,9mm
+	height = 9mm
+	normal_top = 10mm
+	absolut_top = 20mm
+	top = 10mm
+	left = 5mm
+
+-RFC
+
+	width = 205,9mm
+	height = 3mm
+	normal_top = 19mm
+	absolut_top = 29mm
+	top = 10mm
+	left = 5mm
+
+-Registro patronal
+
+	width = 205,9mm
+	height = 3mm
+	normal_top = 22mm
+	absolut_top = 32mm
+	top = 10mm
+	left = 5mm
+
+-numero de trabajador
+
+	width = 205,9mm
+	height = 3mm
+	normal_top = 25mm
+	absolut_top = 35mm
+	top = 10mm
+	left = 5mm
+
+-sucursal
+
+	width = 205,9mm
+	height = 3mm
+	normal_top = 28mm
+	absolut_top = 38mm
+	top = 10mm
+	left = 5mm
+
+-titulo del recibo
+
+	width = 205,9mm
+	height = 3mm
+	normal_top = 31mm
+	absolut_top = 41mm
+	top = 10mm
+	left = 5mm
+
+-texto
+
+	width = 205,9mm
+	height = 10mm
+	normal_top = 34mm
+	absolut_top = 49mm
+	top = 15mm
+	left = 5mm
+
+-tabla datos del trabajador
+
+	width = 80mm
+	height = 40mm
+	normal_top = 44mm
+	absolut_top = 64mm
+	top = 20mm
+	left = 5mm
+
+-tabla de aguinaldo
+
+	width = 120,9mm
+	height = 40mm
+	normal_top = 84mm
+	absolut_top = 64mm
+	top = -20mm
+	left = 90mm
+
+-firma
+
+	width = 215,9mm
+	height = 8mm
+	normal_top = 124mm
+	absolut_top = 131mm
+	top = 7mm
+	left = 0mm
+
+
+Nota:
+
+printer_Officejet-6500-E710n-z.print_margin_bottom	0.500000012107193
+...

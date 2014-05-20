@@ -1,0 +1,280 @@
+<?php //This page is called by a javascript function named view at nomina.js?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+	<head>
+		<style type="text/css">
+			.saltopagina
+			{
+				page-break-after: always;
+			}
+
+		</style>
+		<script type="text/javascript" src="moneda.js"></script>
+		<script type="text/javascript" src="calendar.js"></script>
+		<script type="text/javascript">
+			if( typeof( window.innerWidth ) == 'number' )
+			{ 
+				//Non-IE
+				window_width = window.innerWidth;
+				window_height = window.innerHeight;
+				window.moveTo(0,0);
+				window.resizeTo(screen.availWidth, screen.availHeight);
+			}
+			else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) )
+			{
+				//IE 6+ in 'standards compliant mode'
+				window_width = document.documentElement.clientWidth; 
+				window_height = document.documentElement.clientHeight;
+				window.moveTo(0,0);
+				window.resizeTo(screen.availWidth, screen.availHeight);
+			}
+			else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) )
+			{
+				//IE 4 compatible
+				window_width = document.body.clientWidth;
+				window_height = document.body.clientHeight;
+				window.moveTo(0,0);
+				window.resizeTo(screen.availWidth, screen.availHeight);
+			}
+
+			var font = 'normal normal normal 2.6mm Arial , sans-serif'; //weight, style, variant, size, family name, generic family
+			var title_font = 'bold normal normal 2.6mm Arial , sans-serif';
+
+			function _load(obj)
+			{
+				var fieldset = obj.parentNode;
+				var tabla = fieldset.getAttribute('class');
+				var form = fieldset.parentNode;
+				var fieldsets = form.getElementsByTagName('fieldset');
+
+				for(var i=0; i<fieldsets.length; i++)
+
+					if(fieldsets[i].getAttribute('class') == 'Datos_fieldset')
+					{
+						var datos_fieldset = fieldsets[i];
+						break;
+					}
+
+				var textareas = datos_fieldset.getElementsByTagName('textarea');
+
+				for(var i=0; i<textareas.length; i++)
+
+					if(textareas[i].getAttribute('name') == 'id')
+						var _id = textareas[i].value;
+					else if(textareas[i].getAttribute('name') == 'Administradora')
+						var _administradora = textareas[i].value;
+					else if(textareas[i].getAttribute('name') == 'Limite_inferior_del_periodo')
+						var _limite_inferior = textareas[i].value;
+					else if(textareas[i].getAttribute('name') == 'Limite_superior_del_periodo')
+						var _limite_superior = textareas[i].value;
+
+				if (window.XMLHttpRequest)//Mozilla, Safari...
+				{
+					var xmltables = new XMLHttpRequest();
+
+					if (xmltables.overrideMimeType)
+						xmltables.overrideMimeType('text/xml');
+
+				}
+				else if (window.ActiveXObject)// IE
+				{
+
+					try
+					{
+						var xmltables = new ActiveXObject("Msxml2.XMLHTTP");
+					}
+					catch (e)
+					{
+
+						try
+						{
+							var xmltables = new ActiveXObject("Microsoft.XMLHTTP");
+						}
+						catch (e) {}
+
+					}
+
+				}
+
+				xmltables.onreadystatechange = function()
+				{
+
+					if (xmltables.readyState==4 && xmltables.status==200)
+					{
+						var _div = document.createElement('div');
+						_div.innerHTML = xmltables.responseText;
+						var tables = _div.getElementsByTagName('table');
+						var divs = _div.getElementsByTagName('div');
+						var periodo = divs[0].innerHTML;
+						var administradora_rfc = divs[1].innerHTML;
+						var registro_patronal = divs[2].innerHTML;
+						var fecha_de_pago = fdp(_limite_superior);
+
+						for(var i=0; i<tables.length; i++)
+						{
+							var rows = tables[i].rows;
+
+							for(var j=1; j<rows.length; j++)
+								set_recibo(_administradora, tabla, rows[j], fecha_de_pago);
+
+						}
+
+					}
+
+				}
+
+				xmltables.open('POST','_get_tables.php?_class=Prestamos_cliente' + '&tabla=' + tabla + '&nomina=' + _id, true);
+				xmltables.setRequestHeader("cache-control","no-cache");
+				xmltables.send('');
+			}
+
+			function set_recibo(administradora, tabla, row, fecha_de_pago)
+			{
+				var cols = row.getElementsByTagName('td');
+				var trabajador_nombre = cols[0].innerHTML;
+				var cantidad = cols[1].innerHTML;
+				var lugar = cols[2].innerHTML;
+				//body settings
+				document.body.style.padding = '0mm';
+				document.body.style.margin = '0mm';
+				document.body.style.border = 'none';
+				//container
+				var container = document.createElement('div');
+				container.style.display = 'block';
+				container.style.position = 'relative';
+				container.style.padding = '0mm';
+				container.style.margin = '0mm';
+				container.style.border = 'none';
+				container.style.width = '215.9mm';
+				container.style.height = '139.7mm';
+				container.style.overflow = 'hidden';
+				document.body.appendChild(container);
+				//logo
+				var image = document.createElement('img');
+				container.appendChild(image);
+				image.style.display = 'block';
+				image.style.position = 'relative';
+				image.style.top = '5mm';
+				image.style.left = '5mm';
+				image.style.width = '56mm';
+				image.style.height = '10mm';
+				image.style.padding = '0mm';
+				image.style.margin = '0mm';
+				image.style.border = 'none';
+				image.style.background = 'none';
+				image.src = 'images/logo_blanco.jpg';
+				var images = document.getElementsByTagName('IMG');
+
+				if(images.length % 2 == 0)
+					var _break = true;
+				else
+					var _break = false;
+
+				//title
+				var _title = document.createElement('span');
+				container.appendChild(_title);
+				_title.innerHTML = 'Comprobante de pago';
+				_title.style.display = 'block';
+				_title.style.position = 'relative';
+				_title.style.width = '205.9mm';
+				_title.style.height = '9mm';
+				_title.style.top = '10mm';
+				_title.style.left = '5mm';
+				_title.style.padding = '0mm';
+				_title.style.margin = '0mm';
+				_title.style.border = 'none';
+				_title.style.background = '#fff';
+				_title.style.font = title_font;
+				_title.style.textAlign = 'center';
+				_title.style.color = '#555';
+				//lugar y fecha
+				var _lyf = document.createElement('span');
+				container.appendChild(_lyf);
+				_lyf.innerHTML = lugar + ' ' + fecha_de_pago;
+				_lyf.style.display = 'block';
+				_lyf.style.position = 'relative';
+				_lyf.style.padding = '0mm';
+				_lyf.style.margin = '0mm';
+				_lyf.style.border = 'none';
+				_lyf.style.background = '#fff';
+				_lyf.style.top = '10mm';
+				_lyf.style.left = '5mm';
+				_lyf.style.width = '205.9mm';
+				_lyf.style.height = '3mm';
+				_lyf.style.font = font;
+				_lyf.style.textAlign = 'center';
+				_lyf.style.color = '#555';
+				//"texto"
+				var _text = document.createElement('span');
+				container.appendChild(_text);
+				_text.innerHTML = 'Recibí de ' + trabajador_nombre + ' la cantidad de $' + _format(cantidad) + ' ' + covertirNumLetras(cantidad) + ' por concepto de abono a cuenta.';
+				_text.style.display = 'block';
+				_text.style.position = 'relative';
+				_text.style.padding = '0mm';
+				_text.style.margin = '0mm';
+				_text.style.border = 'none';
+				_text.style.background = '#fff';
+				_text.style.top = '27mm';
+				_text.style.left = '5mm';
+				_text.style.width = '205.9mm';
+				_text.style.height = '20mm';
+				_text.style.font = font;
+				_text.style.textAlign = 'justify';
+				_text.style.color = '#555';
+				var _administradora = document.createElement('div');
+				_administradora.innerHTML = administradora;
+				_administradora.style.display = 'block';
+				_administradora.style.position = 'relative';
+				_administradora.style.padding = '0mm';
+				_administradora.style.margin = '0mm';
+				_administradora.style.background = 'none';
+				_administradora.style.font = font;
+				_administradora.style.top = '88.7mm';
+				_administradora.style.left = '0mm';
+				_administradora.style.width = '215.9mm';
+				_administradora.style.height = '8mm';
+				_administradora.style.color = '#666';
+				_administradora.style.textAlign = 'center';
+				_administradora.style.borderBottom = '1px dotted #666';
+				container.appendChild(_administradora);
+			}
+
+			function fdp(limite_superior)
+			{
+				var fecha_de_pago = limite_superior;
+				var year = limite_superior.substring(0,4);
+				var month = limite_superior.substring(5,8);
+				var day = limite_superior.substring(8);
+				var _day = parseInt(day,10);
+				var _cal = new Calendar(parseInt(month,10) - 1,parseInt(year,10),_day);
+				_cal.generateHTML();
+				var _div = document.createElement('div');
+				_div.innerHTML = _cal.getHTML();
+				var tables = _div.getElementsByTagName('table');
+				var table = tables[0];
+				var n = 0;
+
+				dance:
+				for(var i=1; i<table.rows.length; i++)//i=0 : year row
+
+					for(var j=0; j<table.rows[i].cells.length; j++)
+
+						if(parseInt(table.rows[i].cells[j].innerHTML) == _day)
+						{
+							n = j;
+							break dance;
+						}
+
+				if(table.rows[1].cells[n].innerHTML == 'D')//D:Domingo
+					fecha_de_pago = _cal.decDay();
+
+				return fecha_de_pago;
+			}
+		</script>
+	</head>
+
+	<body>
+		<script type='text/javascript'>window.opener._recibos_prestamo_cliente();</script>
+	</body>
+</html>

@@ -1,0 +1,703 @@
+<?php //This page is called by a javascript function named view at nomina.js?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+	<head>
+		<style type="text/css">
+			.saltopagina
+			{
+				page-break-after: always;
+			}
+
+		</style>
+		<script type="text/javascript" src="calendar.js"></script>
+		<script type="text/javascript">
+			if( typeof( window.innerWidth ) == 'number' )
+			{ 
+				//Non-IE
+				window_width = window.innerWidth;
+				window_height = window.innerHeight;
+				window.moveTo(0,0);
+				window.resizeTo(screen.availWidth, screen.availHeight);
+			}
+			else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) )
+			{
+				//IE 6+ in 'standards compliant mode'
+				window_width = document.documentElement.clientWidth; 
+				window_height = document.documentElement.clientHeight;
+				window.moveTo(0,0);
+				window.resizeTo(screen.availWidth, screen.availHeight);
+			}
+			else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) )
+			{
+				//IE 4 compatible
+				window_width = document.body.clientWidth;
+				window_height = document.body.clientHeight;
+				window.moveTo(0,0);
+				window.resizeTo(screen.availWidth, screen.availHeight);
+			}
+
+			var font = 'normal normal normal 2.6mm Arial , sans-serif'; //weight, style, variant, size, family name, generic family
+			var title_font = 'bold normal normal 2.6mm Arial , sans-serif';
+
+			function _load(obj)
+			{
+				var fieldset = obj.parentNode;
+				var tabla = fieldset.getAttribute('class');
+				var form = fieldset.parentNode;
+				var fieldsets = form.getElementsByTagName('fieldset');
+
+				for(var i=0; i<fieldsets.length; i++)
+
+					if(fieldsets[i].getAttribute('class') == 'Datos_fieldset')
+					{
+						var datos_fieldset = fieldsets[i];
+						break;
+					}
+
+				var textareas = datos_fieldset.getElementsByTagName('textarea');
+
+				for(var i=0; i<textareas.length; i++)
+
+					if(textareas[i].getAttribute('name') == 'id')
+						var _id = textareas[i].value;
+					else if(textareas[i].getAttribute('name') == 'Administradora')
+						var _administradora = textareas[i].value;
+					else if(textareas[i].getAttribute('name') == 'Limite_inferior_del_periodo')
+						var _limite_inferior = textareas[i].value;
+					else if(textareas[i].getAttribute('name') == 'Limite_superior_del_periodo')
+						var _limite_superior = textareas[i].value;
+
+				if (window.XMLHttpRequest)//Mozilla, Safari...
+				{
+					var xmltables = new XMLHttpRequest();
+
+					if (xmltables.overrideMimeType)
+						xmltables.overrideMimeType('text/xml');
+
+				}
+				else if (window.ActiveXObject)// IE
+				{
+
+					try
+					{
+						var xmltables = new ActiveXObject("Msxml2.XMLHTTP");
+					}
+					catch (e)
+					{
+
+						try
+						{
+							var xmltables = new ActiveXObject("Microsoft.XMLHTTP");
+						}
+						catch (e) {}
+
+					}
+
+				}
+
+				xmltables.onreadystatechange = function()
+				{
+
+					if (xmltables.readyState==4 && xmltables.status==200)
+					{
+
+						var _div = document.createElement('div');
+						_div.innerHTML = xmltables.responseText;
+						var tables = _div.getElementsByTagName('table');
+						var divs = _div.getElementsByTagName('div');
+						var periodo = divs[0].innerHTML;
+						var administradora_rfc = divs[1].innerHTML;
+						var registro_patronal = divs[2].innerHTML;
+						var fecha_de_pago = fdp(_limite_superior);
+
+						if(tables.length == 0)
+							tables = fieldset.getElementsByTagName('table');//if there are not 'sucursales' tables, the table is at the fieldset
+
+						for(var i=0; i<tables.length; i++)
+						{
+							var rows = tables[i].rows;
+
+							for(var j=2; j<rows.length; j++)
+								set_recibo(_id, _administradora, _limite_inferior, _limite_superior, tabla, rows[0].innerHTML, rows[1], rows[j], administradora_rfc, registro_patronal, fecha_de_pago)
+
+						}
+
+					}
+
+				}
+
+				xmltables.open('POST','_get_tables.php?_class=Prestamos_cliente' + '&tabla=' + tabla + '&nomina=' + _id, true);
+				xmltables.setRequestHeader("cache-control","no-cache");
+				xmltables.send('');
+			}
+
+			function set_recibo(_id, administradora, limite_inferior, limite_superior, tabla, sucursal, titles, row, administradora_rfc, registro_patronal, fecha_de_pago)
+			{
+				var cols = row.getElementsByTagName('td');
+				var trabajador_nombre = cols[0].innerHTML;
+				var cantidad = cols[1].innerHTML;
+				alert(cantidad);
+				//body settings
+				document.body.style.padding = '0mm';
+				document.body.style.margin = '0mm';
+				document.body.style.border = 'none';
+				//container
+				var container = document.createElement('div');
+				container.style.display = 'block';
+				container.style.position = 'relative';
+				container.style.padding = '0mm';
+				container.style.margin = '0mm';
+				container.style.border = 'none';
+				container.style.width = '215.9mm';
+				container.style.height = '139.7mm';
+				container.style.overflow = 'hidden';
+				document.body.appendChild(container);
+				//logo
+				var image = document.createElement('img');
+				container.appendChild(image);
+				image.style.display = 'block';
+				image.style.position = 'relative';
+				image.style.top = '5mm';
+				image.style.left = '5mm';
+				image.style.width = '56mm';
+				image.style.height = '10mm';
+				image.style.padding = '0mm';
+				image.style.margin = '0mm';
+				image.style.border = 'none';
+				image.style.background = 'none';
+				image.src = 'images/logo_blanco.jpg';
+				var images = document.getElementsByTagName('IMG');
+
+				if(images.length % 2 == 0)
+					var _break = true;
+				else
+					var _break = false;
+
+				//title
+				var _title = document.createElement('span');
+				container.appendChild(_title);
+				_title.innerHTML = 'Comprobante de pago';
+				_title.style.display = 'block';
+				_title.style.position = 'relative';
+				_title.style.width = '205.9mm';
+				_title.style.height = '9mm';
+				_title.style.top = '10mm';
+				_title.style.left = '5mm';
+				_title.style.padding = '0mm';
+				_title.style.margin = '0mm';
+				_title.style.border = 'none';
+				_title.style.background = '#fff';
+				_title.style.font = title_font;
+				_title.style.textAlign = 'center';
+				_title.style.color = '#555';
+				//"texto"
+				var _text = document.createElement('span');
+				container.appendChild(_text);
+				_text.innerHTML = 'Recibí de ' + trabajador_nombre + ' la cantidad de $' + _format(cantidad) + ' ' + covertirNumLetras(cantidad) + ' por concepto de abono a cuenta, quedando pendiente el pago de la candidad de sepa la bola.';
+				_text.style.display = 'block';
+				_text.style.position = 'relative';
+				_text.style.padding = '0mm';
+				_text.style.margin = '0mm';
+				_text.style.border = 'none';
+				_text.style.background = '#fff';
+				_text.style.top = '15mm';
+				_text.style.left = '5mm';
+				_text.style.width = '205.9mm';
+				_text.style.height = '20mm';
+				_text.style.font = font;
+				_text.style.textAlign = 'justify';
+				_text.style.color = '#555';
+				var _administradora = document.createElement('div');
+				_administradora.innerHTML = administradora;
+				_administradora.style.display = 'block';
+				_administradora.style.position = 'relative';
+				_administradora.style.padding = '0mm';
+				_administradora.style.margin = '0mm';
+				_administradora.style.background = 'none';
+				_administradora.style.font = font;
+				_administradora.style.top = '76.7mm';
+				_administradora.style.left = '0mm';
+				_administradora.style.width = '215.9mm';
+				_administradora.style.height = '8mm';
+				_administradora.style.color = '#666';
+				_administradora.style.textAlign = 'center';
+				_administradora.style.borderBottom = '1px dotted #666';
+				container.appendChild(_administradora);
+*/			}
+
+			function _format(data)
+			{
+				_data = parseFloat(data);
+
+				if(!isNaN(_data) && _data != 'Infinity')
+				{
+					var parts = data.split('.');
+					var _int = parts[0];
+					var _dec = parts[1];
+					var digits = _int.split('');
+					var new_int = '';
+
+					for(var i=digits.length - 1, j=1; i>=0; i--, j++)
+
+						if(j % 4 == 0)
+							new_int = digits[i] + ',' + new_int;
+						else
+							new_int = digits[i] + new_int;
+
+					if(_dec)
+						return (new_int + '.' + _dec);
+					else
+						return new_int;
+				}
+				else
+					return data;
+
+			}
+
+			function ndp(periodo,limite_superior)
+			{
+				var year = limite_superior.substring(0,4);
+				var month = limite_superior.substring(5,8);
+				var day = limite_superior.substring(8);
+				var _month = parseInt(month,10);
+				var _cal = new Calendar(0,year);//2011-01-...
+				var n = 0;
+
+				for(var i=0; i<_month - 1; i++)
+				{
+					n += _cal.getMonthLen();
+					_cal.incMonth();
+				}
+
+				n += parseInt(day,10);
+
+				if(periodo == 'Semana')
+					n = Math.round(n / 7);
+
+				return n;
+			}
+
+			function fdp(limite_superior)
+			{
+				var fecha_de_pago = limite_superior;
+				var year = limite_superior.substring(0,4);
+				var month = limite_superior.substring(5,8);
+				var day = limite_superior.substring(8);
+				var _day = parseInt(day,10);
+				var _cal = new Calendar(parseInt(month,10) - 1,parseInt(year,10),_day);
+				_cal.generateHTML();
+				var _div = document.createElement('div');
+				_div.innerHTML = _cal.getHTML();
+				var tables = _div.getElementsByTagName('table');
+				var table = tables[0];
+				var n = 0;
+
+				dance:
+				for(var i=1; i<table.rows.length; i++)//i=0 : year row
+
+					for(var j=0; j<table.rows[i].cells.length; j++)
+
+						if(parseInt(table.rows[i].cells[j].innerHTML) == _day)
+						{
+							n = j;
+							break dance;
+						}
+
+				if(table.rows[1].cells[n].innerHTML == 'D')//D:Domingo
+					fecha_de_pago = _cal.decDay();
+
+				return fecha_de_pago;
+			}
+
+			function total(val)
+			{
+				var total = 0;
+				values = val.split(',');
+
+				for(var l=0; l<values.length; l++)
+				{
+					var data = values[l].split('</span>');
+
+					if(data.length > 1)
+						total += parseFloat(data[1].replace('<span>',''));
+					else
+					{
+
+						if(data[0] != '')
+							total += parseFloat(data[0].replace('<span>',''));
+
+					}
+
+				}
+
+				return total.toFixed(2);
+			}
+//****************************************************************************************************************************
+// Función modulo, regresa el residuo de una división 
+function mod(dividendo , divisor) 
+{ 
+  resDiv = dividendo / divisor ;  
+  parteEnt = Math.floor(resDiv);            // Obtiene la parte Entera de resDiv 
+  parteFrac = resDiv - parteEnt ;      // Obtiene la parte Fraccionaria de la división
+  modulo = Math.round(parteFrac * divisor);  // Regresa la parte fraccionaria * la división (modulo)
+  return modulo;
+} // Fin de función mod
+
+// Función ObtenerParteEntDiv, regresa la parte entera de una división
+function ObtenerParteEntDiv(dividendo , divisor) 
+{ 
+  resDiv = dividendo / divisor ;  
+  parteEntDiv = Math.floor(resDiv); 
+  return parteEntDiv; 
+} // Fin de función ObtenerParteEntDiv
+
+// function fraction_part, regresa la parte Fraccionaria de una cantidad
+function fraction_part(dividendo , divisor) 
+{ 
+  resDiv = dividendo / divisor ;  
+  f_part = Math.floor(resDiv); 
+  return f_part; 
+} // Fin de función fraction_part
+
+
+// function string_literal conversion is the core of this program 
+// converts numbers to spanish strings, handling the general special 
+// cases in spanish language. 
+function string_literal_conversion(number)
+{   
+   // first, divide your number in hundreds, tens and units, cascadig 
+   // trough subsequent divisions, using the modulus of each division 
+   // for the next. 
+
+   centenas = ObtenerParteEntDiv(number, 100);
+   
+   number = mod(number, 100); 
+
+   decenas = ObtenerParteEntDiv(number, 10);
+   number = mod(number, 10); 
+
+   unidades = ObtenerParteEntDiv(number, 1); 
+   number = mod(number, 1);  
+   string_hundreds="";
+   string_tens="";
+   string_units="";
+   // cascade trough hundreds. This will convert the hundreds part to 
+   // their corresponding string in spanish.
+   if(centenas == 1){
+      string_hundreds = "ciento ";
+   } 
+   
+   
+   if(centenas == 2){
+      string_hundreds = "doscientos ";
+   }
+    
+   if(centenas == 3){
+      string_hundreds = "trescientos ";
+   } 
+   
+   if(centenas == 4){
+      string_hundreds = "cuatrocientos ";
+   } 
+   
+   if(centenas == 5){
+      string_hundreds = "quinientos ";
+   } 
+   
+   if(centenas == 6){
+      string_hundreds = "seiscientos ";
+   } 
+   
+   if(centenas == 7){
+      string_hundreds = "setecientos ";
+   } 
+   
+   if(centenas == 8){
+      string_hundreds = "ochocientos ";
+   } 
+   
+   if(centenas == 9){
+      string_hundreds = "novecientos ";
+   } 
+   
+ // end switch hundreds 
+
+   // casgade trough tens. This will convert the tens part to corresponding 
+   // strings in spanish. Note, however that the strings between 11 and 19 
+   // are all special cases. Also 21-29 is a special case in spanish. 
+   if(decenas == 1){
+      //Special case, depends on units for each conversion
+      if(unidades == 1){
+         string_tens = "once";
+      }
+      
+      if(unidades == 2){
+         string_tens = "doce";
+      }
+      
+      if(unidades == 3){
+         string_tens = "trece";
+      }
+      
+      if(unidades == 4){
+         string_tens = "catorce";
+      }
+      
+      if(unidades == 5){
+         string_tens = "quince";
+      }
+      
+      if(unidades == 6){
+         string_tens = "dieciseis";
+      }
+      
+      if(unidades == 7){
+         string_tens = "diecisiete";
+      }
+      
+      if(unidades == 8){
+         string_tens = "dieciocho";
+      }
+      
+      if(unidades == 9){
+         string_tens = "diecinueve";
+      }
+   } 
+   //alert("STRING_TENS ="+string_tens);
+   
+   if(decenas == 2){
+      string_tens = "veinti";
+   }
+   if(decenas == 3){
+      string_tens = "treinta";
+   }
+   if(decenas == 4){
+      string_tens = "cuarenta";
+   }
+   if(decenas == 5){
+      string_tens = "cincuenta";
+   }
+   if(decenas == 6){
+      string_tens = "sesenta";
+   }
+   if(decenas == 7){
+      string_tens = "setenta";
+   }
+   if(decenas == 8){
+      string_tens = "ochenta";
+   }
+   if(decenas == 9){
+      string_tens = "noventa";
+   }
+   
+    // Fin de swicth decenas
+
+
+   // cascades trough units, This will convert the units part to corresponding 
+   // strings in spanish. Note however that a check is being made to see wether 
+   // the special cases 11-19 were used. In that case, the whole conversion of 
+   // individual units is ignored since it was already made in the tens cascade. 
+
+   if (decenas == 1) 
+   { 
+      string_units="";  // empties the units check, since it has alredy been handled on the tens switch 
+   } 
+   else 
+   { 
+      if(unidades == 1){
+         string_units = "un";
+      }
+      if(unidades == 2){
+         string_units = "dos";
+      }
+      if(unidades == 3){
+         string_units = "tres";
+      }
+      if(unidades == 4){
+         string_units = "cuatro";
+      }
+      if(unidades == 5){
+         string_units = "cinco";
+      }
+      if(unidades == 6){
+         string_units = "seis";
+      }
+      if(unidades == 7){
+         string_units = "siete";
+      }
+      if(unidades == 8){
+         string_units = "ocho";
+      }
+      if(unidades == 9){
+         string_units = "nueve";
+      }
+       // end switch units 
+   } // end if-then-else 
+   
+
+//final special cases. This conditions will handle the special cases which 
+//are not as general as the ones in the cascades. Basically four: 
+
+// when you've got 100, you dont' say 'ciento' you say 'cien' 
+// 'ciento' is used only for [101 >= number > 199] 
+if (centenas == 1 && decenas == 0 && unidades == 0) 
+{ 
+   string_hundreds = "cien " ; 
+}  
+
+// when you've got 10, you don't say any of the 11-19 special 
+// cases.. just say 'diez' 
+if (decenas == 1 && unidades ==0) 
+{ 
+   string_tens = "diez " ; 
+} 
+
+// when you've got 20, you don't say 'veinti', which is used 
+// only for [21 >= number > 29] 
+if (decenas == 2 && unidades ==0) 
+{ 
+  string_tens = "veinte " ; 
+} 
+
+// for numbers >= 30, you don't use a single word such as veintiuno 
+// (twenty one), you must add 'y' (and), and use two words. v.gr 31 
+// 'treinta y uno' (thirty and one) 
+if (decenas >=3 && unidades >=1) 
+{ 
+   string_tens = string_tens+" y "; 
+} 
+
+// this line gathers all the hundreds, tens and units into the final string 
+// and returns it as the function value.
+final_string = string_hundreds+string_tens+string_units;
+
+
+return final_string ; 
+
+} //end of function string_literal_conversion()================================ 
+
+// handle some external special cases. Specially the millions, thousands 
+// and hundreds descriptors. Since the same rules apply to all number triads 
+// descriptions are handled outside the string conversion function, so it can 
+// be re used for each triad. 
+
+
+function covertirNumLetras(number)
+{
+   
+  //number = number_format (number, 2);
+   number1=number;
+   //settype (number, "integer");
+   cent = number1.split('.');   
+   centavos = cent[1];
+   number = cent[0];
+   
+   if (centavos == 0 || centavos == undefined){
+   centavos = "00";}
+
+   if (number == 0 || number == "") 
+   { // if amount = 0, then forget all about conversions, 
+      centenas_final_string=" cero "; // amount is zero (cero). handle it externally, to 
+      // function breakdown 
+  } 
+   else 
+   { 
+   
+     millions  = ObtenerParteEntDiv(number, 1000000); // first, send the millions to the string 
+      number = mod(number, 1000000);           // conversion function 
+      
+     if (millions != 0)
+      {                      
+      // This condition handles the plural case 
+         if (millions == 1) 
+         {              // if only 1, use 'millon' (million). if 
+            descriptor= " millon ";  // > than 1, use 'millones' (millions) as 
+            } 
+         else 
+         {                           // a descriptor for this triad. 
+              descriptor = " millones "; 
+            } 
+      } 
+      else 
+      {    
+         descriptor = " ";                 // if 0 million then use no descriptor. 
+      } 
+      millions_final_string = string_literal_conversion(millions)+descriptor; 
+          
+      
+      thousands = ObtenerParteEntDiv(number, 1000);  // now, send the thousands to the string 
+        number = mod(number, 1000);            // conversion function. 
+      //print "Th:".thousands;
+     if (thousands != 1) 
+      {                   // This condition eliminates the descriptor 
+         thousands_final_string =string_literal_conversion(thousands) + " mil "; 
+       //  descriptor = " mil ";          // if there are no thousands on the amount 
+      } 
+      if (thousands == 1)
+      {
+         thousands_final_string = " mil "; 
+     }
+      if (thousands < 1) 
+      { 
+         thousands_final_string = " "; 
+      } 
+  
+      // this will handle numbers between 1 and 999 which 
+      // need no descriptor whatsoever. 
+
+     centenas  = number;                     
+      centenas_final_string = string_literal_conversion(centenas) ; 
+      
+   } //end if (number ==0) 
+
+   /*if (ereg("un",centenas_final_string))
+   {
+     centenas_final_string = ereg_replace("","o",centenas_final_string); 
+   }*/
+   //finally, print the output. 
+
+   /* Concatena los millones, miles y cientos*/
+   cad = millions_final_string+thousands_final_string+centenas_final_string; 
+   
+   /* Convierte la cadena a Mayúsculas*/
+   cad = cad.toUpperCase();       
+
+   if (centavos.length>2)
+   {   
+      if(centavos.substring(2,3)>= 5){
+         centavos = centavos.substring(0,1)+(parseInt(centavos.substring(1,2))+1).toString();
+      }   else{
+        centavos = centavos.substring(0,2);
+       }
+   }
+
+   /* Concatena a los centavos la cadena "/100" */
+   if (centavos.length==1)
+   {
+      centavos = centavos+"0";
+   }
+   centavos = centavos+ "/100"; 
+
+
+   /* Asigna el tipo de moneda, para 1 = PESO, para distinto de 1 = PESOS*/
+   if (number == 1)
+   {
+      moneda = " PESO ";  
+   }
+   else
+   {
+      moneda = " PESOS ";  
+   }
+   /* Regresa el número en cadena entre paréntesis y con tipo de moneda y la fase M.N.*/
+   return '(' + cad + moneda + centavos + ' MN )';
+}
+
+			//****************************************************************************************************************************
+		</script>
+	</head>
+
+	<body>
+		<script type='text/javascript'>window.opener._pensiones();</script>
+	</body>
+</html>

@@ -1,0 +1,19 @@
+<?php
+	//This page is called by an AJAX function at some concept's .js and gets some values from a table Trabajador from database multinomina
+
+	include_once('connection.php');
+
+	if(!isset($_SESSION))
+		session_start();
+
+	$conn = new Connection();
+
+	if($_GET['dbtable'] == 'Empresa_administradora')
+		$result = $conn->query("SELECT Socio FROM Empresa_administradora_Socio WHERE Empresa_administradora = '{$_GET['id']}'");
+
+	if(isset($result))
+
+		while(list($representante) = $conn->fetchRow($result))
+			echo "$representante>>";
+
+?>

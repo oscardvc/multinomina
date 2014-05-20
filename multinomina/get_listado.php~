@@ -1,0 +1,44 @@
+<?php
+	//This page is called by an AJAX function at listado_de_trabajadores_por_cliente.php
+	include_once('connection.php');
+	$conn = new Connection('multinomina');
+	$values = explode('/',$_POST['Cliente']);
+	$cliente = $values[0];
+	$limite_inferior = $_POST['limite_inferior_del_periodo'];
+	$limite_superior = $_POST['limite_superior_del_periodo'];
+	$result = $conn->query("SELECT Trabajador.RFC,Trabajador.Nombre, Trabajador.Domicilio_particular, Trabajador.Edad, Trabajador.Estado_civil, Trabajador.Numero_IMSS, Trabajador.Jornada, Trabajador.Tipo, Trabajador.Lugar_de_nacimiento, Trabajador.Puesto, Trabajador.Sexo, Trabajador.Numero_IFE, Trabajador.Fecha_de_ingreso_con_la_administradora FROM (Servicio LEFT JOIN Servicio_Trabajador ON Servicio.id = Servicio_Trabajador.Servicio) LEFT JOIN  Trabajador ON Servicio_Trabajador.Trabajador = Trabajador.RFC WHERE Servicio.Cliente = '$cliente'");
+	$txt = "<table><tr class = 'title'><td colspan = 14>Listado de trabajadores de la empresa {$values[1]}</td></tr><tr class = 'titles'><td>Nombre</td><td>Domicilio</td><td>Edad</td><td>Estado civil</td><td>Número IMSS</td><td>Jornada</td><td>Tipo</td><td>Lugar de nacimiento</td><td>Puesto</td><td>Sexo</td><td>Número IFE</td><td>Fecha de ingreso con la administradora</td><td>SDI</td><td>Sueldo</td></tr>";
+
+	if(isset($result))
+	{
+
+		while(list($rfc,$nombre,$domicilio,$edad,$estado_civil,$numero_imss,$jornada,$tipo,$lugar_de_nacimiento,$puesto,$sexo,$numero_ife,$fecha_de_ingreso_con_la_administradora) = $conn->fetchRow($result))
+		{
+			$txt .= "<tr class = 'option'><td>$nombre</td><td>$domicilio</td><td>$edad</td><td>$estado_civil</td><td>$numero_imss</td><td>$jornada</td><td>$tipo</td><td>$lugar_de_nacimiento</td><td>$puesto</td><td>$sexo</td><td>$numero_ife</td><td>$fecha_de_ingreso_con_la_administradora</td>";
+
+			if($tipo == 'Asalariado')
+			{
+				$result1 = $conn->query("SELECT cuotas_IMSS.Salario_diario_integrado FROM Nomina LEFT JOIN cuotas_IMSS ON Nomina.id = cuotas_IMSS.Nomina WHERE DATEDIFF('$limite_inferior',Nomina.Limite_inferior_del_periodo) >= 0 AND DATEDIFF(Nomina.Limite_superior_del_periodo, '$limite_superior') >= 0 AND cuotas_IMSS.Trabajador = '$rfc'");
+				list($sdi) = $conn->fetchRow($result1);
+				$txt .= "<td>$sdi</td>";
+				$conn->freeResult($result1);
+				$result1 = $conn->query("SELECT Sueldo FROM Nomina LEFT JOIN nomina_asalariados ON Nomina.id = nomina_asalariados.Nomina WHERE DATEDIFF('$limite_inferior',Nomina.Limite_inferior_del_periodo) >= 0 AND DATEDIFF(Nomina.Limite_superior_del_periodo, '$limite_superior') >= 0 AND  nomina_asalariados.Trabajador = '$rfc'");
+				list($sueldo) = $conn->fetchRow($result1);
+				$txt .= "<td>$sueldo</td></tr>";
+				$conn->freeResult($result1);
+			}
+			else
+			{
+				$txt .= "<td></td>";
+				$result1 = $conn->query("SELECT Sueldo FROM Nomina LEFT JOIN nomina_asimilables ON Nomina.id = nomina_asimilables.Nomina WHERE DATEDIFF('$limite_inferior',Nomina.Limite_inferior_del_periodo) >= 0 AND DATEDIFF(Nomina.Limite_superior_del_periodo, '$limite_superior') >= 0 AND  nomina_asimilables.Trabajador = '$rfc'");
+				list($sueldo) = $conn->fetchRow($result1);
+				$txt .= "<td>$sueldo</td></tr>";
+				$conn->freeResult($result1);
+			}
+
+		}
+
+	}
+
+	echo $txt;
+?>

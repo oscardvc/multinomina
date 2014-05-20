@@ -1,0 +1,64 @@
+<?php
+	include_once('connection.php');
+
+//Class Actividad definition
+
+	class Actividad
+	{
+		//class properties
+		//data
+		private $Usuario;
+		private $Operacion;
+		private $Dato;
+		private $Identificadores;
+		private $Hora_y_fecha;
+		//database connection
+		private $conn;
+
+		//class methods
+		public function __construct()
+		{
+
+			if(!isset($_SESSION))
+				session_start();
+
+			date_default_timezone_set('America/Mexico_City');
+			$this->set('Usuario',$_SESSION['usuario']);
+			$fecha = new DateTime();
+			$this->set('Hora_y_fecha',$fecha->format('Y-m-d H:i:s'));
+			$this->conn = new Connection();
+		}
+
+		public function __destruct()
+		{
+		}
+
+		public function set($name, $value) //sets property named $name with value $value
+		{
+			$this->$name = $value;
+		}
+
+		public function get($name)//gets property named $name
+		{
+			return $this->$name;
+		}
+
+		public function showProperties()//prints properties values
+		{
+
+			foreach($this as $key => $value)
+
+				if($key != 'conn')
+					echo "$key = $value <br />";
+
+		}
+
+		public function dbStore()
+		{
+			$this->conn->query("INSERT INTO Actividad(Usuario, Cuenta, Operacion, Dato, Identificadores, Hora_y_fecha) VALUES ('{$this->Usuario}', '{$this->Cuenta}', '{$this->Operacion}', '{$this->Dato}', '{$this->Identificadores}', '{$this->Hora_y_fecha}')");
+			return true;
+		}
+
+	}
+
+?>

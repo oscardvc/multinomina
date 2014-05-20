@@ -1,0 +1,23 @@
+<?php
+	//This page is called by an AJAX function at some concept's .js and gets some values from a table Apoderado from database multinomina
+
+	include_once('connection.php');
+	$conn = new Connection('multinomina');
+
+	if($_GET['dbtable'] == 'Instrumento_notarial')
+		$result = $conn->query("SELECT Empresa_administradora FROM Instrumento_notarial WHERE Numero_de_instrumento = '{$_GET['id']}'");
+	elseif($_GET['dbtable'] == 'Socio')
+		$result = $conn->query("SELECT Empresa_administradora FROM Empresa_administradora_Socio WHERE Socio = '{$_GET['id']}'");
+	elseif($_GET['dbtable'] == 'Apoderado')
+		$result = $conn->query("SELECT Empresa_administradora FROM Empresa_administradora_Apoderado WHERE Apoderado = '{$_GET['id']}'");
+	elseif($_GET['dbtable'] == 'Archivo_digital')
+		$result = $conn->query("SELECT Empresa_administradora FROM Archivo_digital WHERE Nombre = '{$_GET['id']}'");
+	elseif($_GET['dbtable'] == 'Establecimiento')
+		$result = $conn->query("SELECT Empresa_administradora FROM Establecimiento WHERE Domicilio = '{$_GET['id']}'");
+
+	if(isset($result))
+
+		while(list($administradora) = $conn->fetchRow($result))
+			echo "$administradora,";
+
+?>

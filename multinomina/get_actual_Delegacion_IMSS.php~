@@ -1,0 +1,15 @@
+<?php
+	//This page is called by an AJAX function at some concept's .js and gets some values from a table Establecimiento
+
+	include_once('connection.php');
+	$conn = new Connection();
+
+	if($_GET['dbtable'] == 'Subdelegacion_IMSS')
+		$result = $conn->query("SELECT Delegacion_IMSS FROM Subdelegacion_IMSS WHERE Nombre = '{$_GET['id']}' AND Nombre = '{$_GET['id']}' AND Delegacion_IMSS IS NOT NULL AND Cuenta = '{$_SESSION['cuenta']}'");
+
+	if(isset($result))
+
+		while(list($delegacion) = $conn->fetchRow($result))
+			echo "$delegacion>>";
+
+?>

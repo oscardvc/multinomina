@@ -1,0 +1,15 @@
+<?php
+	//This page is called by an AJAX function at some concept's .js and gets some values from a table Establecimiento
+
+	include_once('connection.php');
+	$conn = new Connection('multinomina');
+
+	if($_GET['dbtable'] == 'Registro_patronal')
+		$result = $conn->query("SELECT Establecimiento FROM Registro_patronal WHERE Numero = '{$_GET['id']}' AND Establecimiento IS NOT NULL");
+
+	if(isset($result))
+
+		while(list($establecimiento) = $conn->fetchRow($result))
+			echo "$establecimiento,";
+
+?>

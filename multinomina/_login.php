@@ -1,0 +1,21 @@
+<?php
+	include_once('connection.php');
+	$conn = new Connection();
+	$usuario = $_POST['usuario'];
+	$cuenta = $_POST['cuenta'];
+	$contrasena = $_POST['contrasena'];
+	$result = $conn->query("SELECT Nombre FROM Usuario WHERE Nombre = '$usuario' AND Cuenta = '$cuenta' AND Contrasena = '$contrasena'");
+	$flag = $conn->num_rows($result);
+
+	if($flag == 1)
+	{
+		session_start();
+		$_SESSION['usuario'] = $usuario;
+		$_SESSION['cuenta'] = $cuenta;
+		$_SESSION['contrasena'] = $contrasena;
+		echo "access";
+	}
+	else
+		echo "denied";
+
+?>

@@ -1,0 +1,15 @@
+<?php
+	//This page is called by an AJAX function at some concept's .js and gets some values from a table Comisionista from database multinomina
+
+	include_once('connection.php');
+	$conn = new Connection('multinomina');
+
+	if($_GET['dbtable'] == 'Cliente')
+		$result = $conn->query("SELECT Comisionista FROM Cliente WHERE RFC = '{$_GET['id']}'");
+
+	if(isset($result))
+
+		while(list($comisionista) = $conn->fetchRow($result))
+			echo "$comisionista,";
+
+?>

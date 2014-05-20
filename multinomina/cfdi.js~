@@ -1,0 +1,65 @@
+function send_cfdi(obj)
+{
+	var textareas = obj.parentNode.getElementsByTagName('textarea');
+
+	for(var i=0; i<textareas.length; i++)
+
+		if(textareas[i].getAttribute('name') == 'id')
+		{
+			var id = textareas[i].value;
+			break;
+		}
+
+	if (window.XMLHttpRequest)//Mozilla, Safari...
+	{
+		var xmlSendCFDI = new XMLHttpRequest();
+
+		if (xmlSendCFDI.overrideMimeType)
+		{
+			xmlSendCFDI.overrideMimeType('text/xml');
+		}
+
+	}
+	else if (window.ActiveXObject)// IE
+	{
+
+		try
+		{
+			var xmlSendCFDI = new ActiveXObject("Msxml2.XMLHTTP");
+		}
+		catch (e)
+		{
+
+			try
+			{
+				var xmlSendCFDI = new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			catch (e) {}
+
+		}
+
+	}
+
+	xmlSendCFDI.onreadystatechange = function()
+	{
+
+		if (xmlSendCFDI.readyState==4 && xmlSendCFDI.status==200)
+		{
+
+			if(xmlSendCFDI.responseText == '')
+				_alert('CFDI Enviado');
+			else
+				_alert(xmlSendCFDI.responseText);
+
+		}
+
+	}
+
+	var params = 'id=' + id;
+	xmlSendCFDI.open('POST','send_cfdi.php', true);
+	xmlSendCFDI.setRequestHeader("Content-type", "application/x-www-form-urlencoded; charset=UTF-8");
+	xmlSendCFDI.setRequestHeader("cache-control","no-cache");
+	xmlSendCFDI.setRequestHeader("Content-length", params.length);
+	xmlSendCFDI.setRequestHeader("Connection", "close");
+	xmlSendCFDI.send(params);
+}

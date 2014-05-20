@@ -1,0 +1,60 @@
+<?php
+/*Class Conection definition*/
+
+	class Connection
+	{
+		private $link;
+    
+		public function __construct($db = 'multinomina')
+		{
+			$this->link = mysqli_connect("localhost", "root", "yopxuv5", "$db");
+			//$this->link = mysql_connect('localhost', 'root', 'yopxuv5') or die(mysql_error());
+			//mysql_select_db($db, $this->link);
+		}
+
+		public function __destruct()
+		{
+			mysqli_close($this->link);
+		}
+
+		public function query($q,$mode = 'SINGLE')
+		{
+
+			if($mode == 'SINGLE')
+				return mysqli_query($this->link,$q);//or die(mysql_error());
+			else //mode = 'MULTI'
+				return mysqli_multi_query($this->link,$q);
+
+		}
+
+		public function fetchRow($result,$mode = 'NONE')
+		{
+			if($mode == 'NONE')
+				return mysqli_fetch_row($result);
+			elseif($mode == 'ASSOC')
+				return mysqli_fetch_assoc($result);
+
+		}
+
+		public function freeResult($result)
+		{
+			mysqli_free_result($result);
+		}
+
+		public function data_seek($resource,$position)
+		{
+			mysqli_data_seek($resource,$position);
+		}
+
+		public function info()
+		{
+			return mysqli_info($this->link);
+		}
+
+		public function num_rows($result)
+		{
+			return mysqli_num_rows($result);
+		}
+    
+	}
+?>

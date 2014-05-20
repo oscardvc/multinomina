@@ -1,0 +1,10 @@
+<html>
+	<head>
+		<title>Delegación IMSS</title>
+		<LINK href="style.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="manual.js"></script>
+	</head>
+	<body>
+		<span class = "_title">Índice</span><br/><br/>
+	</body>
+</html>

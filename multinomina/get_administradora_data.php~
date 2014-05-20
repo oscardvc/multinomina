@@ -1,0 +1,34 @@
+<?php
+	include_once('connection.php');
+	$conn = new Connection('multinomina');
+	$val = $_POST['val'];
+	$result = $conn->query("SELECT RFC FROM Empresa_administradora WHERE Razon_social = '$val'");
+	$rfcs = array();
+	$i = 0;
+	//cliente rfc
+	$txt = '<select class = "cliente_rfc_select">';
+
+	while(list($rfc) = $conn->fetchRow($result))
+	{
+		$txt .= "<option>$rfc</option>";
+		$rfcs[$i] = $rfc;
+		$i ++;
+	}
+
+	$txt .= "</select>";
+	$len = count($rfcs);
+	//servicio
+	$txt .= '<select class = "servicio_select">';
+
+	for($i=0; $i<$len; $i++)
+	{
+		$result = $conn->query("SELECT Servicio.id, Servicio.Tipo_de_servicio, Servicio.Periodicidad_de_la_nomina, Cliente.Nombre FROM Servicio LEFT JOIN Cliente ON Servicio.Cliente = Cliente.RFC WHERE Cliente.RFC = '{$rfcs[$i]}'");
+
+		while(list($id,$tipo,$periodicidad,$cliente) = $conn->fetchRow($result))
+			$txt .= "<option>$id/$tipo/$periodicidad/$cliente</option>";
+
+	}
+
+	$txt .= "</select>";
+	echo $txt;
+?>

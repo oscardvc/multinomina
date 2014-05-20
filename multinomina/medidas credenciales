@@ -1,0 +1,105 @@
+::relative positions::
+
+-credential
+	width = 54mm
+	height = 86mm
+
+*Front
+
+-Logo
+	width = 46mm
+	height = 15mm
+	normal_top = 0mm//sum of all heights of elements above
+	absolut_top = 2mm// height where you wanna place it
+	top = 2mm//difference between normal and absolut
+	left = 4mm
+
+-Photo
+	width = 25mm
+	height = 30mm
+	normal_top = 15mm
+	absolut_top = 19mm
+	top = 4mm
+	left = centered
+
+-Name
+	width = 50mm
+	height = 6mm
+	normal_top = 45mm
+	absolut_top = 51mm
+	top = 6mm
+	left = centered
+
+-IMSS
+	width = 50mm
+	height = 6mm
+	normal_top = 51mm
+	absolut_top = 59mm
+	top = 8mm
+	left = centered
+
+-authorization
+	width = 40mm
+	height = 4mm
+	normal_top = 57mm
+	absolut_top = 77mm
+	top = 20mm
+	left = centered
+
+*Back
+
+-birth date
+	width = 50mm
+	height = 3mm
+	normal_top = 0mm//sum of all heights of elements above
+	absolut_top = 2mm// height where you wanna place it
+	top = 2mm//difference between normal and absolut
+	left = centered
+
+-blood type
+	width = 50mm
+	height = 3mm
+	normal_top = 3mm
+	absolut_top = 7mm
+	top = 4mm
+	left = centered
+
+-key
+	width = 50mm
+	height = 3mm
+	normal_top = 6mm
+	absolut_top = 12mm
+	top = 6mm
+	left = centered
+
+-worker address
+	width = 50mm
+	height = 18mm
+	normal_top = 9mm
+	absolut_top = 17mm
+	top = 8mm
+	left = centered
+
+-sign
+	width = 50mm
+	height = 15mm
+	normal_top = 27mm
+	absolut_top = 37mm
+	top = 10mm
+	left = centered
+
+-sign label
+	width = 40mm
+	height = 3mm
+	normal_top = 41mm
+	absolut_top = 53mm
+	top = 11mm
+	left = centered
+
+-Company address
+	width = 54mm
+	height = 27mm
+	normal_top = 45mm
+	absolut_top = 59mm
+	top = 14mm
+	left = 0

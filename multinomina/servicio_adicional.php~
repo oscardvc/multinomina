@@ -1,0 +1,139 @@
+<?php
+	include_once('connection.php');
+
+//Class Servicio_adicional definition
+
+	class Servicio_adicional
+	{
+		//class properties
+		//data
+		private $Nombre;
+		private $Monto;
+		private $Condicion;
+		private $id;
+		private $Servicio;
+		//database connection
+		private $conn;
+
+		//class methods
+		public function __construct()
+		{
+
+			if(!isset($_SESSION))
+				session_start();
+
+			$this->conn = new Connection();
+		}
+
+		public function __destruct()
+		{
+		}
+
+		public function setID()
+		{
+			$result = $this->conn->query("SELECT id FROM Servicio_adicional WHERE Servicio = '{$this->Servicio}' AND Cuenta = '{$_SESSION['cuenta']}' ORDER BY id DESC LIMIT 1");
+			$row = $this->conn->fetchRow($result);
+
+			if(isset($row))
+			{
+				list($this->id) = $row;
+				$this->id ++;
+			}
+			else
+				$this->id = 1;
+
+		}
+
+		public function set($name, $value) //sets property named $name with value $value
+		{
+			$this->$name = $value;
+		}
+
+		public function get($name)//gets property named $name
+		{
+			return $this->$name;
+		}
+
+		public function setFromBrowser()//sets properties from superglobal $_POST
+		{
+
+			foreach($this as $key => $value)
+
+				if(isset($_POST["$key"]))
+					$this->$key = trim($_POST["$key"]);
+
+		}
+
+		public function showProperties()//prints properties values
+		{
+
+			foreach($this as $key => $value)
+
+				if($key != 'conn')
+					echo "$key = $value <br />";
+
+		}
+
+		public function setFromDb()//sets properties from data base, but $id and $Servicio has to be set before
+		{
+			$result = $this->conn->query("SELECT * FROM Servicio_adicional WHERE id = '{$this->id}' AND Servicio = '{$this->Servicio}' AND Cuenta = '{$_SESSION['cuenta']}'");
+
+			while($row = $this->conn->fetchRow($result,'ASSOC'))
+
+				foreach($row as $key => $value)
+
+					if($key != 'Cuenta')
+						$this->$key = $value;
+
+		}
+
+		public function dbStore($update)//if $update is false it stores a new database register with $this' properties. if $update is true it updates all database registers (professedly one) with $this' id and Servicio
+		{
+
+			if($update == 'false')
+			{
+				$this->setID();
+				$this->conn->query("INSERT INTO Servicio_adicional(id, Servicio, Cuenta) VALUES ('{$this->id}', '{$this->Servicio}', '{$_SESSION['cuenta']}')");
+			}
+
+			foreach($this as $key => $value)
+
+				if(isset($this->$key) && $key != 'conn' && $key != 'id')
+					$this->conn->query("UPDATE Servicio_adicional SET $key  = '$value' WHERE id = '{$this->id}' AND Servicio = '{$this->Servicio}' AND Cuenta = '{$_SESSION['cuenta']}'");
+
+			return true;
+		}
+
+		public function dbDelete()//delete this entity from database but id and Servicio have to be set before
+		{
+
+			if(isset($this->id) && isset($this->Servicio))
+				$this->conn->query("DELETE FROM Servicio_adicional WHERE id = '{$this->id}' AND Servicio = '{$this->Servicio}'");
+
+		}
+
+		public function draw($act)//draws $this Servicio_adicional. if $act == 'EDIT' 'ADD' the fields can be edited and the form is submitted. if $act == 'DRAW' the fields can't be edited and the form is not submitted
+		{
+			echo "<div onclick = \"show('Datos_fieldset',this)\" class = \"datos_tab\">Datos</div>";
+			echo '<form class = "show_form">';
+				echo "<fieldset class = \"Datos_fieldset\" style = \"visibility:visible\"\>";
+					echo "<textarea name = \"id\" class=\"hidden_textarea\" readonly=true>"."$this->id</textarea>";
+					echo "<textarea name = \"Servicio\" class=\"hidden_textarea\" readonly=true>"."$this->Servicio</textarea>";
+					echo "<label class = \"nombre_label\">Nombre</label>";
+					echo "<textarea class = \"nombre_textarea\" name = \"Nombre\" title = \"Nombre\"". ($act == 'EDIT' || $act == 'ADD'?"required=true>":"readonly=true>")."$this->Nombre</textarea>";
+					echo "<label class = \"monto_label\">Monto</label>";
+					echo "<textarea class = \"monto_textarea\" name = \"Monto\" title = \"Monto\"". ($act == 'EDIT' || $act == 'ADD'?">":"readonly=true>")."$this->Monto</textarea>";
+					echo "<label class = \"condicion_label\">Condición</label>";
+					echo "<textarea class = \"condicion_textarea\" name = \"Condicion\" title = \"Condicion\"". ($act == 'EDIT' || $act == 'ADD'?">":"readonly=true>")."$this->Condicion</textarea>";
+				echo "</fieldset>";
+
+			if($act == 'EDIT' || $act == 'ADD')
+				echo "<img title = \"Guardar\"class = \"submit_button\" onclick = \"_submit('$act',this.parentNode,'Servicio_adicional')\" />";//_submit() at common_entities.js
+			
+			echo "</form>";
+
+		}
+
+	}
+
+?>

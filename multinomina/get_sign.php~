@@ -1,0 +1,121 @@
+<?php
+	include_once('connection.php');
+
+	if(!isset($_SESSION))
+		session_start();
+
+	$conn = new Connection();
+
+	if(isset($_GET['trabajador']))
+		$result = $conn->query("SELECT Contenido,Tipo FROM Sign WHERE Trabajador = '{$_GET['trabajador']}'");
+	else
+		$result = $conn->query("SELECT Contenido, Tipo FROM Sign WHERE Usuario = '{$_GET['usuario']}' AND Cuenta = '{$_SESSION['cuenta']}'");
+
+	list($contenido,$tipo) = $conn->fetchRow($result);
+
+	if(isset($contenido) && isset($tipo))
+	{
+
+		if($tipo == 'image/jpeg')
+			$filename = 'temp/' . uniqid() . '.jpg';
+		elseif($tipo == 'image/png')
+			$filename = 'temp/' . uniqid() . '.png';
+
+		file_put_contents($filename, $contenido);
+		$image_info = getimagesize($filename);
+		$image_type = $image_info[2];
+		Header("Content-type: $image_type");
+
+		if($image_type == IMAGETYPE_JPEG)
+		{
+			$image = imagecreatefromjpeg($filename);
+		}
+		elseif($image_type == IMAGETYPE_GIF )
+		{
+			$image = imagecreatefromgif($filename);
+		}
+		elseif($image_type == IMAGETYPE_PNG)
+		{
+			$image = imagecreatefrompng($filename);
+		}
+
+		$width = imagesx($image);
+		$height = imagesy($image);
+
+		if($width > $height)
+		{
+			$new_width = $width > $_GET['width'] ? $_GET['width'] : $width;
+			$ratio = $new_width / $width;
+			$new_height = $height * $ratio;
+
+			if($new_height > $_GET['height'])
+			{
+				$ratio = $_GET['height'] / $new_height;
+				$new_height = $_GET['height'];
+				$new_width = $new_width * $ratio;
+			}
+		}
+		else
+		{
+			$new_height = $height > $_GET['height'] ? $_GET['height'] : $height;
+			$ratio = $new_height / $height;
+			$new_width = $width * $ratio;
+
+			if($new_width > $_GET['width'])
+			{
+				$ratio = $_GET['width'] / $new_width;
+				$new_width = $_GET['width'];
+				$new_height = $new_height * $ratio;
+			}
+
+		}
+
+		$new_image = imagecreatetruecolor($new_width, $new_height);
+		$white = imagecolorallocate($new_image, 255, 255, 255);
+		imagefill($new_image, 0, 0, $white);
+		imagecolortransparent($new_image, $white);
+		imagecopyresampled($new_image, $image, 0, 0, 0, 0, $new_width, $new_height, $width, $height);
+		$image = $new_image;
+
+		if($image_type == IMAGETYPE_JPEG)
+		{
+			imagejpeg($image);
+		}
+		elseif($image_type == IMAGETYPE_GIF)
+		{
+			imagegif($image);
+		}
+		elseif($image_type == IMAGETYPE_PNG)
+		{
+			imagepng($image);
+		}
+
+		unlink($filename);
+	}
+	else
+	{
+		$filename = 'images/sign.png';
+		Header("Content-type: IMAGETYPE_PNG");
+		$image = imagecreatefrompng($filename);
+		$width = imagesx($image);
+		$height = imagesy($image);
+		$new_width = $width > $_GET['width'] ? $_GET['width'] : $width;
+		$ratio = $new_width / $width;
+		$new_height = $height * $ratio;
+
+		if($new_height > $_GET['height'])
+		{
+			$ratio = $_GET['height'] / $new_height;
+			$new_height = $_GET['height'];
+			$new_width = $new_width * $ratio;
+		}
+
+		$new_image = imagecreatetruecolor($new_width, $new_height);
+		$white = imagecolorallocate($new_image, 255, 255, 255);
+		imagefill($new_image, 0, 0, $white); 
+		imagecopyresampled($new_image, $image, 0, 0, 0, 0, $new_width, $new_height, $width, $height);
+		$image = $new_image;
+		imagepng($image);
+	}
+
+?>

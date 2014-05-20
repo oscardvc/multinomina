@@ -1,0 +1,986 @@
+function get_workers(mode,obj)
+{
+	var datos_fieldset = obj.parentNode;
+	var textareas = datos_fieldset.getElementsByTagName('textarea');
+
+	for(var i=0; i<textareas.length; i++)
+
+		if(textareas[i].getAttribute('name') == 'Fecha_de_pago')
+			var fecha_de_pago = textareas[i].value;
+		else if(textareas[i].getAttribute('name') == 'Limite_inferior_del_periodo')
+			var limite_inferior = textareas[i].value;
+		else if(textareas[i].getAttribute('name') == 'Limite_superior_del_periodo')
+			var limite_superior = textareas[i].value;
+		else if(textareas[i].getAttribute('name') == 'id')
+			var _id = textareas[i].value;
+
+	var selects = datos_fieldset.getElementsByTagName('select');
+
+	for(var i=0; i<selects.length; i++)
+
+		if(selects[i].getAttribute('name') == 'Servicio')
+		{
+			var servicio = selects[i].value;
+			break;
+		}
+
+	if(1)//user == 'nomina'
+	{
+
+		if (window.XMLHttpRequest)//Mozilla, Safari...
+		{
+			var xmlworkers = new XMLHttpRequest();
+
+			if (xmlworkers.overrideMimeType)
+			{
+				xmlworkers.overrideMimeType('text/xml');
+			}
+
+		}
+		else if (window.ActiveXObject)// IE
+		{
+
+			try
+			{
+				var xmlworkers = new ActiveXObject("Msxml2.XMLHTTP");
+			}
+			catch (e)
+			{
+
+				try
+				{
+					var xmlworkers = new ActiveXObject("Microsoft.XMLHTTP");
+				}
+				catch (e) {}
+
+			}
+
+		}
+
+		xmlworkers.onreadystatechange = function()
+		{
+
+			if (xmlworkers.readyState==4 && xmlworkers.status==200)
+			{
+				var workers_div = document.createElement('div');
+				var _div = obj.parentNode.parentNode.parentNode;
+				workers_div.setAttribute('class','workers_div');
+				_div.appendChild(workers_div);
+				var capsule = document.createElement('div');
+				var _options = document.createElement('div');
+				workers_div.appendChild(_options);
+				_options.setAttribute('class','options');
+				capsule.innerHTML = xmlworkers.responseText;
+				var labels = capsule.getElementsByTagName('label');
+
+				if(labels.length > 0)
+					_alert('El periodo que ha elegido interfiere con otras nominas');
+				else
+				{
+					var tables = capsule.getElementsByTagName('table');
+					workers_div.appendChild(tables[0]);//titles_table
+					_options.appendChild(tables[0]);//options_table
+					workers_div.style.overflow = 'hidden';
+					workers_div.style.display = 'block';
+					workers_div.style.position = 'absolute';
+					workers_div.style.padding = 0;
+					workers_div.style.margin = 0;
+					workers_div.style.border = 'none';
+					workers_div.style.width = _div.offsetWidth - _border_width + 'px';
+					workers_div.style.height = _div.offsetHeight - _border_width + 'px';
+					workers_div.style.top = - workers_div.offsetHeight + 'px';
+					workers_div.style.left = '0px';
+					workers_div.style.background = 'rgba(66, 66, 66, 0.90)';
+					workers_div.style.zIndex = 5;
+					//go button
+					var go_button = document.createElement('img');
+					workers_div.appendChild(go_button);
+					go_button.setAttribute('onclick','calculate(this.parentNode.parentNode)');
+					go_button.setAttribute('title','Continuar');
+					go_button.style.display = 'block';
+					go_button.style.position = 'absolute';
+					go_button.style.padding = 0;
+					go_button.style.margin = 0;
+					go_button.style.top = workers_div.offsetHeight - _height - 10 + 'px';
+					go_button.style.background = 'none';
+					go_button.style.left = parseInt((workers_div.offsetWidth - _height) / 2) + 'px';
+					go_button.style.cursor = 'pointer';
+					go_button.src = 'icon.php?subject=play&height=' + _height;
+					//hide button
+					var hide_button = document.createElement('img');
+					workers_div.appendChild(hide_button);
+					hide_button.setAttribute('onclick','close_workers(this.parentNode)');
+					hide_button.setAttribute('title','Cerrar');
+					hide_button.style.display = 'block';
+					hide_button.style.position = 'absolute';
+					hide_button.style.padding = 0;
+					hide_button.style.margin = 0;
+					hide_button.style.border = 'none';
+					hide_button.style.background = 'none';
+					hide_button.style.top = '5px';
+					hide_button.style.left = parseInt((workers_div.offsetWidth - _height) / 2) + 'px';
+					hide_button.style.cursor = 'pointer';
+					hide_button.src = 'icon.php?subject=hide&height=' + _height;
+					//import button
+					var import_button = document.createElement('img');
+					workers_div.appendChild(import_button);
+					import_button.setAttribute('onclick',"_new('Archivo_digital','IMPORT')");
+					import_button.setAttribute('title','Importar archivo');
+					import_button.style.display = 'block';
+					import_button.style.position = 'absolute';
+					import_button.style.padding = 0;
+					import_button.style.margin = 0;
+					import_button.style.border = 'none';
+					import_button.style.background = 'none';
+					import_button.style.top = '5px';
+					import_button.style.left = hide_button.offsetLeft + _height + 15 + 'px';
+					import_button.style.cursor = 'pointer';
+					import_button.src = 'icon.php?subject=import&height=' + _height;
+					workers_div.final_top = 0;
+					fit_workers(workers_div);//fit_workers() at presentation.js
+					show_workers(workers_div);//show_workers() at presentation.js
+				}
+
+			}
+
+		}
+
+		if(fecha_de_pago != '' && limite_inferior != '' && limite_superior != '' && servicio != '')
+		{
+			var _div = obj.parentNode.parentNode.parentNode;
+			var divs = _div.getElementsByTagName('div');
+
+			for(var i=0; i<divs.length; i++)
+
+				if(divs[i].getAttribute('class') == 'workers_div')
+				{
+					var _workers_div = divs[i];
+					break;
+				}
+
+			if(_workers_div)
+				show_workers(_workers_div);//show_workers() at presentation.js
+			else
+			{
+				xmlworkers.open("POST","get_workers.php?servicio="+servicio+'&limite_inferior='+limite_inferior+'&limite_superior='+limite_superior+'&id='+_id+'&mode='+mode,true);
+				xmlworkers.setRequestHeader("cache-control","no-cache");
+				xmlworkers.send('');
+			}
+
+		}
+		else
+		{
+
+			if(fecha_de_pago == '' || fecha_de_pago == '0000-00-00')
+				_alert('Por favor escriba una fecha de elaboración');
+			else if(limite_inferior == '')
+				_alert('Por favor escriba una fecha para el límite inferior del periodo');
+			else if(limite_superior == '')
+				_alert('Por favor escriba una fecha para el límite superior del periodo');
+			else if(servicio == '')
+				_alert('Por favor seleccione un servicio');
+
+		}
+
+	}
+
+}
+
+function calculate(obj)//open the window calculate_nomina.php to calculate a nomina and display the results. obj is new_div or edit_div
+{
+	var divs = obj.getElementsByTagName('div');
+
+	for(var i=0; i<divs.length; i++)
+
+		if(divs[i].getAttribute('class') == 'workers_div')
+		{
+			var _div = divs[i];
+			break;
+		}
+
+	var image = document.createElement('img');
+	_div.appendChild(image);
+	image.src = 'images/loading.gif';
+	image.style.display = 'block';
+	image.style.position = 'absolute';
+	image.style.padding = 0;
+	image.style.margin = 0;
+	image.style.border = 'none';
+	image.style.background = 'none';
+	image.style.width = '50px';
+	image.style.height = '50px';
+	image.style.top = parseInt((_div.offsetHeight - image.offsetHeight) / 2) + 'px';
+	image.style.left = parseInt((_div.offsetWidth - image.offsetWidth) / 2) + 'px';
+	image.style.zIndex = 2;
+
+	var tables = _div.getElementsByTagName('table');
+
+	for(var i=0; i<tables.length; i++)
+
+		if(tables[i].getAttribute('class') == 'workers_options')
+			var table = tables[i];
+		else if(tables[i].getAttribute('class') == 'workers_titles')
+			var titles = tables[i];
+
+	var incidencias = '<table><tr>Incidencias</tr><tr>';
+
+	for(var i=1; i<titles.rows[0].cells.length; i++)
+		incidencias += '<td>' + titles.rows[0].cells[i].innerHTML + '</td>';
+
+	incidencias += '</tr>';
+
+	for(var i=0; i<table.rows.length; i++)
+	{
+
+		if(! table.rows[i].cells[0].firstChild.checked)
+			continue;
+
+		incidencias += '<tr>';
+
+		for(j=2; j<table.rows[i].cells.length; j++)
+		{
+
+			if(j==2)
+				incidencias += '<td>' + table.rows[i].cells[j].innerHTML + '</td>';
+			else
+				incidencias += '<td>' + table.rows[i].cells[j].getAttribute('value') + '</td>';
+
+		}
+
+		incidencias += '</tr>';
+	}
+
+	incidencias += '</table>';
+	var trabajador = '';
+
+	for(var i=0; i<table.rows.length; i++)
+	{
+
+		if(! table.rows[i].cells[0].firstChild.checked)
+			continue;
+
+		trabajador += table.rows[i].cells[2].innerHTML + (i == table.rows.length - 1 ? '' : '>>');
+	}
+
+	var params = 'trabajador=' + trabajador + '&incidencias=' + incidencias;
+	var fieldsets = obj.getElementsByTagName('fieldset');
+
+	for(var i=0; i<fieldsets.length; i++)
+
+		if(fieldsets[i].getAttribute('class') == 'Datos_fieldset')
+			var datos_fieldset = fieldsets[i];
+		else if(fieldsets[i].getAttribute('class') == 'ISRasalariados_fieldset')
+			var _ISRasalariados_fieldset = fieldsets[i];
+		else if(fieldsets[i].getAttribute('class') == 'ISRasimilables_fieldset')
+			var _ISRasimilables_fieldset = fieldsets[i];
+		else if(fieldsets[i].getAttribute('class') == 'IMSS')
+			var IMSS_fieldset = fieldsets[i];
+		else if(fieldsets[i].getAttribute('class') == 'Prestaciones')
+			var prestaciones_fieldset = fieldsets[i];
+		else if(fieldsets[i].getAttribute('class') == 'Nomina_asimilables')
+			var nomina_asimilables_fieldset = fieldsets[i];
+		else if(fieldsets[i].getAttribute('class') == 'Nomina_asalariados')
+			var nomina_asalariados_fieldset = fieldsets[i];
+
+
+	var textareas = datos_fieldset.getElementsByTagName('textarea');
+
+	for(var i=0; i<textareas.length; i++)
+
+		if(textareas[i].getAttribute('name') == 'Limite_inferior_del_periodo')
+			var limite_inferior = textareas[i].value;
+		else if(textareas[i].getAttribute('name') == 'Limite_superior_del_periodo')
+			var limite_superior = textareas[i].value;
+		else if(textareas[i].getAttribute('name') == 'id')
+			var _id = textareas[i].value;
+		else if(textareas[i].getAttribute('name') == 'incidencias')
+			var _incidencias = textareas[i];
+
+	var selects = datos_fieldset.getElementsByTagName('select');
+
+	for(var i=0; i<selects.length; i++)
+
+		if(selects[i].getAttribute('name') == 'Servicio')
+		{
+			var servicio = selects[i].value;
+			break;
+		}
+
+	if(1)//user == 'nomina'
+	{
+
+		if (window.XMLHttpRequest)//Mozilla, Safari...
+		{
+			var xmlhttp0 = new XMLHttpRequest();
+
+			if (xmlhttp0.overrideMimeType)
+			{
+				xmlhttp0.overrideMimeType('text/xml');
+			}
+
+		}
+		else if (window.ActiveXObject)// IE
+		{
+
+			try
+			{
+				var xmlhttp0 = new ActiveXObject("Msxml2.XMLHTTP");
+			}
+			catch (e)
+			{
+
+				try
+				{
+					var xmlhttp0 = new ActiveXObject("Microsoft.XMLHTTP");
+				}
+				catch (e) {}
+
+			}
+
+		}
+
+		xmlhttp0.onreadystatechange = function()
+		{
+
+			if (xmlhttp0.readyState==4 && xmlhttp0.status==200)
+			{
+				image.parentNode.removeChild(image);
+				close_workers(_div);
+				var capsule = document.createElement('div');
+				capsule.innerHTML = xmlhttp0.responseText;
+				var _divs = capsule.getElementsByTagName('div');
+				datos_fieldset.appendChild(_divs[0]);
+				var tables = capsule.getElementsByTagName('table');
+				_ISRasalariados_fieldset.innerHTML = '';
+				_ISRasalariados_fieldset.appendChild(tables[0]);//tables[0] is ISRasalariados table
+				fit_fieldset(_ISRasalariados_fieldset);//fit_fieldset() at presentations.js
+				_ISRasimilables_fieldset.innerHTML = '';
+				_ISRasimilables_fieldset.appendChild(tables[0]);//now tables[0] is ISRasimilables table
+				fit_fieldset(_ISRasimilables_fieldset);
+				IMSS_fieldset.innerHTML = '';
+				IMSS_fieldset.appendChild(tables[0]);//now tables[0] is IMSS table
+				fit_fieldset(IMSS_fieldset);
+				prestaciones_fieldset.innerHTML = '';
+				prestaciones_fieldset.appendChild(tables[0]);//now tables[0] is prestaciones table
+				fit_fieldset(prestaciones_fieldset);
+				nomina_asalariados_fieldset.innerHTML = '';
+				nomina_asalariados_fieldset.appendChild(tables[0]);//now tables[0] is nomina asalariados table
+				fit_fieldset(nomina_asalariados_fieldset);//fit_fieldset() at presentations.js
+				nomina_asimilables_fieldset.innerHTML = '';
+				nomina_asimilables_fieldset.appendChild(tables[0]);//now tables[0] is nomina asimilables table
+				fit_fieldset(nomina_asimilables_fieldset);//fit_fieldset() at presentations.js
+				var aux = document.createElement('div');
+				aux.appendChild(tables[0]);//now tables[0] is incidencias table
+				_incidencias.value = aux.innerHTML;
+			}
+
+		}
+
+		xmlhttp0.open('POST','calculate_nomina.php?id=' + _id + '&Limite_inferior_del_periodo=' + limite_inferior + '&Limite_superior_del_periodo=' + limite_superior + '&Servicio=' + servicio, true);
+		xmlhttp0.setRequestHeader("Content-type", "application/x-www-form-urlencoded; charset=UTF-8");
+		xmlhttp0.setRequestHeader("cache-control","no-cache");
+		xmlhttp0.setRequestHeader("Content-length", params.length);
+		xmlhttp0.setRequestHeader("Connection", "close");
+		xmlhttp0.send(params);
+	}
+
+}
+
+function store_nomina(obj)//obj is the form
+{
+	var fieldsets = obj.getElementsByTagName('fieldset');
+
+	for(var i=0; i<fieldsets.length; i++)
+
+		if(fieldsets[i].getAttribute('class') == 'Datos_fieldset')
+			var datos_fieldset = fieldsets[i];
+		else if(fieldsets[i].getAttribute('class') == 'ISRasalariados_fieldset')
+			var isr_asalariados_fieldset = fieldsets[i];
+		else if(fieldsets[i].getAttribute('class') == 'ISRasimilables_fieldset')
+			var isr_asimilables_fieldset = fieldsets[i];
+		else if(fieldsets[i].getAttribute('class') == 'IMSS')
+			var imss_fieldset = fieldsets[i];
+		else if(fieldsets[i].getAttribute('class') == 'Prestaciones')
+			var prestaciones_fieldset = fieldsets[i];
+		else if(fieldsets[i].getAttribute('class') == 'Nomina_asimilables')
+			var nomina_asimilables_fieldset = fieldsets[i];
+		else if(fieldsets[i].getAttribute('class') == 'Nomina_asalariados')
+			var nomina_asalariados_fieldset = fieldsets[i];
+
+	//getting isr asalariados table
+	var isr_asalariados_table = isr_asalariados_fieldset.firstChild;
+	//removing isr asalariados table style (because style wont be needed and adds hundreds of characters)
+	isr_asalariados_table.removeAttribute('style');
+	//getting isr asalariados table rows
+	var rows = isr_asalariados_table.getElementsByTagName('tr');
+	//removing rows style
+	for(var i=0; i<rows.length; i++)
+	{
+		rows[i].removeAttribute('style');
+		//getting isr asalariados table row columns
+		var cols = rows[i].getElementsByTagName('td');
+		//removing columns style
+		for(var j=0; j<cols.length; j++)
+			cols[j].removeAttribute('style');
+
+	}
+
+	var aux = document.createElement('div');
+	aux.appendChild(isr_asalariados_table);
+	var isr_asalariados = document.createElement('textarea');
+	isr_asalariados.setAttribute('name','ISRasalariados');
+	isr_asalariados.style.visibility = 'hidden';
+	isr_asalariados.value = aux.innerHTML;
+	isr_asalariados_fieldset.appendChild(isr_asalariados);
+	//getting isr asimilables table
+	var isr_asimilables_table = isr_asimilables_fieldset.firstChild;
+	//removing isr asimilables table style (because style wont be needed and adds hundreds of characters)
+	isr_asimilables_table.removeAttribute('style');
+	//getting isr asimilables table rows
+	var rows = isr_asimilables_table.getElementsByTagName('tr');
+	//removing rows style
+	for(var i=0; i<rows.length; i++)
+	{
+		rows[i].removeAttribute('style');
+		//getting isr asimilables table row columns
+		var cols = rows[i].getElementsByTagName('td');
+		//removing columns style
+		for(var j=0; j<cols.length; j++)
+			cols[j].removeAttribute('style');
+
+	}
+
+	aux.innerHTML = '';
+	aux.appendChild(isr_asimilables_table);
+	var isr_asimilables = document.createElement('textarea');
+	isr_asimilables.setAttribute('name','ISRasimilables');
+	isr_asimilables.style.visibility = 'hidden';
+	isr_asimilables.value = aux.innerHTML;
+	isr_asimilables_fieldset.appendChild(isr_asimilables);
+	//getting imss table
+	var imss = imss_fieldset.firstChild;
+	//removing imss table style (because style wont be needed and adds hundreds of characters)
+	imss.removeAttribute('style');
+	//getting imss table rows
+	rows = imss.getElementsByTagName('tr');
+	//removing rows style
+	for(var i=0; i<rows.length; i++)
+	{
+		rows[i].removeAttribute('style');
+		//getting imss table row columns
+		cols = rows[i].getElementsByTagName('td');
+		//removing columns style
+		for(var j=0; j<cols.length; j++)
+			cols[j].removeAttribute('style');
+
+	}
+
+	aux.innerHTML = '';
+	aux.appendChild(imss);
+	var imss_asalariados = document.createElement('textarea');
+	imss_asalariados.setAttribute('name','cuotas_IMSS');
+	imss_asalariados.style.visibility = 'hidden';
+	imss_asalariados.value = aux.innerHTML;
+	imss_fieldset.appendChild(imss_asalariados);
+	//getting nomina asalariados table
+	var nomina_asalariados_table = nomina_asalariados_fieldset.firstChild;
+	//removing nomina asalariados table style (because style wont be needed and adds hundreds of characters)
+	nomina_asalariados_table.removeAttribute('style');
+	//getting nomina asalariados table rows
+	rows = nomina_asalariados_table.getElementsByTagName('tr');
+	//removing rows style
+	for(var i=0; i<rows.length; i++)
+	{
+		rows[i].removeAttribute('style');
+		//getting nomina asalariados table row columns
+		cols = rows[i].getElementsByTagName('td');
+		//removing columns style
+		for(var j=0; j<cols.length; j++)
+			cols[j].removeAttribute('style');
+
+	}
+
+	aux.innerHTML = '';
+	aux.appendChild(nomina_asalariados_table);
+	var nomina_asalariados = document.createElement('textarea');
+	nomina_asalariados.setAttribute('name','nomina_asalariados');
+	nomina_asalariados.style.visibility = 'hidden';
+	nomina_asalariados.value = aux.innerHTML;
+	nomina_asalariados_fieldset.appendChild(nomina_asalariados);
+	//getting nomina asimilables table
+	var nomina_asimilables_table = nomina_asimilables_fieldset.firstChild;
+	//removing nomina asimilables table style (because style wont be needed and adds hundreds of characters)
+	nomina_asimilables_table.removeAttribute('style');
+	//getting nomina asimilables table rows
+	rows = nomina_asimilables_table.getElementsByTagName('tr');
+	//removing rows style
+	for(var i=0; i<rows.length; i++)
+	{
+		rows[i].removeAttribute('style');
+		//getting nomina asimilables table row columns
+		cols = rows[i].getElementsByTagName('td');
+		//removing columns style
+		for(var j=0; j<cols.length; j++)
+			cols[j].removeAttribute('style');
+
+	}
+
+	aux.innerHTML = '';
+	aux.appendChild(nomina_asimilables_table);
+	var nomina_asimilables = document.createElement('textarea');
+	nomina_asimilables.setAttribute('name','nomina_asimilables');
+	nomina_asimilables.style.visibility = 'hidden';
+	nomina_asimilables.value = aux.innerHTML;
+	nomina_asimilables_fieldset.appendChild(nomina_asimilables);
+	//getting prestaciones table
+	var prestaciones = prestaciones_fieldset.firstChild;
+	//removing prestaciones table style (because style wont be needed and adds hundreds of characters)
+	prestaciones.removeAttribute('style');
+	//getting prestaciones table rows
+	rows = prestaciones.getElementsByTagName('tr');
+	//removing rows style
+	for(var i=0; i<rows.length; i++)
+	{
+		rows[i].removeAttribute('style');
+		//getting prestaciones table row columns
+		cols = rows[i].getElementsByTagName('td');
+		//removing columns style
+		for(var j=0; j<cols.length; j++)
+			cols[j].removeAttribute('style');
+
+	}
+
+	aux.innerHTML = '';
+	aux.appendChild(prestaciones);
+	var prestaciones_asalariados = document.createElement('textarea');
+	prestaciones_asalariados.setAttribute('name','prestaciones');
+	prestaciones_asalariados.style.visibility = 'hidden';
+	prestaciones_asalariados.value = aux.innerHTML;
+	prestaciones_fieldset.appendChild(prestaciones_asalariados);
+}
+
+function deposit_menu(obj)
+{
+	deposit_menu.item = obj;
+	var deposit_div = document.createElement('div');
+	document.body.appendChild(deposit_div);
+	deposit_div.style.overflow = 'hidden';
+	deposit_div.style.display = 'block';
+	deposit_div.style.position = 'absolute';
+	deposit_div.style.padding = 0;
+	deposit_div.style.margin = 0;
+	deposit_div.style.height = (window_height < 150 ? parseInt(window_height * 0.96) : 150) + 'px';
+	deposit_div.style.width = (window_width < 300 ? parseInt(window_width * 0.98) : 300) + 'px';
+	deposit_div.style.border = _border_width + 'px solid #555';
+	deposit_div.style.top = parseInt((window_height - deposit_div.offsetHeight) / 2) + 'px';
+	deposit_div.style.left = parseInt((window_width - deposit_div.offsetWidth) / 2) + 'px';
+	deposit_div.style.zIndex = 200;
+	deposit_div.style.background = 'rgba(255, 255, 255, 0.90)';
+	deposit_div.style.filter = 'filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#CCffffff, endColorstr=#CCffffff)';
+	deposit_div.style.MozBoxShadow = "0 0 8px 8px #888";
+	deposit_div.style.WebkitBoxShadow = "0 0 8px 8px#888";
+	deposit_div.style.boxShadow = "0 0 8px 8px #888";
+	//close button
+	var close_button = document.createElement('div');
+	deposit_div.appendChild(close_button);
+	close_button.setAttribute('onclick','close_div(this)');//close_div() at presentation.js
+	close_button.style.display = 'block';
+	close_button.style.position = 'absolute';
+	close_button.style.padding = 0;
+	close_button.style.margin = 0;
+	close_button.style.border = 'none';
+	close_button.style.background = '#555';
+	close_button.style.width = _height + 'px';
+	close_button.style.height = _height + 'px';
+	close_button.style.top = '0px';
+	close_button.style.left = deposit_div.offsetWidth - close_button.offsetWidth - _border_width * 2 + 'px';
+	close_button.style.cursor = 'pointer';
+	var image = document.createElement('img');
+	close_button.appendChild(image);
+	image.style.display = 'block';
+	image.style.position = 'absolute';
+	image.style.padding = 0;
+	image.style.margin = 0;
+	image.style.border = 'none';
+	image.style.background = 'none';
+	image.style.zIndex = 1;
+	image.src = 'icon.php?subject=close&height=' + _height;
+	//title
+	var _title = document.createElement('span');
+	deposit_div.appendChild(_title);
+	_title.style.display = 'block';
+	_title.style.position = 'absolute';
+	_title.style.padding = 0;
+	_title.style.margin = 0;
+	_title.style.border = 'none';
+	_title.style.background = '#555';
+	_title.style.top = '0px';
+	_title.style.left = '0px';
+	_title.style.color = '#fff';
+	_title.style.width = deposit_div.offsetWidth - _height + 'px';
+	_title.style.height = close_button.offsetHeight + 'px';
+	//cuestion
+	var _cuestion = document.createElement('span');
+	deposit_div.appendChild(_cuestion);
+	_cuestion.style.display = 'block';
+	_cuestion.style.position = 'absolute';
+	_cuestion.style.padding = 0;
+	_cuestion.style.margin = 0;
+	_cuestion.style.border = 'none';
+	_cuestion.style.background = 'none';
+	_cuestion.style.color = '#555';
+	_cuestion.style.font = font;
+	_cuestion.innerHTML = '¿Clasificar por sucursales?';
+	_cuestion.style.top = parseInt((deposit_div.offsetHeight - _cuestion.offsetHeight) / 2) + 'px';
+	_cuestion.style.left = parseInt((deposit_div.offsetWidth - _cuestion.offsetWidth) / 2) + 'px';
+	var image = document.createElement('img');
+	deposit_div.appendChild(image);
+	image.style.display = 'block';
+	image.style.position = 'absolute';
+	image.style.padding = 0;
+	image.style.margin = 0;
+	image.style.border = 'none';
+	image.style.background = 'none';
+	image.style.zIndex = 1;
+	image.style.cursor = 'pointer';
+	image.setAttribute('classify','yes');
+	image.setAttribute('onclick','view(this)');
+	image.src = 'icon.php?subject=yes&height=' + _height;
+	image.style.top = _cuestion.offsetTop + _cuestion.offsetHeight + _border_width + 'px';
+	image.style.left = _cuestion.offsetLeft + 'px';
+	var image = document.createElement('img');
+	deposit_div.appendChild(image);
+	image.style.display = 'block';
+	image.style.position = 'absolute';
+	image.style.padding = 0;
+	image.style.margin = 0;
+	image.style.border = 'none';
+	image.style.background = 'none';
+	image.style.zIndex = 1;
+	image.style.cursor = 'pointer';
+	image.setAttribute('classify','no');
+	image.setAttribute('onclick','view(this)');
+	image.src = 'icon.php?subject=no&height=' + _height;
+	image.style.top = _cuestion.offsetTop + _cuestion.offsetHeight + _border_width + 'px';
+	image.style.left = _cuestion.offsetLeft + _cuestion.offsetWidth - _height + 'px';
+}
+
+function view(obj)
+{
+
+	if(obj.getAttribute('class'))
+	{
+		view.button = obj;
+		view.button.setAttribute('classify', 'yes');
+	}
+	else
+	{
+		view.button = deposit_menu.item;
+		view.button.setAttribute('classify', obj.getAttribute('classify'));
+		close_div(obj);
+	}
+
+	params = window_params('Nomina');//window_params at presentation.js
+	view_window = window.open('view.php', 'view_window', 'Menubar =YES');
+}
+
+function _preview()
+{
+	view_window._load(view.button);
+}
+
+function recibos(obj)
+{
+	recibos.button = obj;
+	params = window_params('Nomina');//window_params at presentation.js
+	recibos_window = window.open('recibos.php', 'recibos_window', 'Menubar =YES');
+}
+
+function _recibos()
+{
+	recibos_window._load(recibos.button);
+}
+
+function recibos_prestamo_cliente(obj)
+{
+	recibos_prestamo_cliente.button = obj;
+	recibos_prestamo_cliente_window = window.open('recibos_prestamo_cliente.php', 'recibos_prestamo_cliente_window', 'Menubar =YES');
+}
+
+function _recibos_prestamo_cliente()
+{
+	recibos_prestamo_cliente_window._load(recibos_prestamo_cliente.button);
+}
+
+function pensiones(obj)
+{
+	pensiones.button = obj;
+	params = window_params('Nomina');//window_params at presentation.js
+	pensiones_window = window.open('pensiones.php', 'pensiones_window', 'Menubar =YES');
+}
+
+function _pensiones()
+{
+	pensiones_window._load(pensiones.button);
+}
+
+
+function _capture(obj)
+{
+	var _div = obj.parentNode.parentNode.parentNode.parentNode;
+	var capture_div = document.createElement('div');
+	capture_div.op = obj;
+	_div.appendChild(capture_div);
+	capture_div.style.display = 'block';
+	capture_div.style.position = 'absolute';
+	capture_div.style.padding = '0px 5px';
+	capture_div.style.margin = 0;
+	capture_div.style.border = _border_width + 'px solid #555';
+	capture_div.style.background = 'rgba(255, 255, 255, 0.90)';
+	capture_div.style.height = (window_height < 120 ? parseInt(window_height * 0.96) : 120) + 'px';
+	capture_div.style.width = (window_width < 250 ? parseInt(window_width * 0.98) : 250) + 'px';
+	capture_div.style.top = obj.offsetTop + 'px';
+	capture_div.style.left = obj.offsetLeft + 'px';
+	capture_div.style.opacity = 0;
+	var _label = document.createElement('label');
+	capture_div.appendChild(_label);
+	_label.innerHTML = obj.getAttribute('title');
+	_label.style.display = 'block';
+	_label.style.position = 'absolute';
+	_label.style.padding = '3px 5px';
+	_label.style.margin = 0;
+	_label.style.border = 'none';
+	_label.style.background = '#555';
+	_label.style.font = font;
+	_label.style.color = '#fff';
+	_label.style.top = parseInt((capture_div.offsetHeight - _label.offsetHeight) / 2) + 'px';
+	_label.style.borderTopLeftRadius = '10px';
+	_label.style.borderBottomLeftRadius = '10px';
+	_label.style.MozBorderRadiusTopleft = '10px';
+	_label.style.MozBorderRadiusBottomleft = '10px';
+	_label.style.WebkitBorderTopLeftRadius = '10px';
+	_label.style.WebkitBorderBottomLeftRadius = '10px';
+	var _textarea = document.createElement('textarea');
+	capture_div.appendChild(_textarea);
+
+	if(obj.getAttribute('value'))
+		_textarea.value = obj.getAttribute('value');
+
+	_textarea.style.display = 'block';
+	_textarea.style.position = 'absolute';
+	_textarea.style.padding = 0;
+	_textarea.style.margin = 0;
+	_textarea.style.border = _border_width + 'px solid #555';
+	_textarea.style.borderTopRightRadius = '10px';
+	_textarea.style.borderBottomRightRadius = '10px';
+	_textarea.style.MozBorderRadiusTopright = '10px';
+	_textarea.style.MozBorderRadiusBottomright = '10px';
+	_textarea.style.WebkitBorderTopRightRadius = '10px';
+	_textarea.style.WebkitBorderBottomRightRadius = '10px';
+	_textarea.style.background = '#fff';
+	_textarea.style.font = font;
+	_textarea.style.color = '#555';
+	_textarea.style.top = _label.offsetTop + 'px';
+	_textarea.style.left = _label.offsetLeft + _label.offsetWidth + 'px';
+	_textarea.style.height = _label.offsetHeight - _border_width * 2 + 'px';
+	_textarea.style.width = parseInt((capture_div.offsetWidth - _label.offsetWidth) * 0.70) + 'px';
+
+	if(obj.getAttribute('title') == 'Faltas' || obj.getAttribute('title') == 'Prima dominical')
+	{
+		//calendar button
+		var calendar_button = document.createElement('img');
+		capture_div.appendChild(calendar_button);
+		calendar_button.setAttribute('onclick','show_cal(this)');//show_cal() at sepa la bola xD 
+		calendar_button.style.display = 'block';
+		calendar_button.style.position = 'absolute';
+		calendar_button.style.padding = 0;
+		calendar_button.style.margin = 0;
+		calendar_button.style.top = _label.offsetTop - (_height - _textarea.offsetHeight) / 2 + 'px';
+		calendar_button.style.border = 'none';
+		calendar_button.style.background = 'none';
+		calendar_button.style.left = _textarea.offsetLeft + _textarea.offsetWidth + 'px';
+		calendar_button.style.cursor = 'pointer';
+		calendar_button.src = 'icon.php?subject=calendar&height=' + _height;
+	}
+
+	//header
+	var _header = document.createElement('span');
+	capture_div.appendChild(_header);
+	_header.style.display = 'block';
+	_header.style.position = 'absolute';
+	_header.style.padding = 0;
+	_header.style.margin = 0;
+	_header.style.border = 'none';
+	_header.style.background = '#555';
+	_header.style.top = '0px';
+	_header.style.left = '0px';
+	_header.style.height = _height + 'px';
+	_header.style.width = capture_div.offsetWidth - 2 * _border_width + 'px';
+	//close button
+	var close_button = document.createElement('img');
+	capture_div.appendChild(close_button);
+	close_button.setAttribute('onclick','close_capture(this)');//close_capture() at presentation.js 
+	close_button.setAttribute('title','cerrar');
+	close_button.style.display = 'block';
+	close_button.style.position = 'absolute';
+	close_button.style.padding = 0;
+	close_button.style.margin = 0;
+	close_button.style.top = '0px';
+	close_button.style.border = 'none';
+	close_button.style.background = '#555';
+	close_button.style.left = capture_div.offsetWidth - _height - _border_width * 2 + 'px';
+	close_button.style.cursor = 'pointer';
+	close_button.src = 'icon.php?subject=close&height=' + _height;
+	//ok button
+	var ok_button = document.createElement('img');
+	capture_div.appendChild(ok_button);
+	ok_button.setAttribute('onclick','_save(this)');
+	ok_button.style.display = 'block';
+	ok_button.style.position = 'absolute';
+	ok_button.style.padding = 0;
+	ok_button.style.margin = 0;
+	ok_button.style.border = 'none';
+	ok_button.style.background = 'none';
+	ok_button.style.top = capture_div.offsetHeight - _height - _border_width * 2 + 'px';
+	ok_button.style.zIndex = 1;
+	ok_button.style.cursor = 'pointer';
+	ok_button.style.left = capture_div.offsetWidth - _height - _border_width * 2 + 'px';
+	ok_button.src = 'icon.php?subject=submit&height=' + _height;
+	show_capture(capture_div);
+}
+
+function _save(obj)
+{
+	var _div = obj.parentNode;
+	var textareas = _div.getElementsByTagName('textarea');
+	var _textarea = textareas[0];
+	_div.op.setAttribute('value',_textarea.value);
+	_div.op.innerHTML = _textarea.value.substring(0,6);
+
+	if(_textarea.value.length > 6)
+		_div.op.innerHTML += '...';
+
+	close_capture(obj);
+}
+
+function timbrar(obj)
+{
+	var usr = getUser();
+
+	if(usr != 'jonathan')
+	{
+		_alert('Fase de pruebas. Por el momento no puede usar esta función');
+		return;
+	}
+
+	var textareas = obj.parentNode.getElementsByTagName('textarea');
+
+	for(var i=0; i<textareas.length; i++)
+
+		if(textareas[i].getAttribute('name') == 'id')
+		{
+			var nomina = textareas[i].value;
+			break;
+		}
+
+	if (window.XMLHttpRequest)//Mozilla, Safari...
+	{
+		var xmltimbre = new XMLHttpRequest();
+
+		if (xmltimbre.overrideMimeType)
+		{
+			xmltimbre.overrideMimeType('text/xml');
+		}
+
+	}
+	else if (window.ActiveXObject)// IE
+	{
+
+		try
+		{
+			var xmltimbre = new ActiveXObject("Msxml2.XMLHTTP");
+		}
+		catch (e)
+		{
+
+			try
+			{
+				var xmltimbre = new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			catch (e) {}
+
+		}
+
+	}
+
+	xmltimbre.onreadystatechange = function()
+	{
+
+		if (xmltimbre.readyState==4 && xmltimbre.status==200)
+		{
+
+			if(xmltimbre.responseText == '')
+			{
+				_alert('Listo. Abra una vez más la nómina para revisar los resultados');
+				close_div(obj.parentNode.parentNode);
+			}
+			else
+				_alert(xmltimbre.responseText);
+
+		}
+
+	}
+
+	var alert_box = document.createElement('div');
+	obj.parentNode.parentNode.parentNode.appendChild(alert_box);
+	alert_box.style.display = 'block';
+	alert_box.style.position = 'absolute';
+	alert_box.style.padding = 0;
+	alert_box.style.margin = 0;
+	alert_box.style.border = _border_width + 'px solid #555';
+	alert_box.style.background = 'rgba(255, 255, 255, 0.90)';
+	alert_box.style.filter = 'filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#CCffffff, endColorstr=#CCffffff)';
+	alert_box.style.MozBoxShadow = "0 0 6px 6px #999";
+	alert_box.style.WebkitBoxShadow = "0 0 6px 6px #999";
+	alert_box.style.boxShadow = "0 0 6px 6px #999";
+	alert_box.style.height = _height + "px";
+	var image = document.createElement('img');
+	alert_box.appendChild(image);
+	image.style.display = 'block';
+	image.style.position = 'absolute';
+	image.style.padding = 0;
+	image.style.margin = 0;
+	image.style.border = 'none';
+	image.style.background = 'none';
+	image.style.top = (_height - 40) / 2 + 'px';
+	image.style.left = '0px';
+	image.style.zIndex = 1;
+	image.style.width = '40px';
+	image.style.height = '40px';
+	image.src = image.src = 'images/loading.gif';
+	var msg = document.createElement('span');
+	msg.innerHTML = 'Timbrando...';
+	alert_box.appendChild(msg);
+	msg.style.display = 'block';
+	msg.style.position = 'absolute';
+	msg.style.padding = 0;
+	msg.style.margin = '0px 0px 0px ' + parseInt(_height / 2) + 'px';
+	msg.style.border = 'none';
+	msg.style.background = 'none';
+	msg.style.color = '#555';
+	msg.style.font = title_font;
+	msg.style.whiteSpace = 'nowrap';
+	msg.style.top = parseInt((alert_box.offsetHeight - msg.offsetHeight) / 2) + 'px';
+	msg.style.left = _height + 'px';
+	alert_box.style.top = parseInt((alert_box.parentNode.offsetHeight - _height) / 2) + 'px';
+	alert_box.style.width = image.offsetWidth + msg.offsetWidth + _height * 2 + 'px';
+	alert_box.style.left = parseInt((alert_box.parentNode.offsetWidth - alert_box.offsetWidth) / 2) + 'px';
+	alert_box.style.zIndex = '200';
+	var params = 'nomina=' + nomina;
+	xmltimbre.open('POST','timbrar_nomina.php', true);
+	xmltimbre.setRequestHeader("Content-type", "application/x-www-form-urlencoded; charset=UTF-8");
+	xmltimbre.setRequestHeader("cache-control","no-cache");
+	xmltimbre.setRequestHeader("Content-length", params.length);
+	xmltimbre.setRequestHeader("Connection", "close");
+	xmltimbre.send(params);
+}

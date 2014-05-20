@@ -1,0 +1,27 @@
+body
+{
+	font:normal normal normal 13px Arial, sans-serif;
+	color:#666;
+}
+
+._title
+{
+	font:bold normal normal 13px Arial, sans-serif;
+	color:#666;
+}
+
+._link
+{
+	cursor:pointer;
+}
+
+._inline
+{
+	vertical-align:middle;
+}
+
+._link A
+{
+	color:#666;
+	text-decoration:none;
+}

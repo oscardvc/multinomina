@@ -1,0 +1,40 @@
+<?php //This page is called from an ajax function named calculate at nomina.js?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+	<head>
+	</head>
+
+	<body>
+		<?php
+			include_once('connection.php');
+			include_once('aguinaldo.php');
+
+			if(!isset($_SESSION))
+				session_start();
+
+			$aguinaldo = new Aguinaldo();
+			$aguinaldo->set('id',$_GET['id']);
+			$aguinaldo->set('Fecha_de_pago',$_GET['Fecha_de_pago']);
+			$aguinaldo->set('Servicio',$_GET['Servicio']);
+			$trabajador = explode('>>',$_POST['trabajador']);
+			$gratificacion_adicional = explode('>>',$_POST['gratificacion_adicional']);
+			$pago_neto = explode('>>',$_POST['pago_neto']);
+			$aguinaldo->set('trabajador',$trabajador);
+			$aguinaldo->set('gratificacion_adicional',$gratificacion_adicional);
+			$aguinaldo->set('pago_neto',$pago_neto);
+			//$aguinaldo->showProperties();
+			//Calculation order:
+			$aguinaldo->calculate_ISR_trabajadores_asalariados();
+			$aguinaldo->calculate_aguinaldo_trabajadores_asalariados();
+			$aguinaldo->chk_saldo_trabajadores_asalariados();
+			//Presentation order:
+			$conn = new Connection();
+			$result = $conn->query("SELECT Porcentaje_de_honorarios FROM Servicio WHERE id = '{$_GET['Servicio']}' AND Cuenta = '{$_SESSION['cuenta']}'");
+			list($honorarios) = $conn->fetchRow($result);
+			echo "<div id = 'honorarios' style = 'visibility:hidden'>$honorarios</div>";
+			echo "{$aguinaldo->get('ISRaguinaldo')}";
+			echo "{$aguinaldo->get('aguinaldo_asalariados')}";
+		?>
+	</body>
+</html>

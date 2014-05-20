@@ -1,0 +1,25 @@
+<?php
+	//This page is called by the entity form
+	include_once('logo.php');
+
+	$logo = new Logo();
+	$logo->setFromBrowser();
+	$logo->dbStore();
+	$aux = rand();
+	echo "<script type='text/javascript'>
+			var _iframe = window.parent.document.getElementById('{$_POST['iframe']}');
+			var _div = _iframe.parentNode;
+			var images = _div.previousSibling.getElementsByTagName('img');
+			alert(_div.previousSibling.innerHTML);
+
+			for(var i=0; i<images.length; i++)
+
+				if(images[i].getAttribute('class') == 'logo_image' && images[i].getAttribute('empresa') == '{$logo->get('Empresa')}')
+				{
+					window.parent.show_logo(images[i].parentNode);
+					break;
+				}
+
+			window.parent.close_div(_iframe);
+	</script>";
+?>

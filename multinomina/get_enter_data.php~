@@ -1,0 +1,42 @@
+<?php
+	include_once('connection.php');
+
+	if(!isset($_SESSION))
+		session_start();
+
+	$conn = new Connection();
+	$val = $_POST['val'];
+	$result = $conn->query("SELECT RFC FROM Empresa WHERE Nombre = '$val' AND Cuenta = '{$_SESSION['cuenta']}'");
+	$rfcs = array();
+	$i = 0;
+	//emrpesa rfc
+	$txt = '<select class = "empresa_rfc_select">';
+
+	while(list($rfc) = $conn->fetchRow($result))
+	{
+		$txt .= "<option>$rfc</option>";
+		$rfcs[$i] = $rfc;
+		$i ++;
+	}
+
+	$txt .= "</select>";
+	$len = count($rfcs);
+	//servicio
+	$txt .= '<select class = "servicio_select">';
+
+	for($i=0; $i<$len; $i++)
+	{
+		$result = $conn->query("SELECT Servicio.id, Servicio.Tipo_de_servicio, Servicio.Periodicidad_de_la_nomina, Empresa.Nombre FROM Servicio LEFT JOIN Servicio_Empresa ON Servicio.id = Servicio_Empresa.Servicio LEFT JOIN Empresa ON Servicio_Empresa.Empresa = Empresa.RFC WHERE Empresa.RFC = '{$rfcs[$i]}' AND Servicio.Cuenta = '{$_SESSION['cuenta']}' AND Servicio_Empresa.Cuenta = '{$_SESSION['cuenta']}' GROUP BY Servicio.id ORDER BY Servicio_Empresa.Fecha_de_asignacion DESC");
+
+		while(list($id,$tipo,$periodicidad,$empresa) = $conn->fetchRow($result))
+			$txt .= "<option>$id/$tipo/$periodicidad/$empresa</option>";
+
+
+		if($conn->num_rows($result) > 1)
+			$txt .= "<option>Todos</option>";
+
+	}
+
+	$txt .= "</select>";
+	echo $txt;
+?>

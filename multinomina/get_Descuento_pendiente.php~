@@ -1,0 +1,174 @@
+<?php
+	//This page is called by an AJAX function at entities.js and gets some values from table Descuento_pendiente
+
+	include_once('connection.php');
+
+	if(!isset($_SESSION))
+		session_start();
+
+	$conn = new Connection();
+	$values = explode(',',$_POST['values']);//values is set at javascript function get_options() at entities.js
+	$result = $conn->query("SELECT Nomina, Retencion, id, Cantidad, Numero_de_descuentos, Fecha_de_inicio, Fecha_de_termino FROM Descuento_pendiente WHERE Trabajador = '{$_GET['id']}' AND Cuenta = '{$_SESSION['cuenta']}' AND Nomina LIKE '%{$values[0]}%' AND Retencion LIKE '%{$values[1]}%' AND id LIKE '%{$values[2]}%' AND Cantidad LIKE '%{$values[3]}%'" . ($values[4] == "" ? " AND (Numero_de_descuentos IS NULL OR Numero_de_descuentos LIKE '%{$values[4]}%')" : " AND Numero_de_descuentos LIKE '%{$values[4]}%'") . ($values[5] == "" ? " AND (Fecha_de_inicio IS NULL OR Fecha_de_inicio LIKE '%{$values[5]}%')" : " AND Fecha_de_inicio LIKE '%{$values[5]}%'") . ($values[6] == "" ? " AND (Fecha_de_termino IS NULL OR Fecha_de_termino LIKE '%{$values[6]}%')" : " AND Fecha_de_termino LIKE '%{$values[6]}%'"));
+	$txt = "";
+/*
+	//Retención INFONAVIT
+	$result = $conn->query("SELECT Descuento_pendiente.Nomina, Descuento_pendiente.Retencion, Descuento_pendiente.id, Descuento_pendiente.Cantidad, Descuento_pendiente.Numero_de_descuentos, Descuento_pendiente.Fecha_de_inicio, Descuento_pendiente.Fecha_de_termino FROM Retencion_INFONAVIT INNER JOIN Descuento_pendiente ON Retencion_INFONAVIT.id = Descuento_pendiente.id WHERE Retencion_INFONAVIT.Trabajador = '{$_GET['id']}' AND Descuento_pendiente.Retencion = 'Retención INFONAVIT' AND Descuento_pendiente.Nomina LIKE '%{$values[0]}%' AND Descuento_pendiente.Retencion LIKE '%{$values[1]}%' AND Descuento_pendiente.id LIKE '%{$values[2]}%' AND Descuento_pendiente.Cantidad LIKE '%{$values[3]}%'" . ($values[4] == "" ? " AND (Descuento_pendiente.Numero_de_descuentos IS NULL OR Descuento_pendiente.Numero_de_descuentos LIKE '%{$values[4]}%')" : " AND Descuento_pendiente.Numero_de_descuentos LIKE '%{$values[4]}%'") . ($values[5] == "" ? " AND (Descuento_pendiente.Fecha_de_inicio IS NULL OR Descuento_pendiente.Fecha_de_inicio LIKE '%{$values[5]}%')" : " AND Descuento_pendiente.Fecha_de_inicio LIKE '%{$values[5]}%'") . ($values[6] == "" ? " AND (Descuento_pendiente.Fecha_de_termino IS NULL OR Descuento_pendiente.Fecha_de_termino LIKE '%{$values[6]}%')" : " AND Descuento_pendiente.Fecha_de_termino LIKE '%{$values[6]}%'"));
+
+	if(isset($result))
+	{
+		$txt = '<table class = "options_table">';
+
+		while(list($nomina, $retencion, $id, $cantidad, $numero_de_descuentos, $fecha_de_inicio, $fecha_de_termino) = $conn->fetchRow($result))
+
+			if($_GET['mode'] != 'DRAW')
+				$txt .= "<tr onmouseover=\"option_bright(this)\" onmouseout=\"option_opaque(this)\"><td class = \"checkbox_input_cell\"></td><td>$nomina</td><td>$retencion</td><td>$id</td><td>$cantidad</td><td>$numero_de_descuentos</td><td>$fecha_de_inicio</td><td>$fecha_de_termino</td><td onmouseover = 'om_bright(this)' onmouseout = 'om_opaque(this)' onclick = \"_view(this,'Descuento_pendiente')\" title = 'Ver' class = 'view_cell'><img src = 'images/view.png'/></td><td onmouseover = 'om_bright(this)' onmouseout = 'om_opaque(this)' onclick = \"_edit(this,'Descuento_pendiente')\" title = 'Editar' class = 'edit_cell'><img src = 'images/edit.png'/></td><td onmouseover = 'om_bright(this)' onmouseout = 'om_opaque(this)' onclick = \"_delete(this,'Descuento_pendiente')\" title = 'Eliminar' class = 'delete_cell'><img src = 'images/delete.png'/></td></tr>";//option_bright() and option_opaque() at presentation.js. select_optio() at general.js
+			else
+				$txt .= "<tr onmouseover=\"option_bright(this)\" onmouseout=\"option_opaque(this)\"><td class = \"checkbox_input_cell\"></td><td>$nomina</td><td>$retencion</td><td>$id</td><td>$cantidad</td><td>$numero_de_descuentos</td><td>$fecha_de_inicio</td><td>$fecha_de_termino</td><td onmouseover = 'om_bright(this)' onmouseout = 'om_opaque(this)' onclick = \"_view(this,'Descuento_pendiente')\" title = 'Ver' class = 'view_cell'><img src = 'images/view.png'/></td></tr>";
+
+	}
+
+	$conn->freeResult($result);
+
+	//Retención FONACOT
+	$result = $conn->query("SELECT Descuento_pendiente.Nomina, Descuento_pendiente.Retencion, Descuento_pendiente.id, Descuento_pendiente.Cantidad, Descuento_pendiente.Numero_de_descuentos, Descuento_pendiente.Fecha_de_inicio, Descuento_pendiente.Fecha_de_termino FROM Retencion_FONACOT INNER JOIN Descuento_pendiente ON Retencion_FONACOT.id = Descuento_pendiente.id WHERE Retencion_FONACOT.Trabajador = '{$_GET['id']}' AND Descuento_pendiente.Retencion = 'Retención FONACOT' AND Descuento_pendiente.Nomina LIKE '%{$values[0]}%' AND Descuento_pendiente.Retencion LIKE '%{$values[1]}%' AND Descuento_pendiente.id LIKE '%{$values[2]}%' AND Descuento_pendiente.Cantidad LIKE '%{$values[3]}%'" . ($values[4] == "" ? " AND (Descuento_pendiente.Numero_de_descuentos IS NULL OR Descuento_pendiente.Numero_de_descuentos LIKE '%{$values[4]}%')" : " AND Descuento_pendiente.Numero_de_descuentos LIKE '%{$values[4]}%'") . ($values[5] == "" ? " AND (Descuento_pendiente.Fecha_de_inicio IS NULL OR Descuento_pendiente.Fecha_de_inicio LIKE '%{$values[5]}%')" : " AND Descuento_pendiente.Fecha_de_inicio LIKE '%{$values[5]}%'") . ($values[6] == "" ? " AND (Descuento_pendiente.Fecha_de_termino IS NULL OR Descuento_pendiente.Fecha_de_termino LIKE '%{$values[6]}%')" : " AND Descuento_pendiente.Fecha_de_termino LIKE '%{$values[6]}%'"));
+
+	if(isset($result))
+	{
+
+		if($txt == "")
+			$txt = '<table class = "options_table">';
+
+		while(list($nomina, $retencion, $id, $cantidad, $numero_de_descuentos, $fecha_de_inicio, $fecha_de_termino) = $conn->fetchRow($result))
+
+			if($_GET['mode'] != 'DRAW')
+				$txt .= "<tr onmouseover=\"option_bright(this)\" onmouseout=\"option_opaque(this)\"><td class = \"checkbox_input_cell\"></td><td>$nomina</td><td>$retencion</td><td>$id</td><td>$cantidad</td><td>$numero_de_descuentos</td><td>$fecha_de_inicio</td><td>$fecha_de_termino</td><td onmouseover = 'om_bright(this)' onmouseout = 'om_opaque(this)' onclick = \"_view(this,'Descuento_pendiente')\" title = 'Ver' class = 'view_cell'><img src = 'images/view.png'/></td><td onmouseover = 'om_bright(this)' onmouseout = 'om_opaque(this)' onclick = \"_edit(this,'Descuento_pendiente')\" title = 'Editar' class = 'edit_cell'><img src = 'images/edit.png'/></td><td onmouseover = 'om_bright(this)' onmouseout = 'om_opaque(this)' onclick = \"_delete(this,'Descuento_pendiente')\" title = 'Eliminar' class = 'delete_cell'><img src = 'images/delete.png'/></td></tr>";//option_bright() and option_opaque() at presentation.js. select_optio() at general.js
+			else
+				$txt .= "<tr onmouseover=\"option_bright(this)\" onmouseout=\"option_opaque(this)\"><td class = \"checkbox_input_cell\"></td><td>$nomina</td><td>$retencion</td><td>$id</td><td>$cantidad</td><td>$numero_de_descuentos</td><td>$fecha_de_inicio</td><td>$fecha_de_termino</td><td onmouseover = 'om_bright(this)' onmouseout = 'om_opaque(this)' onclick = \"_view(this,'Descuento_pendiente')\" title = 'Ver' class = 'view_cell'><img src = 'images/view.png'/></td></tr>";
+
+	}
+
+	$conn->freeResult($result);
+
+	//Pensión alimenticia
+	$result = $conn->query("SELECT Descuento_pendiente.Nomina, Descuento_pendiente.Retencion, Descuento_pendiente.id, Descuento_pendiente.Cantidad, Descuento_pendiente.Numero_de_descuentos, Descuento_pendiente.Fecha_de_inicio, Descuento_pendiente.Fecha_de_termino FROM Pension_alimenticia INNER JOIN Descuento_pendiente ON Pension_alimenticia.id = Descuento_pendiente.id WHERE Pension_alimenticia.Trabajador = '{$_GET['id']}' AND Descuento_pendiente.Retencion = 'Pensión alimenticia' AND Descuento_pendiente.Nomina LIKE '%{$values[0]}%' AND Descuento_pendiente.Retencion LIKE '%{$values[1]}%' AND Descuento_pendiente.id LIKE '%{$values[2]}%' AND Descuento_pendiente.Cantidad LIKE '%{$values[3]}%'" . ($values[4] == "" ? " AND (Descuento_pendiente.Numero_de_descuentos IS NULL OR Descuento_pendiente.Numero_de_descuentos LIKE '%{$values[4]}%')" : " AND Descuento_pendiente.Numero_de_descuentos LIKE '%{$values[4]}%'") . ($values[5] == "" ? " AND (Descuento_pendiente.Fecha_de_inicio IS NULL OR Descuento_pendiente.Fecha_de_inicio LIKE '%{$values[5]}%')" : " AND Descuento_pendiente.Fecha_de_inicio LIKE '%{$values[5]}%'") . ($values[6] == "" ? " AND (Descuento_pendiente.Fecha_de_termino IS NULL OR Descuento_pendiente.Fecha_de_termino LIKE '%{$values[6]}%')" : " AND Descuento_pendiente.Fecha_de_termino LIKE '%{$values[6]}%'"));
+
+	if(isset($result))
+	{
+
+		if($txt == "")
+			$txt = '<table class = "options_table">';
+
+		while(list($nomina, $retencion, $id, $cantidad, $numero_de_descuentos, $fecha_de_inicio, $fecha_de_termino) = $conn->fetchRow($result))
+
+			if($_GET['mode'] != 'DRAW')
+				$txt .= "<tr onmouseover=\"option_bright(this)\" onmouseout=\"option_opaque(this)\"><td class = \"checkbox_input_cell\"></td><td>$nomina</td><td>$retencion</td><td>$id</td><td>$cantidad</td><td>$numero_de_descuentos</td><td>$fecha_de_inicio</td><td>$fecha_de_termino</td><td onmouseover = 'om_bright(this)' onmouseout = 'om_opaque(this)' onclick = \"_view(this,'Descuento_pendiente')\" title = 'Ver' class = 'view_cell'><img src = 'images/view.png'/></td><td onmouseover = 'om_bright(this)' onmouseout = 'om_opaque(this)' onclick = \"_edit(this,'Descuento_pendiente')\" title = 'Editar' class = 'edit_cell'><img src = 'images/edit.png'/></td><td onmouseover = 'om_bright(this)' onmouseout = 'om_opaque(this)' onclick = \"_delete(this,'Descuento_pendiente')\" title = 'Eliminar' class = 'delete_cell'><img src = 'images/delete.png'/></td></tr>";//option_bright() and option_opaque() at presentation.js. select_optio() at general.js
+			else
+				$txt .= "<tr onmouseover=\"option_bright(this)\" onmouseout=\"option_opaque(this)\"><td class = \"checkbox_input_cell\"></td><td>$nomina</td><td>$retencion</td><td>$id</td><td>$cantidad</td><td>$numero_de_descuentos</td><td>$fecha_de_inicio</td><td>$fecha_de_termino</td><td onmouseover = 'om_bright(this)' onmouseout = 'om_opaque(this)' onclick = \"_view(this,'Descuento_pendiente')\" title = 'Ver' class = 'view_cell'><img src = 'images/view.png'/></td></tr>";
+
+	}
+
+	$conn->freeResult($result);
+
+	//Pago por seguro de vida
+	$result = $conn->query("SELECT Descuento_pendiente.Nomina, Descuento_pendiente.Retencion, Descuento_pendiente.id, Descuento_pendiente.Cantidad, Descuento_pendiente.Numero_de_descuentos, Descuento_pendiente.Fecha_de_inicio, Descuento_pendiente.Fecha_de_termino FROM Pago_por_seguro_de_vida INNER JOIN Descuento_pendiente ON Pago_por_seguro_de_vida.id = Descuento_pendiente.id WHERE Pago_por_seguro_de_vida.Trabajador = '{$_GET['id']}' AND Descuento_pendiente.Retencion = 'Pago por seguro de vida' AND Descuento_pendiente.Nomina LIKE '%{$values[0]}%' AND Descuento_pendiente.Retencion LIKE '%{$values[1]}%' AND Descuento_pendiente.id LIKE '%{$values[2]}%' AND Descuento_pendiente.Cantidad LIKE '%{$values[3]}%'" . ($values[4] == "" ? " AND (Descuento_pendiente.Numero_de_descuentos IS NULL OR Descuento_pendiente.Numero_de_descuentos LIKE '%{$values[4]}%')" : " AND Descuento_pendiente.Numero_de_descuentos LIKE '%{$values[4]}%'") . ($values[5] == "" ? " AND (Descuento_pendiente.Fecha_de_inicio IS NULL OR Descuento_pendiente.Fecha_de_inicio LIKE '%{$values[5]}%')" : " AND Descuento_pendiente.Fecha_de_inicio LIKE '%{$values[5]}%'") . ($values[6] == "" ? " AND (Descuento_pendiente.Fecha_de_termino IS NULL OR Descuento_pendiente.Fecha_de_termino LIKE '%{$values[6]}%')" : " AND Descuento_pendiente.Fecha_de_termino LIKE '%{$values[6]}%'"));
+
+	if(isset($result))
+	{
+
+		if($txt == "")
+			$txt = '<table class = "options_table">';
+
+		while(list($nomina, $retencion, $id, $cantidad, $numero_de_descuentos, $fecha_de_inicio, $fecha_de_termino) = $conn->fetchRow($result))
+
+			if($_GET['mode'] != 'DRAW')
+				$txt .= "<tr onmouseover=\"option_bright(this)\" onmouseout=\"option_opaque(this)\"><td class = \"checkbox_input_cell\"></td><td>$nomina</td><td>$retencion</td><td>$id</td><td>$cantidad</td><td>$numero_de_descuentos</td><td>$fecha_de_inicio</td><td>$fecha_de_termino</td><td onmouseover = 'om_bright(this)' onmouseout = 'om_opaque(this)' onclick = \"_view(this,'Descuento_pendiente')\" title = 'Ver' class = 'view_cell'><img src = 'images/view.png'/></td><td onmouseover = 'om_bright(this)' onmouseout = 'om_opaque(this)' onclick = \"_edit(this,'Descuento_pendiente')\" title = 'Editar' class = 'edit_cell'><img src = 'images/edit.png'/></td><td onmouseover = 'om_bright(this)' onmouseout = 'om_opaque(this)' onclick = \"_delete(this,'Descuento_pendiente')\" title = 'Eliminar' class = 'delete_cell'><img src = 'images/delete.png'/></td></tr>";//option_bright() and option_opaque() at presentation.js. select_optio() at general.js
+			else
+				$txt .= "<tr onmouseover=\"option_bright(this)\" onmouseout=\"option_opaque(this)\"><td class = \"checkbox_input_cell\"></td><td>$nomina</td><td>$retencion</td><td>$id</td><td>$cantidad</td><td>$numero_de_descuentos</td><td>$fecha_de_inicio</td><td>$fecha_de_termino</td><td onmouseover = 'om_bright(this)' onmouseout = 'om_opaque(this)' onclick = \"_view(this,'Descuento_pendiente')\" title = 'Ver' class = 'view_cell'><img src = 'images/view.png'/></td></tr>";
+
+	}
+
+	$conn->freeResult($result);
+
+	//Préstamo del fondo de ahorro
+	$result = $conn->query("SELECT Descuento_pendiente.Nomina, Descuento_pendiente.Retencion, Descuento_pendiente.id, Descuento_pendiente.Cantidad, Descuento_pendiente.Numero_de_descuentos, Descuento_pendiente.Fecha_de_inicio, Descuento_pendiente.Fecha_de_termino FROM Trabajador_Prestamo_del_fondo_de_ahorro INNER JOIN Descuento_pendiente ON Trabajador_Prestamo_del_fondo_de_ahorro.Prestamo_del_fondo_de_ahorro = Descuento_pendiente.id WHERE Trabajador_Prestamo_del_fondo_de_ahorro.Trabajador = '{$_GET['id']}' AND Descuento_pendiente.Retencion = 'Préstamo del fondo de ahorro' AND Descuento_pendiente.Nomina LIKE '%{$values[0]}%' AND Descuento_pendiente.Retencion LIKE '%{$values[1]}%' AND Descuento_pendiente.id LIKE '%{$values[2]}%' AND Descuento_pendiente.Cantidad LIKE '%{$values[3]}%'" . ($values[4] == "" ? " AND (Descuento_pendiente.Numero_de_descuentos IS NULL OR Descuento_pendiente.Numero_de_descuentos LIKE '%{$values[4]}%')" : " AND Descuento_pendiente.Numero_de_descuentos LIKE '%{$values[4]}%'") . ($values[5] == "" ? " AND (Descuento_pendiente.Fecha_de_inicio IS NULL OR Descuento_pendiente.Fecha_de_inicio LIKE '%{$values[5]}%')" : " AND Descuento_pendiente.Fecha_de_inicio LIKE '%{$values[5]}%'") . ($values[6] == "" ? " AND (Descuento_pendiente.Fecha_de_termino IS NULL OR Descuento_pendiente.Fecha_de_termino LIKE '%{$values[6]}%')" : " AND Descuento_pendiente.Fecha_de_termino LIKE '%{$values[6]}%'"));
+
+	if(isset($result))
+	{
+
+		if($txt == "")
+			$txt = '<table class = "options_table">';
+
+		while(list($nomina, $retencion, $id, $cantidad, $numero_de_descuentos, $fecha_de_inicio, $fecha_de_termino) = $conn->fetchRow($result))
+
+			if($_GET['mode'] != 'DRAW')
+				$txt .= "<tr onmouseover=\"option_bright(this)\" onmouseout=\"option_opaque(this)\"><td class = \"checkbox_input_cell\"></td><td>$nomina</td><td>$retencion</td><td>$id</td><td>$cantidad</td><td>$numero_de_descuentos</td><td>$fecha_de_inicio</td><td>$fecha_de_termino</td><td onmouseover = 'om_bright(this)' onmouseout = 'om_opaque(this)' onclick = \"_view(this,'Descuento_pendiente')\" title = 'Ver' class = 'view_cell'><img src = 'images/view.png'/></td><td onmouseover = 'om_bright(this)' onmouseout = 'om_opaque(this)' onclick = \"_edit(this,'Descuento_pendiente')\" title = 'Editar' class = 'edit_cell'><img src = 'images/edit.png'/></td><td onmouseover = 'om_bright(this)' onmouseout = 'om_opaque(this)' onclick = \"_delete(this,'Descuento_pendiente')\" title = 'Eliminar' class = 'delete_cell'><img src = 'images/delete.png'/></td></tr>";//option_bright() and option_opaque() at presentation.js. select_optio() at general.js
+			else
+				$txt .= "<tr onmouseover=\"option_bright(this)\" onmouseout=\"option_opaque(this)\"><td class = \"checkbox_input_cell\"></td><td>$nomina</td><td>$retencion</td><td>$id</td><td>$cantidad</td><td>$numero_de_descuentos</td><td>$fecha_de_inicio</td><td>$fecha_de_termino</td><td onmouseover = 'om_bright(this)' onmouseout = 'om_opaque(this)' onclick = \"_view(this,'Descuento_pendiente')\" title = 'Ver' class = 'view_cell'><img src = 'images/view.png'/></td></tr>";
+
+	}
+
+	$conn->freeResult($result);
+
+	//Préstamo de caja
+	$result = $conn->query("SELECT Descuento_pendiente.Nomina, Descuento_pendiente.Retencion, Descuento_pendiente.id, Descuento_pendiente.Cantidad, Descuento_pendiente.Numero_de_descuentos, Descuento_pendiente.Fecha_de_inicio, Descuento_pendiente.Fecha_de_termino FROM Trabajador_Prestamo_caja INNER JOIN Descuento_pendiente ON Trabajador_Prestamo_caja.Prestamo_caja = Descuento_pendiente.id WHERE Trabajador_Prestamo_caja.Trabajador = '{$_GET['id']}' AND Descuento_pendiente.Retencion = 'Préstamo caja' AND Descuento_pendiente.Nomina LIKE '%{$values[0]}%' AND Descuento_pendiente.Retencion LIKE '%{$values[1]}%' AND Descuento_pendiente.id LIKE '%{$values[2]}%' AND Descuento_pendiente.Cantidad LIKE '%{$values[3]}%'" . ($values[4] == "" ? " AND (Descuento_pendiente.Numero_de_descuentos IS NULL OR Descuento_pendiente.Numero_de_descuentos LIKE '%{$values[4]}%')" : " AND Descuento_pendiente.Numero_de_descuentos LIKE '%{$values[4]}%'") . ($values[5] == "" ? " AND (Descuento_pendiente.Fecha_de_inicio IS NULL OR Descuento_pendiente.Fecha_de_inicio LIKE '%{$values[5]}%')" : " AND Descuento_pendiente.Fecha_de_inicio LIKE '%{$values[5]}%'") . ($values[6] == "" ? " AND (Descuento_pendiente.Fecha_de_termino IS NULL OR Descuento_pendiente.Fecha_de_termino LIKE '%{$values[6]}%')" : " AND Descuento_pendiente.Fecha_de_termino LIKE '%{$values[6]}%'"));
+
+	if(isset($result))
+	{
+
+		if($txt == "")
+			$txt = '<table class = "options_table">';
+
+		while(list($nomina, $retencion, $id, $cantidad, $numero_de_descuentos, $fecha_de_inicio, $fecha_de_termino) = $conn->fetchRow($result))
+
+			if($_GET['mode'] != 'DRAW')
+				$txt .= "<tr onmouseover=\"option_bright(this)\" onmouseout=\"option_opaque(this)\"><td class = \"checkbox_input_cell\"></td><td>$nomina</td><td>$retencion</td><td>$id</td><td>$cantidad</td><td>$numero_de_descuentos</td><td>$fecha_de_inicio</td><td>$fecha_de_termino</td><td onmouseover = 'om_bright(this)' onmouseout = 'om_opaque(this)' onclick = \"_view(this,'Descuento_pendiente')\" title = 'Ver' class = 'view_cell'><img src = 'images/view.png'/></td><td onmouseover = 'om_bright(this)' onmouseout = 'om_opaque(this)' onclick = \"_edit(this,'Descuento_pendiente')\" title = 'Editar' class = 'edit_cell'><img src = 'images/edit.png'/></td><td onmouseover = 'om_bright(this)' onmouseout = 'om_opaque(this)' onclick = \"_delete(this,'Descuento_pendiente')\" title = 'Eliminar' class = 'delete_cell'><img src = 'images/delete.png'/></td></tr>";//option_bright() and option_opaque() at presentation.js. select_optio() at general.js
+			else
+				$txt .= "<tr onmouseover=\"option_bright(this)\" onmouseout=\"option_opaque(this)\"><td class = \"checkbox_input_cell\"></td><td>$nomina</td><td>$retencion</td><td>$id</td><td>$cantidad</td><td>$numero_de_descuentos</td><td>$fecha_de_inicio</td><td>$fecha_de_termino</td><td onmouseover = 'om_bright(this)' onmouseout = 'om_opaque(this)' onclick = \"_view(this,'Descuento_pendiente')\" title = 'Ver' class = 'view_cell'><img src = 'images/view.png'/></td></tr>";
+
+	}
+
+	$conn->freeResult($result);
+
+	//Préstamo de administradora
+	$result = $conn->query("SELECT Descuento_pendiente.Nomina, Descuento_pendiente.Retencion, Descuento_pendiente.id, Descuento_pendiente.Cantidad, Descuento_pendiente.Numero_de_descuentos, Descuento_pendiente.Fecha_de_inicio, Descuento_pendiente.Fecha_de_termino FROM Trabajador_Prestamo_administradora INNER JOIN Descuento_pendiente ON Trabajador_Prestamo_administradora.Prestamo_administradora = Descuento_pendiente.id WHERE Trabajador_Prestamo_administradora.Trabajador = '{$_GET['id']}' AND Descuento_pendiente.Retencion = 'Préstamo administradora' AND Descuento_pendiente.Nomina LIKE '%{$values[0]}%' AND Descuento_pendiente.Retencion LIKE '%{$values[1]}%' AND Descuento_pendiente.id LIKE '%{$values[2]}%' AND Descuento_pendiente.Cantidad LIKE '%{$values[3]}%'" . ($values[4] == "" ? " AND (Descuento_pendiente.Numero_de_descuentos IS NULL OR Descuento_pendiente.Numero_de_descuentos LIKE '%{$values[4]}%')" : " AND Descuento_pendiente.Numero_de_descuentos LIKE '%{$values[4]}%'") . ($values[5] == "" ? " AND (Descuento_pendiente.Fecha_de_inicio IS NULL OR Descuento_pendiente.Fecha_de_inicio LIKE '%{$values[5]}%')" : " AND Descuento_pendiente.Fecha_de_inicio LIKE '%{$values[5]}%'") . ($values[6] == "" ? " AND (Descuento_pendiente.Fecha_de_termino IS NULL OR Descuento_pendiente.Fecha_de_termino LIKE '%{$values[6]}%')" : " AND Descuento_pendiente.Fecha_de_termino LIKE '%{$values[6]}%'"));
+
+	if(isset($result))
+	{
+
+		if($txt == "")
+			$txt = '<table class = "options_table">';
+
+		while(list($nomina, $retencion, $id, $cantidad, $numero_de_descuentos, $fecha_de_inicio, $fecha_de_termino) = $conn->fetchRow($result))
+
+			if($_GET['mode'] != 'DRAW')
+				$txt .= "<tr onmouseover=\"option_bright(this)\" onmouseout=\"option_opaque(this)\"><td class = \"checkbox_input_cell\"></td><td>$nomina</td><td>$retencion</td><td>$id</td><td>$cantidad</td><td>$numero_de_descuentos</td><td>$fecha_de_inicio</td><td>$fecha_de_termino</td><td onmouseover = 'om_bright(this)' onmouseout = 'om_opaque(this)' onclick = \"_view(this,'Descuento_pendiente')\" title = 'Ver' class = 'view_cell'><img src = 'images/view.png'/></td><td onmouseover = 'om_bright(this)' onmouseout = 'om_opaque(this)' onclick = \"_edit(this,'Descuento_pendiente')\" title = 'Editar' class = 'edit_cell'><img src = 'images/edit.png'/></td><td onmouseover = 'om_bright(this)' onmouseout = 'om_opaque(this)' onclick = \"_delete(this,'Descuento_pendiente')\" title = 'Eliminar' class = 'delete_cell'><img src = 'images/delete.png'/></td></tr>";//option_bright() and option_opaque() at presentation.js. select_optio() at general.js
+			else
+				$txt .= "<tr onmouseover=\"option_bright(this)\" onmouseout=\"option_opaque(this)\"><td class = \"checkbox_input_cell\"></td><td>$nomina</td><td>$retencion</td><td>$id</td><td>$cantidad</td><td>$numero_de_descuentos</td><td>$fecha_de_inicio</td><td>$fecha_de_termino</td><td onmouseover = 'om_bright(this)' onmouseout = 'om_opaque(this)' onclick = \"_view(this,'Descuento_pendiente')\" title = 'Ver' class = 'view_cell'><img src = 'images/view.png'/></td></tr>";
+
+	}
+
+	$conn->freeResult($result);
+
+	//Préstamo de cliente
+	$result = $conn->query("SELECT Descuento_pendiente.Nomina, Descuento_pendiente.Retencion, Descuento_pendiente.id, Descuento_pendiente.Cantidad, Descuento_pendiente.Numero_de_descuentos, Descuento_pendiente.Fecha_de_inicio, Descuento_pendiente.Fecha_de_termino FROM Trabajador_Prestamo_cliente INNER JOIN Descuento_pendiente ON Trabajador_Prestamo_cliente.Prestamo_cliente = Descuento_pendiente.id WHERE Trabajador_Prestamo_cliente.Trabajador = '{$_GET['id']}' AND Descuento_pendiente.Retencion = 'Préstamo cliente' AND Descuento_pendiente.Nomina LIKE '%{$values[0]}%' AND Descuento_pendiente.Retencion LIKE '%{$values[1]}%' AND Descuento_pendiente.id LIKE '%{$values[2]}%' AND Descuento_pendiente.Cantidad LIKE '%{$values[3]}%'" . ($values[4] == "" ? " AND (Descuento_pendiente.Numero_de_descuentos IS NULL OR Descuento_pendiente.Numero_de_descuentos LIKE '%{$values[4]}%')" : " AND Descuento_pendiente.Numero_de_descuentos LIKE '%{$values[4]}%'") . ($values[5] == "" ? " AND (Descuento_pendiente.Fecha_de_inicio IS NULL OR Descuento_pendiente.Fecha_de_inicio LIKE '%{$values[5]}%')" : " AND Descuento_pendiente.Fecha_de_inicio LIKE '%{$values[5]}%'") . ($values[6] == "" ? " AND (Descuento_pendiente.Fecha_de_termino IS NULL OR Descuento_pendiente.Fecha_de_termino LIKE '%{$values[6]}%')" : " AND Descuento_pendiente.Fecha_de_termino LIKE '%{$values[6]}%'"));
+*/
+	if(isset($result))
+	{
+
+		if($txt == "")
+			$txt = '<table class = "options_table">';
+
+		while(list($nomina, $retencion, $id, $cantidad, $numero_de_descuentos, $fecha_de_inicio, $fecha_de_termino) = $conn->fetchRow($result))
+
+			if($_GET['mode'] != 'DRAW')
+				$txt .= "<tr onmouseover=\"option_bright(this)\" onmouseout=\"option_opaque(this)\"><td class = \"checkbox_input_cell\"></td><td>$nomina</td><td>$retencion</td><td>$id</td><td>$cantidad</td><td>$numero_de_descuentos</td><td>$fecha_de_inicio</td><td>$fecha_de_termino</td><td onmouseover = 'om_bright(this)' onmouseout = 'om_opaque(this)' onclick = \"_view(this,'Descuento_pendiente')\" title = 'Ver' class = 'view_cell'><img src = 'images/view.png'/></td><td onmouseover = 'om_bright(this)' onmouseout = 'om_opaque(this)' onclick = \"_edit(this,'Descuento_pendiente')\" title = 'Editar' class = 'edit_cell'><img src = 'images/edit.png'/></td><td onmouseover = 'om_bright(this)' onmouseout = 'om_opaque(this)' onclick = \"_delete(this,'Descuento_pendiente')\" title = 'Eliminar' class = 'delete_cell'><img src = 'images/delete.png'/></td></tr>";//option_bright() and option_opaque() at presentation.js. select_optio() at general.js
+			else
+				$txt .= "<tr onmouseover=\"option_bright(this)\" onmouseout=\"option_opaque(this)\"><td class = \"checkbox_input_cell\"></td><td>$nomina</td><td>$retencion</td><td>$id</td><td>$cantidad</td><td>$numero_de_descuentos</td><td>$fecha_de_inicio</td><td>$fecha_de_termino</td><td onmouseover = 'om_bright(this)' onmouseout = 'om_opaque(this)' onclick = \"_view(this,'Descuento_pendiente')\" title = 'Ver' class = 'view_cell'><img src = 'images/view.png'/></td></tr>";
+
+	}
+
+	if($txt != "")
+		$txt .= '</table>';
+
+	echo $txt;
+?>

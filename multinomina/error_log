@@ -1,0 +1,959 @@
+[Thu Mar 20 17:22:31 2014] [error] [client ::1] PHP Notice:  Trying to get property of non-object in /var/www/web/multinomina/cfdi_trabajador.php on line 651, referer: http://localhost/index_.php
+[Thu Mar 20 17:22:31 2014] [error] [client ::1] PHP Notice:  Trying to get property of non-object in /var/www/web/multinomina/cfdi_trabajador.php on line 651, referer: http://localhost/index_.php
+[Thu Mar 20 17:22:31 2014] [error] [client ::1] PHP Notice:  Trying to get property of non-object in /var/www/web/multinomina/cfdi_trabajador.php on line 656, referer: http://localhost/index_.php
+[Thu Mar 20 17:22:32 2014] [error] [client ::1] PHP Notice:  Trying to get property of non-object in /var/www/web/multinomina/cfdi_trabajador.php on line 651, referer: http://localhost/index_.php
+[Thu Mar 20 17:22:32 2014] [error] [client ::1] PHP Notice:  Trying to get property of non-object in /var/www/web/multinomina/cfdi_trabajador.php on line 651, referer: http://localhost/index_.php
+[Thu Mar 20 17:22:32 2014] [error] [client ::1] PHP Notice:  Trying to get property of non-object in /var/www/web/multinomina/cfdi_trabajador.php on line 656, referer: http://localhost/index_.php
+[Thu Mar 20 17:22:33 2014] [error] [client ::1] PHP Notice:  Trying to get property of non-object in /var/www/web/multinomina/cfdi_trabajador.php on line 651, referer: http://localhost/index_.php
+[Thu Mar 20 17:22:33 2014] [error] [client ::1] PHP Notice:  Trying to get property of non-object in /var/www/web/multinomina/cfdi_trabajador.php on line 651, referer: http://localhost/index_.php
+[Thu Mar 20 17:22:33 2014] [error] [client ::1] PHP Notice:  Trying to get property of non-object in /var/www/web/multinomina/cfdi_trabajador.php on line 656, referer: http://localhost/index_.php
+[Thu Mar 20 17:22:34 2014] [error] [client ::1] PHP Notice:  Trying to get property of non-object in /var/www/web/multinomina/cfdi_trabajador.php on line 651, referer: http://localhost/index_.php
+[Thu Mar 20 17:22:34 2014] [error] [client ::1] PHP Notice:  Trying to get property of non-object in /var/www/web/multinomina/cfdi_trabajador.php on line 651, referer: http://localhost/index_.php
+[Thu Mar 20 17:22:34 2014] [error] [client ::1] PHP Notice:  Trying to get property of non-object in /var/www/web/multinomina/cfdi_trabajador.php on line 656, referer: http://localhost/index_.php
+[Thu Mar 20 17:22:34 2014] [error] [client ::1] PHP Notice:  Trying to get property of non-object in /var/www/web/multinomina/cfdi_trabajador.php on line 651, referer: http://localhost/index_.php
+[Thu Mar 20 17:22:34 2014] [error] [client ::1] PHP Notice:  Trying to get property of non-object in /var/www/web/multinomina/cfdi_trabajador.php on line 651, referer: http://localhost/index_.php
+[Thu Mar 20 17:22:34 2014] [error] [client ::1] PHP Notice:  Trying to get property of non-object in /var/www/web/multinomina/cfdi_trabajador.php on line 656, referer: http://localhost/index_.php
+[Thu Mar 20 17:22:35 2014] [error] [client ::1] PHP Notice:  Trying to get property of non-object in /var/www/web/multinomina/cfdi_trabajador.php on line 651, referer: http://localhost/index_.php
+[Thu Mar 20 17:22:35 2014] [error] [client ::1] PHP Notice:  Trying to get property of non-object in /var/www/web/multinomina/cfdi_trabajador.php on line 651, referer: http://localhost/index_.php
+[Thu Mar 20 17:22:35 2014] [error] [client ::1] PHP Notice:  Trying to get property of non-object in /var/www/web/multinomina/cfdi_trabajador.php on line 656, referer: http://localhost/index_.php
+[Thu Mar 20 17:22:36 2014] [error] [client ::1] PHP Notice:  Trying to get property of non-object in /var/www/web/multinomina/cfdi_trabajador.php on line 651, referer: http://localhost/index_.php
+[Thu Mar 20 17:22:36 2014] [error] [client ::1] PHP Notice:  Trying to get property of non-object in /var/www/web/multinomina/cfdi_trabajador.php on line 651, referer: http://localhost/index_.php
+[Thu Mar 20 17:22:36 2014] [error] [client ::1] PHP Notice:  Trying to get property of non-object in /var/www/web/multinomina/cfdi_trabajador.php on line 656, referer: http://localhost/index_.php
+[Thu Mar 20 17:28:41 2014] [error] [client 77.93.126.114] script not found or unable to stat: /var/www/cgi-bin/php
+[Thu Mar 20 17:28:41 2014] [error] [client 77.93.126.114] script not found or unable to stat: /var/www/cgi-bin/php5
+[Thu Mar 20 17:28:42 2014] [error] [client 77.93.126.114] script not found or unable to stat: /var/www/cgi-bin/php-cgi
+[Thu Mar 20 17:28:43 2014] [error] [client 77.93.126.114] script not found or unable to stat: /var/www/cgi-bin/php.cgi
+[Thu Mar 20 17:28:43 2014] [error] [client 77.93.126.114] script not found or unable to stat: /var/www/cgi-bin/php4
+[Thu Mar 20 17:34:14 2014] [error] [client 192.168.1.192] PHP Notice:  Trying to get property of non-object in /var/www/web/multinomina/cfdi_trabajador.php on line 651, referer: http://192.168.1.169/index_.php
+[Thu Mar 20 17:34:15 2014] [error] [client 192.168.1.192] PHP Notice:  Trying to get property of non-object in /var/www/web/multinomina/cfdi_trabajador.php on line 651, referer: http://192.168.1.169/index_.php
+[Thu Mar 20 17:34:16 2014] [error] [client 192.168.1.192] PHP Notice:  Trying to get property of non-object in /var/www/web/multinomina/cfdi_trabajador.php on line 651, referer: http://192.168.1.169/index_.php
+[Thu Mar 20 17:34:16 2014] [error] [client 192.168.1.192] PHP Notice:  Trying to get property of non-object in /var/www/web/multinomina/cfdi_trabajador.php on line 651, referer: http://192.168.1.169/index_.php
+[Thu Mar 20 17:34:17 2014] [error] [client 192.168.1.192] PHP Notice:  Trying to get property of non-object in /var/www/web/multinomina/cfdi_trabajador.php on line 651, referer: http://192.168.1.169/index_.php
+[Thu Mar 20 17:34:18 2014] [error] [client 192.168.1.192] PHP Notice:  Trying to get property of non-object in /var/www/web/multinomina/cfdi_trabajador.php on line 651, referer: http://192.168.1.169/index_.php
+[Thu Mar 20 17:34:19 2014] [error] [client 192.168.1.192] PHP Notice:  Trying to get property of non-object in /var/www/web/multinomina/cfdi_trabajador.php on line 651, referer: http://192.168.1.169/index_.php
+[Thu Mar 20 17:34:27 2014] [error] [client 212.56.97.209] script not found or unable to stat: /var/www/cgi-bin/php
+[Thu Mar 20 17:34:28 2014] [error] [client 212.56.97.209] script not found or unable to stat: /var/www/cgi-bin/php5
+[Thu Mar 20 17:34:28 2014] [error] [client 212.56.97.209] script not found or unable to stat: /var/www/cgi-bin/php-cgi
+[Thu Mar 20 17:34:29 2014] [error] [client 212.56.97.209] script not found or unable to stat: /var/www/cgi-bin/php.cgi
+[Thu Mar 20 17:34:29 2014] [error] [client 212.56.97.209] script not found or unable to stat: /var/www/cgi-bin/php4
+[Thu Mar 20 17:34:35 2014] [error] [client 192.168.1.192] PHP Notice:  Trying to get property of non-object in /var/www/web/multinomina/cfdi_trabajador.php on line 651, referer: http://192.168.1.169/index_.php
+[Thu Mar 20 17:34:36 2014] [error] [client 192.168.1.192] PHP Notice:  Trying to get property of non-object in /var/www/web/multinomina/cfdi_trabajador.php on line 651, referer: http://192.168.1.169/index_.php
+[Thu Mar 20 17:34:38 2014] [error] [client 192.168.1.192] PHP Notice:  Trying to get property of non-object in /var/www/web/multinomina/cfdi_trabajador.php on line 651, referer: http://192.168.1.169/index_.php
+[Thu Mar 20 17:34:38 2014] [error] [client 192.168.1.192] PHP Notice:  Trying to get property of non-object in /var/www/web/multinomina/cfdi_trabajador.php on line 651, referer: http://192.168.1.169/index_.php
+[Thu Mar 20 17:34:39 2014] [error] [client 192.168.1.192] PHP Notice:  Trying to get property of non-object in /var/www/web/multinomina/cfdi_trabajador.php on line 651, referer: http://192.168.1.169/index_.php
+[Thu Mar 20 17:34:40 2014] [error] [client 192.168.1.192] PHP Notice:  Trying to get property of non-object in /var/www/web/multinomina/cfdi_trabajador.php on line 651, referer: http://192.168.1.169/index_.php
+[Thu Mar 20 17:34:41 2014] [error] [client 192.168.1.192] PHP Notice:  Trying to get property of non-object in /var/www/web/multinomina/cfdi_trabajador.php on line 651, referer: http://192.168.1.169/index_.php
+[Thu Mar 20 17:34:54 2014] [error] [client 192.168.1.192] PHP Notice:  Trying to get property of non-object in /var/www/web/multinomina/cfdi_trabajador.php on line 651, referer: http://192.168.1.169/index_.php
+[Thu Mar 20 17:34:55 2014] [error] [client 192.168.1.192] PHP Notice:  Trying to get property of non-object in /var/www/web/multinomina/cfdi_trabajador.php on line 651, referer: http://192.168.1.169/index_.php
+[Thu Mar 20 17:34:56 2014] [error] [client 192.168.1.192] PHP Notice:  Trying to get property of non-object in /var/www/web/multinomina/cfdi_trabajador.php on line 651, referer: http://192.168.1.169/index_.php
+[Thu Mar 20 17:34:56 2014] [error] [client 192.168.1.192] PHP Notice:  Trying to get property of non-object in /var/www/web/multinomina/cfdi_trabajador.php on line 651, referer: http://192.168.1.169/index_.php
+[Thu Mar 20 17:34:57 2014] [error] [client 192.168.1.192] PHP Notice:  Trying to get property of non-object in /var/www/web/multinomina/cfdi_trabajador.php on line 651, referer: http://192.168.1.169/index_.php
+[Thu Mar 20 17:34:58 2014] [error] [client 192.168.1.192] PHP Notice:  Trying to get property of non-object in /var/www/web/multinomina/cfdi_trabajador.php on line 651, referer: http://192.168.1.169/index_.php
+[Thu Mar 20 17:35:00 2014] [error] [client 192.168.1.192] PHP Notice:  Trying to get property of non-object in /var/www/web/multinomina/cfdi_trabajador.php on line 651, referer: http://192.168.1.169/index_.php
+[Thu Mar 20 18:37:09 2014] [error] [client 189.254.25.183] request failed: error reading the headers
+[Thu Mar 20 19:08:54 2014] [error] [client 187.153.81.224] Invalid URI in request \xd7\x7f\x0c=|
+[Thu Mar 20 19:50:21 2014] [error] [client 189.149.89.98] Invalid URI in request j\xc8\xe2#`\xf8\x9a3\x16B:\xfc\xb5\xe1"\x83\xbc\xec\x12\xe6\xa8\xa7\xe5o\x96\x13\x7f\t\x07\x03\xd8
+[Thu Mar 20 20:22:13 2014] [error] [client 98.174.160.9] File does not exist: /var/www/web/multinomina/HNAP1, referer: http://189.151.10.75/
+[Fri Mar 21 06:42:48 2014] [error] [client 219.144.196.190] File does not exist: /var/www/web/multinomina/phpTest
+[Fri Mar 21 06:42:49 2014] [error] [client 219.144.196.190] File does not exist: /usr/share/phpMyAdmin/scripts
+[Fri Mar 21 06:42:50 2014] [error] [client 219.144.196.190] File does not exist: /var/www/web/multinomina/pma
+[Fri Mar 21 06:42:51 2014] [error] [client 219.144.196.190] File does not exist: /var/www/web/multinomina/myadmin
+[Fri Mar 21 08:50:23 2014] [error] [client 186.89.58.167] File does not exist: /var/www/web/multinomina/manager
+[Fri Mar 21 10:21:55 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index: cuenta in /var/www/web/multinomina/nomina.php on line 7862
+[Fri Mar 21 12:57:01 2014] [error] [client 190.236.131.51] request failed: error reading the headers
+[Fri Mar 21 19:23:03 2014] [error] [client 189.210.159.127] Invalid URI in request m&\x13\xcdw,?#\x85N\r\xbck,\xb4\xb5\xa7
+[Fri Mar 21 22:26:14 2014] [error] [client 187.202.160.14] request failed: error reading the headers
+[Fri Mar 21 22:51:35 2014] [error] [client 187.192.99.238] Invalid URI in request \x0f\xbc\xdc\xa5\xfar\xe9\xe0~"[\xd4\x067\xa2\xe3\xb9a\xc0\xb4\x07\xc9\xac\xabJ\x0c\xe0\xb8\xad\x1b\xf9~~\xe2\xfe\xa2\xf0\xe6\x85*\x86\x0e\xfbr(
+[Sat Mar 22 08:00:13 2014] [error] [client 190.85.22.66] Invalid URI in request D\x1d\xe2\rdz\x82cV\x9dv\x8c\xac\xcb\xfa\xa3Z
+[Sat Mar 22 12:20:58 2014] [error] [client 187.241.14.129] Invalid URI in request \x87\x8b\xf4\x8c\x8e\x924\xf2^=\x15?\xcf\xd6\xe3\x1c\xb7\xaa\xb7:*\xdb\xca\xa7i\tlox\xbbh\xcex\x8aw&\x10\xe4~q\x92\xed\xbdh\xbc\x07\xf1\x17i\x05\x1a\xcc\xfc\xbao
+[Sat Mar 22 12:31:45 2014] [error] [client 2.6.146.176] Invalid URI in request \xd0\x17H<\xfc"a:x\xa8 \x1d\xe4/\xa3\\\x922\xa1\x9f\x8f\x89\x11\x82\x1552\b\xa4\x9aB\xca7\xe2\xbc\xf2\xb5\xbe\xe8&\x8e\x98p
+[Sat Mar 22 13:16:18 2014] [error] [client 207.248.42.42] Invalid URI in request \xd9\x905\x8eo\xed\xb6H)\x87\x13\v2c-\xc9\x9b2
+[Sat Mar 22 15:08:33 2014] [error] [client 200.83.147.237] Invalid URI in request \xc2\xe7}\xae\x9e\vI\x95\x17\xabB&0\\'\xcf\x84\x0f\xd42k`O{*b\x05G\x1f"\xafc\xbe\b\x93_\x15\x8b\xb4\xb0\xc4\x18d
+[Sun Mar 23 13:58:07 2014] [error] [client 201.48.157.179] script not found or unable to stat: /var/www/cgi-bin/php
+[Sun Mar 23 13:58:10 2014] [error] [client 201.48.157.179] script not found or unable to stat: /var/www/cgi-bin/php5
+[Sun Mar 23 13:58:12 2014] [error] [client 201.48.157.179] script not found or unable to stat: /var/www/cgi-bin/php-cgi
+[Sun Mar 23 13:58:17 2014] [error] [client 201.48.157.179] script not found or unable to stat: /var/www/cgi-bin/php.cgi
+[Sun Mar 23 13:58:17 2014] [error] [client 201.48.157.179] script not found or unable to stat: /var/www/cgi-bin/php4
+[Mon Mar 24 11:27:09 2014] [error] [client 176.194.132.172] Invalid URI in request \xc7\xe2\x01\xec\xceh\xde,\x8b\x01>\xdb\xa4\xd3%\x06\xbd\x94Bf!\x9fA\x0eg\xf3\xa1\x95\xa3\xcch\xa1\x85<\xe3\vY\xd7\xd7\xeb\xc2
+[Mon Mar 24 12:35:07 2014] [error] [client 186.22.202.181] Invalid URI in request \xa1|~\xf4\x83\x0c\x01\xdd\x88\xfe|D\x17\xbf\xe1\xda
+[Mon Mar 24 15:06:23 2014] [error] [client 189.130.39.48] Invalid URI in request \xc4\xf7\x8a\xf0vb,\r\xdbA@\xd6\x1c\x8e\x9d\xc0\x9b\xf1\xe6
+[Mon Mar 24 15:17:26 2014] [error] [client 189.206.108.2] Invalid URI in request \xfa'Z>,\xf6\xfcok\xc95\xcc\xe1'\x85\xe2aEx`\xcc\x1a.\x1c\x1a\t\xee&\x9eg
+[Mon Mar 24 17:29:47 2014] [error] [client 187.234.119.218] Invalid URI in request \x06\xfe\x12\xed\x83`\xce\x11\xb3\x96`\x93\x1e:\xe9Y\xf6XU\b\xa4\xf6L"\xa0-\xbc\xc8\x9b\xfe8\xeett(\xc1\xcd\xb3\xb2\x17\xfe\xb8\v\x13.\xdd\xccFK\x91
+[Mon Mar 24 18:03:15 2014] [error] [client 201.157.37.186] Invalid URI in request \xe3\x83\xe1<N\xe2T\xaf\xa5\x82\xa2+m\xa7\x88\x9c\xa7\xa7|\xb5\r\xbf\x98
+[Mon Mar 24 22:34:32 2014] [error] [client 201.145.79.12] request failed: error reading the headers
+[Tue Mar 25 05:36:04 2014] [error] [client 124.11.173.125] File does not exist: /var/www/web/multinomina/phpTest
+[Tue Mar 25 05:36:05 2014] [error] [client 124.11.173.125] File does not exist: /usr/share/phpMyAdmin/scripts
+[Tue Mar 25 05:36:06 2014] [error] [client 124.11.173.125] File does not exist: /var/www/web/multinomina/pma
+[Tue Mar 25 05:36:06 2014] [error] [client 124.11.173.125] File does not exist: /var/www/web/multinomina/myadmin
+[Tue Mar 25 10:37:58 2014] [error] [client 111.73.45.204] File does not exist: /var/www/web/multinomina/proxy.txt
+[Tue Mar 25 12:51:46 2014] [error] [client 189.215.219.194] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in /var/www/web/multinomina/get_logo.php on line 108, referer: http://multinomina.servehttp.com/index_.php
+[Tue Mar 25 12:51:46 2014] [error] [client 189.215.219.194] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in /var/www/web/multinomina/get_logo.php on line 109, referer: http://multinomina.servehttp.com/index_.php
+[Tue Mar 25 12:51:46 2014] [error] [client 189.215.219.194] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in /var/www/web/multinomina/get_logo.php on line 111, referer: http://multinomina.servehttp.com/index_.php
+[Tue Mar 25 13:13:07 2014] [error] [client 82.15.216.21] request failed: error reading the headers
+[Tue Mar 25 17:07:26 2014] [error] [client 87.174.100.192] Invalid URI in request \xbc\x85\xb9\b\xd2\xd7d\x07Z\x1du\xef\xdb\xc6\x1c\r\xcb\x93\xaf\xbe^\x0f
+[Wed Mar 26 10:44:43 2014] [error] [client 189.203.237.160] Invalid URI in request `\x05f\x88\x87\x82J\x164\xe5\x87\x03\x10\x7f\xaf\xd8e\x02A\xc6,cA>\xcf\xc7H\xd7\xd9\xb2\xbcZL\x0c\xee
+[Wed Mar 26 11:51:08 2014] [error] [client 189.209.90.233] Invalid URI in request \xbb\xbdV\xd0\xfbh\x1c2\xf9\x99\xef\xd8\x8az\xd9j\v\xeed\xb2\xfcps\xa3\xf7
+[Wed Mar 26 12:15:23 2014] [error] [client 189.148.173.154] Invalid URI in request \xeeE\xc6`\xb95}\\\xc2\xb6i\x98 \xe3\x13g\x9a0/\x8d\x8a\xa0i
+[Wed Mar 26 21:20:04 2014] [error] [client 92.240.68.152] request failed: error reading the headers
+[Thu Mar 27 00:53:58 2014] [error] [client 5.226.101.254] script not found or unable to stat: /var/www/cgi-bin/php
+[Thu Mar 27 00:53:59 2014] [error] [client 5.226.101.254] script not found or unable to stat: /var/www/cgi-bin/php5
+[Thu Mar 27 00:53:59 2014] [error] [client 5.226.101.254] script not found or unable to stat: /var/www/cgi-bin/php-cgi
+[Thu Mar 27 00:54:00 2014] [error] [client 5.226.101.254] script not found or unable to stat: /var/www/cgi-bin/php.cgi
+[Thu Mar 27 00:54:00 2014] [error] [client 5.226.101.254] script not found or unable to stat: /var/www/cgi-bin/php4
+[Thu Mar 27 11:30:00 2014] [error] [client 192.168.1.151] PHP Fatal error:  SOAP-ERROR: Parsing WSDL: Couldn't load from 'https://facturacion.finkok.com/servicios/soap/stamp.wsdl' : failed to load external entity "https://facturacion.finkok.com/servicios/soap/stamp.wsdl"\n in /var/www/web/multinomina/cfdi_trabajador.php on line 633, referer: http://multinomina/index_.php
+[Thu Mar 27 11:30:00 2014] [error] [client 192.168.1.151] PHP Fatal error:  Uncaught SoapFault exception: [WSDL] SOAP-ERROR: Parsing WSDL: Couldn't load from 'https://facturacion.finkok.com/servicios/soap/stamp.wsdl' : failed to load external entity "https://facturacion.finkok.com/servicios/soap/stamp.wsdl"\n in /var/www/web/multinomina/cfdi_trabajador.php:633\nStack trace:\n#0 /var/www/web/multinomina/cfdi_trabajador.php(633): SoapClient->SoapClient('https://factura...')\n#1 /var/www/web/multinomina/cfdi_trabajador.php(621): CFDI_Trabajador->Timbrar('<?xml version="...', 'Nomina')\n#2 /var/www/web/multinomina/nomina.php(7041): CFDI_Trabajador->CFDINomina(Array, true, 'Nomina')\n#3 /var/www/web/multinomina/nomina.php(6969): Nomina->timbrar_nomina_asalariados()\n#4 /var/www/web/multinomina/timbrar_nomina.php(5): Nomina->timbrar_nomina()\n#5 {main}\n  thrown in /var/www/web/multinomina/cfdi_trabajador.php on line 633, referer: http://multinomina/index_.php
+[Thu Mar 27 11:59:49 2014] [error] [client 192.168.1.151] PHP Fatal error:  SOAP-ERROR: Parsing WSDL: Couldn't load from 'https://facturacion.finkok.com/servicios/soap/stamp.wsdl' : failed to load external entity "https://facturacion.finkok.com/servicios/soap/stamp.wsdl"\n in /var/www/web/multinomina/cfdi_trabajador.php on line 633, referer: http://multinomina/index_.php
+[Thu Mar 27 11:59:49 2014] [error] [client 192.168.1.151] PHP Fatal error:  Uncaught SoapFault exception: [WSDL] SOAP-ERROR: Parsing WSDL: Couldn't load from 'https://facturacion.finkok.com/servicios/soap/stamp.wsdl' : failed to load external entity "https://facturacion.finkok.com/servicios/soap/stamp.wsdl"\n in /var/www/web/multinomina/cfdi_trabajador.php:633\nStack trace:\n#0 /var/www/web/multinomina/cfdi_trabajador.php(633): SoapClient->SoapClient('https://factura...')\n#1 /var/www/web/multinomina/cfdi_trabajador.php(621): CFDI_Trabajador->Timbrar('<?xml version="...', 'Nomina')\n#2 /var/www/web/multinomina/nomina.php(7041): CFDI_Trabajador->CFDINomina(Array, true, 'Nomina')\n#3 /var/www/web/multinomina/nomina.php(6969): Nomina->timbrar_nomina_asalariados()\n#4 /var/www/web/multinomina/timbrar_nomina.php(5): Nomina->timbrar_nomina()\n#5 {main}\n  thrown in /var/www/web/multinomina/cfdi_trabajador.php on line 633, referer: http://multinomina/index_.php
+[Thu Mar 27 12:21:00 2014] [error] [client 192.168.1.151] PHP Fatal error:  SOAP-ERROR: Parsing WSDL: Couldn't load from 'https://facturacion.finkok.com/servicios/soap/stamp.wsdl' : failed to load external entity "https://facturacion.finkok.com/servicios/soap/stamp.wsdl"\n in /var/www/web/multinomina/cfdi_trabajador.php on line 633, referer: http://multinomina/index_.php
+[Thu Mar 27 12:21:00 2014] [error] [client 192.168.1.151] PHP Fatal error:  Uncaught SoapFault exception: [WSDL] SOAP-ERROR: Parsing WSDL: Couldn't load from 'https://facturacion.finkok.com/servicios/soap/stamp.wsdl' : failed to load external entity "https://facturacion.finkok.com/servicios/soap/stamp.wsdl"\n in /var/www/web/multinomina/cfdi_trabajador.php:633\nStack trace:\n#0 /var/www/web/multinomina/cfdi_trabajador.php(633): SoapClient->SoapClient('https://factura...')\n#1 /var/www/web/multinomina/cfdi_trabajador.php(621): CFDI_Trabajador->Timbrar('<?xml version="...', 'Nomina')\n#2 /var/www/web/multinomina/nomina.php(7041): CFDI_Trabajador->CFDINomina(Array, true, 'Nomina')\n#3 /var/www/web/multinomina/nomina.php(6969): Nomina->timbrar_nomina_asalariados()\n#4 /var/www/web/multinomina/timbrar_nomina.php(5): Nomina->timbrar_nomina()\n#5 {main}\n  thrown in /var/www/web/multinomina/cfdi_trabajador.php on line 633, referer: http://multinomina/index_.php
+[Thu Mar 27 12:28:50 2014] [error] [client 192.168.1.151] PHP Fatal error:  SOAP-ERROR: Parsing WSDL: Couldn't load from 'https://facturacion.finkok.com/servicios/soap/stamp.wsdl' : failed to load external entity "https://facturacion.finkok.com/servicios/soap/stamp.wsdl"\n in /var/www/web/multinomina/cfdi_trabajador.php on line 633, referer: http://multinomina/index_.php
+[Thu Mar 27 12:28:50 2014] [error] [client 192.168.1.151] PHP Fatal error:  Uncaught SoapFault exception: [WSDL] SOAP-ERROR: Parsing WSDL: Couldn't load from 'https://facturacion.finkok.com/servicios/soap/stamp.wsdl' : failed to load external entity "https://facturacion.finkok.com/servicios/soap/stamp.wsdl"\n in /var/www/web/multinomina/cfdi_trabajador.php:633\nStack trace:\n#0 /var/www/web/multinomina/cfdi_trabajador.php(633): SoapClient->SoapClient('https://factura...')\n#1 /var/www/web/multinomina/cfdi_trabajador.php(621): CFDI_Trabajador->Timbrar('<?xml version="...', 'Nomina')\n#2 /var/www/web/multinomina/nomina.php(7041): CFDI_Trabajador->CFDINomina(Array, true, 'Nomina')\n#3 /var/www/web/multinomina/nomina.php(6969): Nomina->timbrar_nomina_asalariados()\n#4 /var/www/web/multinomina/timbrar_nomina.php(5): Nomina->timbrar_nomina()\n#5 {main}\n  thrown in /var/www/web/multinomina/cfdi_trabajador.php on line 633, referer: http://multinomina/index_.php
+[Thu Mar 27 12:30:38 2014] [error] [client 82.169.181.140] Invalid URI in request \xa1{o*\xe0\r\x1bX5?\x1d*\xdf\x84\x80\x1d\xe2\x8e\xfa
+[Thu Mar 27 12:52:37 2014] [error] [client 189.220.243.53] PHP Fatal error:  SOAP-ERROR: Parsing WSDL: Couldn't load from 'https://facturacion.finkok.com/servicios/soap/stamp.wsdl' : failed to load external entity "https://facturacion.finkok.com/servicios/soap/stamp.wsdl"\n in /var/www/web/multinomina/cfdi_trabajador.php on line 633, referer: http://multinomina.servehttp.com/index_.php
+[Thu Mar 27 12:52:37 2014] [error] [client 189.220.243.53] PHP Fatal error:  Uncaught SoapFault exception: [WSDL] SOAP-ERROR: Parsing WSDL: Couldn't load from 'https://facturacion.finkok.com/servicios/soap/stamp.wsdl' : failed to load external entity "https://facturacion.finkok.com/servicios/soap/stamp.wsdl"\n in /var/www/web/multinomina/cfdi_trabajador.php:633\nStack trace:\n#0 /var/www/web/multinomina/cfdi_trabajador.php(633): SoapClient->SoapClient('https://factura...')\n#1 /var/www/web/multinomina/cfdi_trabajador.php(621): CFDI_Trabajador->Timbrar('<?xml version="...', 'Nomina')\n#2 /var/www/web/multinomina/nomina.php(7041): CFDI_Trabajador->CFDINomina(Array, true, 'Nomina')\n#3 /var/www/web/multinomina/nomina.php(6969): Nomina->timbrar_nomina_asalariados()\n#4 /var/www/web/multinomina/timbrar_nomina.php(5): Nomina->timbrar_nomina()\n#5 {main}\n  thrown in /var/www/web/multinomina/cfdi_trabajador.php on line 633, referer: http://multinomina.servehttp.com/index_.php
+[Thu Mar 27 13:02:39 2014] [error] [client 78.29.104.209] Invalid URI in request \x1c9\xcab\xff$\t\xba\xc9\xea
+[Thu Mar 27 13:55:29 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index: cuenta in /var/www/web/multinomina/credenciales.php on line 746
+[Thu Mar 27 13:55:29 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index: cuenta in /var/www/web/multinomina/credenciales.php on line 746
+[Thu Mar 27 13:55:29 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index: cuenta in /var/www/web/multinomina/credenciales.php on line 756
+[Thu Mar 27 13:55:29 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index: cuenta in /var/www/web/multinomina/credenciales.php on line 761
+[Thu Mar 27 13:55:29 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index: cuenta in /var/www/web/multinomina/credenciales.php on line 764
+[Thu Mar 27 13:55:29 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index: usuario in /var/www/web/multinomina/credenciales.php on line 767
+[Thu Mar 27 13:55:29 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index: cuenta in /var/www/web/multinomina/credenciales.php on line 767
+[Thu Mar 27 13:55:29 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index: cuenta in /var/www/web/multinomina/credenciales.php on line 775
+[Thu Mar 27 13:55:29 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index: cuenta in /var/www/web/multinomina/credenciales.php on line 775
+[Thu Mar 27 13:55:29 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index: cuenta in /var/www/web/multinomina/credenciales.php on line 775
+[Thu Mar 27 13:55:29 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index: cuenta in /var/www/web/multinomina/credenciales.php on line 777
+[Thu Mar 27 13:55:29 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index: cuenta in /var/www/web/multinomina/credenciales.php on line 775
+[Thu Mar 27 13:55:29 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index: cuenta in /var/www/web/multinomina/credenciales.php on line 775
+[Thu Mar 27 13:55:29 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index: cuenta in /var/www/web/multinomina/credenciales.php on line 775
+[Thu Mar 27 13:55:29 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index: cuenta in /var/www/web/multinomina/credenciales.php on line 777
+[Thu Mar 27 13:55:29 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index: cuenta in /var/www/web/multinomina/credenciales.php on line 775
+[Thu Mar 27 13:55:29 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index: cuenta in /var/www/web/multinomina/credenciales.php on line 775
+[Thu Mar 27 13:55:29 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index: cuenta in /var/www/web/multinomina/credenciales.php on line 775
+[Thu Mar 27 13:55:29 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index: cuenta in /var/www/web/multinomina/credenciales.php on line 777
+[Thu Mar 27 13:55:29 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index: cuenta in /var/www/web/multinomina/credenciales.php on line 775
+[Thu Mar 27 13:55:29 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index: cuenta in /var/www/web/multinomina/credenciales.php on line 775
+[Thu Mar 27 13:55:29 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index: cuenta in /var/www/web/multinomina/credenciales.php on line 775
+[Thu Mar 27 13:55:29 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index: cuenta in /var/www/web/multinomina/credenciales.php on line 777
+[Thu Mar 27 13:55:29 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index: cuenta in /var/www/web/multinomina/credenciales.php on line 775
+[Thu Mar 27 13:55:29 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index: cuenta in /var/www/web/multinomina/credenciales.php on line 775
+[Thu Mar 27 13:55:29 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index: cuenta in /var/www/web/multinomina/credenciales.php on line 775
+[Thu Mar 27 13:55:29 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index: cuenta in /var/www/web/multinomina/credenciales.php on line 777
+[Thu Mar 27 13:55:29 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index: cuenta in /var/www/web/multinomina/credenciales.php on line 775
+[Thu Mar 27 13:55:29 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index: cuenta in /var/www/web/multinomina/credenciales.php on line 775
+[Thu Mar 27 13:55:29 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index: cuenta in /var/www/web/multinomina/credenciales.php on line 775
+[Thu Mar 27 13:55:29 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index: cuenta in /var/www/web/multinomina/credenciales.php on line 777
+[Thu Mar 27 13:55:29 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index: cuenta in /var/www/web/multinomina/credenciales.php on line 775
+[Thu Mar 27 13:55:29 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index: cuenta in /var/www/web/multinomina/credenciales.php on line 775
+[Thu Mar 27 13:55:29 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index: cuenta in /var/www/web/multinomina/credenciales.php on line 775
+[Thu Mar 27 13:55:29 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index: cuenta in /var/www/web/multinomina/credenciales.php on line 777
+[Thu Mar 27 13:55:29 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index: cuenta in /var/www/web/multinomina/credenciales.php on line 802
+[Thu Mar 27 19:31:08 2014] [error] [client 66.240.192.138] File does not exist: /var/www/web/multinomina/robots.txt
+[Thu Mar 27 20:08:31 2014] [error] [client 37.21.152.194] Invalid URI in request o \xee!\x92\x15j6\x90\xee\x80\x04[wN\xc8\x16\x8bZ\xdc\xc8\x1d-\x97Xi\xb9i=\x15t\x928I\xfa\xf7\xc4_c\xcf\xd9\x0e\xba|M
+[Thu Mar 27 21:09:20 2014] [error] [client 181.247.220.126] Invalid URI in request JO\x80\xbdx\xbc\x8f!eq\xbe\xc5\xe0\xbf\xa1u\xc78\x13\x9fj\xf0\x02\xd7\xf5\xb0b/\xff\t\xe4\xd2\xb23\xa2i\x1f\xeaUQX\xf7fHL\x98\xd9\x1c4w?\x8d\xa6\xe9\xbc\x97\x85\xe5\x9f
+[Thu Mar 27 22:10:29 2014] [error] [client 200.106.106.16] Invalid URI in request E\xab"cX\x19\xc0H\xcc=\xbb\xf2\x8b\xf1\xaf\xa2\xa6W\x88\xd9ii\x1b3\x04\x85\x01\x81\xd7\xe4\x05\x1f]\x192\xda\xec\xec\xac&\x95\\)\xd2 \xe8\x14\xdai\xd6i;\x13W\xcb\xc3S\x04E\xce<{h\xe5c\xf7\xce
+[Thu Mar 27 22:37:04 2014] [error] [client 189.225.224.215] request failed: error reading the headers
+[Thu Mar 27 23:51:07 2014] [error] [client 187.161.231.189] Invalid URI in request \xe0\xb3\x01\x0c\xfc`\v
+[Fri Mar 28 04:01:09 2014] [error] [client 218.161.78.208] File does not exist: /var/www/web/multinomina/phpTest
+[Fri Mar 28 04:01:10 2014] [error] [client 218.161.78.208] File does not exist: /usr/share/phpMyAdmin/scripts
+[Fri Mar 28 04:01:13 2014] [error] [client 218.161.78.208] File does not exist: /var/www/web/multinomina/pma
+[Fri Mar 28 04:01:14 2014] [error] [client 218.161.78.208] File does not exist: /var/www/web/multinomina/myadmin
+[Fri Mar 28 06:14:23 2014] [error] [client 92.240.68.153] request failed: error reading the headers
+[Fri Mar 28 10:30:33 2014] [error] [client 189.177.97.115] request failed: error reading the headers
+[Fri Mar 28 13:32:16 2014] [error] [client 79.0.205.15] Invalid URI in request a\xfc\x1a\x92\xa9\x0e\xf6\x95\xf0\v\xd9\xa0\x9fy\x01Vw+gV\xc4
+[Fri Mar 28 13:55:33 2014] [error] [client 190.154.42.107] request failed: error reading the headers
+[Fri Mar 28 14:42:35 2014] [error] [client 189.171.0.36] Invalid URI in request C6\xbb\x0c\xb3\xd8\x13\xdb\xfaQG~
+[Fri Mar 28 15:19:31 2014] [error] [client 41.98.114.221] Invalid URI in request \xa7(*\xfa\x06\x1d\x01\x0c\xc5[\xfc~1\xb1W\xbd\b\xaa\x9a\xde\xd9l\xean$Zl
+[Fri Mar 28 15:38:32 2014] [error] [client 187.146.164.125] Invalid URI in request tb\xa9\x9be\x17\x99\xab\x11\xfe`\xfeH\xfe\xb2\x84g|\x8d\xa2\x8a- H\xbcY\xbf\xd3.\xdf\x05H\xc2\x83\xfc3"
+[Fri Mar 28 18:42:16 2014] [error] [client 192.168.1.151] PHP Fatal error:  Uncaught SoapFault exception: [HTTP] Could not connect to host in /var/www/web/multinomina/cfdi_trabajador.php:635\nStack trace:\n#0 [internal function]: SoapClient->__doRequest('<?xml version="...', 'https://factura...', 'stamp', 1, 0)\n#1 /var/www/web/multinomina/cfdi_trabajador.php(635): SoapClient->__soapCall('stamp', Array)\n#2 /var/www/web/multinomina/cfdi_trabajador.php(621): CFDI_Trabajador->Timbrar('<?xml version="...', 'Nomina')\n#3 /var/www/web/multinomina/nomina.php(7041): CFDI_Trabajador->CFDINomina(Array, true, 'Nomina')\n#4 /var/www/web/multinomina/nomina.php(6969): Nomina->timbrar_nomina_asalariados()\n#5 /var/www/web/multinomina/timbrar_nomina.php(5): Nomina->timbrar_nomina()\n#6 {main}\n  thrown in /var/www/web/multinomina/cfdi_trabajador.php on line 635, referer: http://multinomina/index_.php
+[Fri Mar 28 18:46:42 2014] [error] [client 192.168.1.151] PHP Fatal error:  Uncaught SoapFault exception: [HTTP] Could not connect to host in /var/www/web/multinomina/cfdi_trabajador.php:635\nStack trace:\n#0 [internal function]: SoapClient->__doRequest('<?xml version="...', 'https://factura...', 'stamp', 1, 0)\n#1 /var/www/web/multinomina/cfdi_trabajador.php(635): SoapClient->__soapCall('stamp', Array)\n#2 /var/www/web/multinomina/cfdi_trabajador.php(621): CFDI_Trabajador->Timbrar('<?xml version="...', 'Nomina')\n#3 /var/www/web/multinomina/nomina.php(7041): CFDI_Trabajador->CFDINomina(Array, true, 'Nomina')\n#4 /var/www/web/multinomina/nomina.php(6969): Nomina->timbrar_nomina_asalariados()\n#5 /var/www/web/multinomina/timbrar_nomina.php(5): Nomina->timbrar_nomina()\n#6 {main}\n  thrown in /var/www/web/multinomina/cfdi_trabajador.php on line 635, referer: http://multinomina/index_.php
+[Fri Mar 28 18:49:18 2014] [error] [client 192.168.1.151] PHP Fatal error:  Uncaught SoapFault exception: [HTTP] Could not connect to host in /var/www/web/multinomina/cfdi_trabajador.php:635\nStack trace:\n#0 [internal function]: SoapClient->__doRequest('<?xml version="...', 'https://factura...', 'stamp', 1, 0)\n#1 /var/www/web/multinomina/cfdi_trabajador.php(635): SoapClient->__soapCall('stamp', Array)\n#2 /var/www/web/multinomina/cfdi_trabajador.php(621): CFDI_Trabajador->Timbrar('<?xml version="...', 'Nomina')\n#3 /var/www/web/multinomina/nomina.php(7041): CFDI_Trabajador->CFDINomina(Array, true, 'Nomina')\n#4 /var/www/web/multinomina/nomina.php(6969): Nomina->timbrar_nomina_asalariados()\n#5 /var/www/web/multinomina/timbrar_nomina.php(5): Nomina->timbrar_nomina()\n#6 {main}\n  thrown in /var/www/web/multinomina/cfdi_trabajador.php on line 635, referer: http://multinomina/index_.php
+[Fri Mar 28 19:04:47 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Fri Mar 28 19:05:46 2014] [error] [client 187.143.93.104] PHP Fatal error:  Uncaught SoapFault exception: [HTTP] Could not connect to host in /var/www/web/multinomina/cfdi_trabajador.php:635\nStack trace:\n#0 [internal function]: SoapClient->__doRequest('<?xml version="...', 'https://factura...', 'stamp', 1, 0)\n#1 /var/www/web/multinomina/cfdi_trabajador.php(635): SoapClient->__soapCall('stamp', Array)\n#2 /var/www/web/multinomina/cfdi_trabajador.php(621): CFDI_Trabajador->Timbrar('<?xml version="...', 'Nomina')\n#3 /var/www/web/multinomina/nomina.php(7041): CFDI_Trabajador->CFDINomina(Array, true, 'Nomina')\n#4 /var/www/web/multinomina/nomina.php(6969): Nomina->timbrar_nomina_asalariados()\n#5 /var/www/web/multinomina/timbrar_nomina.php(5): Nomina->timbrar_nomina()\n#6 {main}\n  thrown in /var/www/web/multinomina/cfdi_trabajador.php on line 635, referer: http://multinomina.servehttp.com/index_.php
+[Fri Mar 28 19:09:38 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Fri Mar 28 19:09:38 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Fri Mar 28 19:09:38 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Fri Mar 28 19:09:38 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Fri Mar 28 19:09:38 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Fri Mar 28 19:09:38 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Fri Mar 28 19:09:38 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Fri Mar 28 19:09:38 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Fri Mar 28 19:09:38 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Fri Mar 28 19:09:38 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Fri Mar 28 19:09:38 2014] [error] [client 192.168.1.151] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina/index_.php
+[Fri Mar 28 19:09:38 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 5274, referer: http://multinomina/index_.php
+[Fri Mar 28 19:09:38 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Fri Mar 28 19:11:29 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Fri Mar 28 19:11:29 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Fri Mar 28 19:11:29 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Fri Mar 28 19:11:29 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Fri Mar 28 19:11:29 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Fri Mar 28 19:11:29 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Fri Mar 28 19:11:29 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Fri Mar 28 19:11:29 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Fri Mar 28 19:11:29 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Fri Mar 28 19:11:29 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Fri Mar 28 19:11:29 2014] [error] [client 192.168.1.151] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina/index_.php
+[Fri Mar 28 19:11:29 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 5274, referer: http://multinomina/index_.php
+[Fri Mar 28 19:11:29 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Fri Mar 28 19:14:34 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Fri Mar 28 19:14:34 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Fri Mar 28 19:14:34 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Fri Mar 28 19:14:34 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Fri Mar 28 19:14:34 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Fri Mar 28 19:14:34 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Fri Mar 28 19:14:34 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Fri Mar 28 19:14:34 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Fri Mar 28 19:14:34 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Fri Mar 28 19:14:34 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Fri Mar 28 19:14:34 2014] [error] [client 192.168.1.151] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina/index_.php
+[Fri Mar 28 19:14:34 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 5274, referer: http://multinomina/index_.php
+[Fri Mar 28 19:14:34 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Fri Mar 28 20:38:21 2014] [error] [client 24.2.247.76] Invalid URI in request V\xd1\xa9O\xa7\xbdF\x15\xe1\xb1\xc4\xed\x0c\xdaq
+[Sat Mar 29 05:51:18 2014] [error] [client 94.41.39.133] File does not exist: /var/www/web/multinomina/phpTest
+[Sat Mar 29 05:51:19 2014] [error] [client 94.41.39.133] File does not exist: /usr/share/phpMyAdmin/scripts
+[Sat Mar 29 05:51:19 2014] [error] [client 94.41.39.133] File does not exist: /var/www/web/multinomina/pma
+[Sat Mar 29 05:51:20 2014] [error] [client 94.41.39.133] File does not exist: /var/www/web/multinomina/myadmin
+[Sat Mar 29 07:06:49 2014] [error] [client 175.182.91.24] File does not exist: /var/www/web/multinomina/phpTest
+[Sat Mar 29 07:06:50 2014] [error] [client 175.182.91.24] File does not exist: /usr/share/phpMyAdmin/scripts
+[Sat Mar 29 07:06:50 2014] [error] [client 175.182.91.24] File does not exist: /var/www/web/multinomina/pma
+[Sat Mar 29 07:06:51 2014] [error] [client 175.182.91.24] File does not exist: /var/www/web/multinomina/myadmin
+[Sat Mar 29 09:50:54 2014] [error] [client 189.215.219.194] PHP Notice:  Undefined index: iframe in /var/www/web/multinomina/store_archivo_digital.php on line 12
+[Sat Mar 29 12:41:38 2014] [error] [client 216.93.131.179] File does not exist: /var/www/web/multinomina/HNAP1, referer: http://189.148.241.57/
+[Sat Mar 29 13:03:55 2014] [error] [client 198.20.99.130] File does not exist: /var/www/web/multinomina/robots.txt
+[Sat Mar 29 14:55:27 2014] [error] [client 76.164.201.201] File does not exist: /var/www/web/multinomina/user
+[Sat Mar 29 15:21:15 2014] [error] [client 192.168.1.151] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina/index_.php
+[Sat Mar 29 15:21:15 2014] [error] [client 192.168.1.151] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina/index_.php
+[Sat Mar 29 15:21:15 2014] [error] [client 192.168.1.151] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina/index_.php
+[Sat Mar 29 15:21:15 2014] [error] [client 192.168.1.151] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina/index_.php
+[Sat Mar 29 15:21:15 2014] [error] [client 192.168.1.151] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina/index_.php
+[Sat Mar 29 15:21:24 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined property: Finiquito::$Lugar in /var/www/web/multinomina/finiquito.php on line 1239, referer: http://multinomina/index_.php
+[Sat Mar 29 15:21:26 2014] [error] [client 192.168.1.151] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina/index_.php
+[Sat Mar 29 16:32:31 2014] [error] [client 61.19.29.74] File does not exist: /var/www/web/multinomina/phpTest
+[Sat Mar 29 16:32:32 2014] [error] [client 61.19.29.74] File does not exist: /usr/share/phpMyAdmin/scripts
+[Sat Mar 29 16:32:32 2014] [error] [client 61.19.29.74] File does not exist: /var/www/web/multinomina/pma
+[Sat Mar 29 16:32:33 2014] [error] [client 61.19.29.74] File does not exist: /var/www/web/multinomina/myadmin
+[Sat Mar 29 17:56:53 2014] [error] [client 181.129.217.88] Invalid URI in request \b\xb5\xf0\xb1\xde\xabG7\xcaP,\xee \x9f
+[Sat Mar 29 18:21:24 2014] [error] [client 181.211.8.219] script not found or unable to stat: /var/www/cgi-bin/php
+[Sat Mar 29 18:21:25 2014] [error] [client 181.211.8.219] script not found or unable to stat: /var/www/cgi-bin/php5
+[Sat Mar 29 18:21:25 2014] [error] [client 181.211.8.219] script not found or unable to stat: /var/www/cgi-bin/php-cgi
+[Sat Mar 29 18:21:26 2014] [error] [client 181.211.8.219] script not found or unable to stat: /var/www/cgi-bin/php.cgi
+[Sat Mar 29 18:21:26 2014] [error] [client 181.211.8.219] script not found or unable to stat: /var/www/cgi-bin/php4
+[Sat Mar 29 18:52:53 2014] [error] [client 175.156.231.210] File does not exist: /var/www/web/multinomina/HNAP1, referer: http://189.148.241.57/
+[Sun Mar 30 09:01:34 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/muieblackcat
+[Sun Mar 30 09:01:35 2014] [error] [client 111.90.168.5] File does not exist: /usr/share/phpMyAdmin/scripts
+[Sun Mar 30 09:01:35 2014] [error] [client 111.90.168.5] File does not exist: /usr/share/phpMyAdmin/scripts
+[Sun Mar 30 09:01:36 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/pma
+[Sun Mar 30 09:01:37 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/myadmin
+[Sun Mar 30 09:01:38 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/MyAdmin
+[Sun Mar 30 09:01:39 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/pma
+[Sun Mar 30 09:01:40 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/admin
+[Sun Mar 30 09:01:40 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/dbadmin
+[Sun Mar 30 09:01:41 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/mysql
+[Sun Mar 30 09:01:42 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpmyadmin2
+[Sun Mar 30 09:01:42 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin2
+[Sun Mar 30 09:01:43 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2
+[Sun Mar 30 09:01:44 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/php-my-admin
+[Sun Mar 30 09:01:44 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.2.3
+[Sun Mar 30 09:01:45 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.2.6
+[Sun Mar 30 09:01:46 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.5.1
+[Sun Mar 30 09:01:47 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.5.4
+[Sun Mar 30 09:01:47 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.5.5-rc1
+[Sun Mar 30 09:01:48 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.5.5-rc2
+[Sun Mar 30 09:01:49 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.5.5
+[Sun Mar 30 09:01:49 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.5.5-pl1
+[Sun Mar 30 09:01:50 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.5.6-rc1
+[Sun Mar 30 09:01:51 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.5.6-rc2
+[Sun Mar 30 09:01:51 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.5.6
+[Sun Mar 30 09:01:52 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.5.7
+[Sun Mar 30 09:01:53 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.5.7-pl1
+[Sun Mar 30 09:01:53 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.6.0-alpha
+[Sun Mar 30 09:01:54 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.6.0-alpha2
+[Sun Mar 30 09:01:55 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.6.0-beta1
+[Sun Mar 30 09:01:55 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.6.0-beta2
+[Sun Mar 30 09:01:56 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.6.0-rc1
+[Sun Mar 30 09:01:57 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.6.0-rc2
+[Sun Mar 30 09:01:57 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.6.0-rc3
+[Sun Mar 30 09:01:58 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.6.0
+[Sun Mar 30 09:01:59 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.6.0-pl1
+[Sun Mar 30 09:01:59 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.6.0-pl2
+[Sun Mar 30 09:02:00 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.6.0-pl3
+[Sun Mar 30 09:02:01 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.6.1-rc1
+[Sun Mar 30 09:02:02 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.6.1-rc2
+[Sun Mar 30 09:02:02 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.6.1
+[Sun Mar 30 09:02:03 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.6.1-pl1
+[Sun Mar 30 09:02:04 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.6.1-pl2
+[Sun Mar 30 09:02:04 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.6.1-pl3
+[Sun Mar 30 09:02:05 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.6.2-rc1
+[Sun Mar 30 09:02:06 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.6.2-beta1
+[Sun Mar 30 09:02:06 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.6.2-rc1
+[Sun Mar 30 09:02:07 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.6.2
+[Sun Mar 30 09:02:08 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.6.2-pl1
+[Sun Mar 30 09:02:08 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.6.3
+[Sun Mar 30 09:02:09 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.6.3-rc1
+[Sun Mar 30 09:02:10 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.6.3
+[Sun Mar 30 09:02:10 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.6.3-pl1
+[Sun Mar 30 09:02:11 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.6.4-rc1
+[Sun Mar 30 09:02:12 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.6.4-pl1
+[Sun Mar 30 09:02:12 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.6.4-pl2
+[Sun Mar 30 09:02:13 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.6.4-pl3
+[Sun Mar 30 09:02:14 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.6.4-pl4
+[Sun Mar 30 09:02:14 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.6.4
+[Sun Mar 30 09:02:15 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.7.0-beta1
+[Sun Mar 30 09:02:16 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.7.0-rc1
+[Sun Mar 30 09:02:16 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.7.0-pl1
+[Sun Mar 30 09:02:17 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.7.0-pl2
+[Sun Mar 30 09:02:18 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.7.0
+[Sun Mar 30 09:02:19 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.8.0-beta1
+[Sun Mar 30 09:02:19 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.8.0-rc1
+[Sun Mar 30 09:02:20 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.8.0-rc2
+[Sun Mar 30 09:02:21 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.8.0
+[Sun Mar 30 09:02:21 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.8.0.1
+[Sun Mar 30 09:02:22 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.8.0.2
+[Sun Mar 30 09:02:23 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.8.0.3
+[Sun Mar 30 09:02:23 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.8.0.4
+[Sun Mar 30 09:02:24 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.8.1-rc1
+[Sun Mar 30 09:02:25 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.8.1
+[Sun Mar 30 09:02:25 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpMyAdmin-2.8.2
+[Sun Mar 30 09:02:26 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/sqlmanager
+[Sun Mar 30 09:02:27 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/mysqlmanager
+[Sun Mar 30 09:02:27 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/p
+[Sun Mar 30 09:02:28 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/PMA2005
+[Sun Mar 30 09:02:29 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/pma2005
+[Sun Mar 30 09:02:29 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpmanager
+[Sun Mar 30 09:02:30 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/php-myadmin
+[Sun Mar 30 09:02:31 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/phpmy-admin
+[Sun Mar 30 09:02:31 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/webadmin
+[Sun Mar 30 09:02:32 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/sqlweb
+[Sun Mar 30 09:02:33 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/websql
+[Sun Mar 30 09:02:34 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/webdb
+[Sun Mar 30 09:02:34 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/mysqladmin
+[Sun Mar 30 09:02:35 2014] [error] [client 111.90.168.5] File does not exist: /var/www/web/multinomina/mysql-admin
+[Sun Mar 30 09:04:18 2014] [error] [client 114.32.218.28] File does not exist: /var/www/web/multinomina/phpTest
+[Sun Mar 30 09:04:19 2014] [error] [client 114.32.218.28] File does not exist: /usr/share/phpMyAdmin/scripts
+[Sun Mar 30 09:04:19 2014] [error] [client 114.32.218.28] File does not exist: /var/www/web/multinomina/pma
+[Sun Mar 30 09:04:20 2014] [error] [client 114.32.218.28] File does not exist: /var/www/web/multinomina/myadmin
+[Sun Mar 30 11:48:04 2014] [error] [client 189.130.23.130] File does not exist: /var/www/web/multinomina/phpTest
+[Sun Mar 30 11:48:06 2014] [error] [client 189.130.23.130] File does not exist: /usr/share/phpMyAdmin/scripts
+[Sun Mar 30 11:48:07 2014] [error] [client 189.130.23.130] File does not exist: /var/www/web/multinomina/pma
+[Sun Mar 30 11:48:09 2014] [error] [client 189.130.23.130] File does not exist: /var/www/web/multinomina/myadmin
+[Sun Mar 30 15:11:22 2014] [error] [client 211.21.104.169] File does not exist: /var/www/web/multinomina/phpTest
+[Sun Mar 30 15:11:23 2014] [error] [client 211.21.104.169] File does not exist: /usr/share/phpMyAdmin/scripts
+[Sun Mar 30 15:11:23 2014] [error] [client 211.21.104.169] File does not exist: /var/www/web/multinomina/pma
+[Sun Mar 30 15:11:24 2014] [error] [client 211.21.104.169] File does not exist: /var/www/web/multinomina/myadmin
+[Sun Mar 30 18:04:34 2014] [error] [client 187.194.127.243] File does not exist: /var/www/web/multinomina/phpTest
+[Sun Mar 30 18:04:34 2014] [error] [client 187.194.127.243] File does not exist: /usr/share/phpMyAdmin/scripts
+[Sun Mar 30 18:04:35 2014] [error] [client 187.194.127.243] File does not exist: /var/www/web/multinomina/pma
+[Sun Mar 30 18:04:35 2014] [error] [client 187.194.127.243] File does not exist: /var/www/web/multinomina/myadmin
+[Sun Mar 30 18:48:56 2014] [error] [client 186.113.188.202] File does not exist: /var/www/web/multinomina/phpTest
+[Sun Mar 30 18:48:57 2014] [error] [client 186.113.188.202] File does not exist: /usr/share/phpMyAdmin/scripts
+[Sun Mar 30 18:48:57 2014] [error] [client 186.113.188.202] File does not exist: /var/www/web/multinomina/pma
+[Sun Mar 30 18:48:58 2014] [error] [client 186.113.188.202] File does not exist: /var/www/web/multinomina/myadmin
+[Sun Mar 30 22:49:42 2014] [error] [client 121.158.47.179] File does not exist: /var/www/web/multinomina/manager
+[Mon Mar 31 01:12:32 2014] [error] [client 125.227.1.149] File does not exist: /var/www/web/multinomina/phpTest
+[Mon Mar 31 01:12:32 2014] [error] [client 125.227.1.149] File does not exist: /usr/share/phpMyAdmin/scripts
+[Mon Mar 31 01:12:33 2014] [error] [client 125.227.1.149] File does not exist: /var/www/web/multinomina/pma
+[Mon Mar 31 01:12:33 2014] [error] [client 125.227.1.149] File does not exist: /var/www/web/multinomina/myadmin
+[Mon Mar 31 02:40:56 2014] [error] [client 209.126.230.70] File does not exist: /var/www/web/multinomina/robots.txt
+[Mon Mar 31 06:19:56 2014] [error] [client 140.116.99.109] File does not exist: /var/www/web/multinomina/phpTest
+[Mon Mar 31 06:19:57 2014] [error] [client 140.116.99.109] File does not exist: /usr/share/phpMyAdmin/scripts
+[Mon Mar 31 06:19:57 2014] [error] [client 140.116.99.109] File does not exist: /var/www/web/multinomina/pma
+[Mon Mar 31 06:19:58 2014] [error] [client 140.116.99.109] File does not exist: /var/www/web/multinomina/myadmin
+[Mon Mar 31 10:01:08 2014] [error] [client 77.30.123.169] File does not exist: /var/www/web/multinomina/phpTest
+[Mon Mar 31 10:01:10 2014] [error] [client 77.30.123.169] File does not exist: /usr/share/phpMyAdmin/scripts
+[Mon Mar 31 10:01:12 2014] [error] [client 77.30.123.169] File does not exist: /var/www/web/multinomina/pma
+[Mon Mar 31 10:01:13 2014] [error] [client 77.30.123.169] File does not exist: /var/www/web/multinomina/myadmin
+[Mon Mar 31 10:12:17 2014] [error] [client 189.25.234.186] Invalid URI in request \xc4 \xd5o\xc5d]C\bVY\x95\x9a>s3?\xa8\xa8\xc6\xd7\xb26\x1c\xe9\xef6
+[Mon Mar 31 11:28:04 2014] [error] [client 201.114.174.166] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Mon Mar 31 11:28:05 2014] [error] [client 201.114.174.166] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Mon Mar 31 11:28:05 2014] [error] [client 201.114.174.166] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Mon Mar 31 11:28:05 2014] [error] [client 201.114.174.166] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Mon Mar 31 11:28:05 2014] [error] [client 201.114.174.166] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Mon Mar 31 11:28:05 2014] [error] [client 201.114.174.166] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Mon Mar 31 11:28:05 2014] [error] [client 201.114.174.166] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Mon Mar 31 11:28:05 2014] [error] [client 201.114.174.166] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Mon Mar 31 11:28:05 2014] [error] [client 201.114.174.166] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Mon Mar 31 11:28:05 2014] [error] [client 201.114.174.166] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Mon Mar 31 11:28:05 2014] [error] [client 201.114.174.166] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Mon Mar 31 11:28:05 2014] [error] [client 201.114.174.166] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 5274, referer: http://multinomina.servehttp.com/index_.php
+[Mon Mar 31 11:28:05 2014] [error] [client 201.114.174.166] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Mon Mar 31 11:31:10 2014] [error] [client 201.114.174.166] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Mon Mar 31 11:31:10 2014] [error] [client 201.114.174.166] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Mon Mar 31 11:31:10 2014] [error] [client 201.114.174.166] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Mon Mar 31 11:31:10 2014] [error] [client 201.114.174.166] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Mon Mar 31 11:31:10 2014] [error] [client 201.114.174.166] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Mon Mar 31 11:31:10 2014] [error] [client 201.114.174.166] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Mon Mar 31 11:31:11 2014] [error] [client 201.114.174.166] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Mon Mar 31 11:31:11 2014] [error] [client 201.114.174.166] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Mon Mar 31 11:31:11 2014] [error] [client 201.114.174.166] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Mon Mar 31 11:31:11 2014] [error] [client 201.114.174.166] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Mon Mar 31 11:31:11 2014] [error] [client 201.114.174.166] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Mon Mar 31 11:31:11 2014] [error] [client 201.114.174.166] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 5274, referer: http://multinomina.servehttp.com/index_.php
+[Mon Mar 31 11:31:11 2014] [error] [client 201.114.174.166] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Mon Mar 31 11:39:56 2014] [error] [client 201.114.174.166] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Mon Mar 31 11:39:56 2014] [error] [client 201.114.174.166] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Mon Mar 31 11:39:56 2014] [error] [client 201.114.174.166] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Mon Mar 31 11:39:56 2014] [error] [client 201.114.174.166] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Mon Mar 31 11:39:56 2014] [error] [client 201.114.174.166] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Mon Mar 31 11:39:56 2014] [error] [client 201.114.174.166] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Mon Mar 31 11:39:56 2014] [error] [client 201.114.174.166] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Mon Mar 31 11:39:56 2014] [error] [client 201.114.174.166] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Mon Mar 31 11:39:56 2014] [error] [client 201.114.174.166] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Mon Mar 31 11:39:56 2014] [error] [client 201.114.174.166] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Mon Mar 31 11:39:56 2014] [error] [client 201.114.174.166] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Mon Mar 31 11:39:56 2014] [error] [client 201.114.174.166] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 5274, referer: http://multinomina.servehttp.com/index_.php
+[Mon Mar 31 11:39:56 2014] [error] [client 201.114.174.166] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Mon Mar 31 11:41:39 2014] [error] [client 188.19.172.79] Invalid URI in request \xe5\xe4\xca\xb3\xfc\xff8\xeb\x1d\xbd\xd0\xdd!\xe4\x1b4\xce\x84I\t\xb26\x81zO^]\xce\xdfJ\xe5z\x83D\xe1a\xe1\xa35!\xe9\xea\x97\xedBR\x83X\x1b\x9b\xd0c|h,\x18>Z\x86\xc5K`
+[Mon Mar 31 12:21:54 2014] [error] [client 182.181.146.191] Invalid URI in request \xac\x96\xec\x0f]$\xe9\xcf\xa3'\xab \xc6wuSkDc\x17\x05\xe7
+[Mon Mar 31 13:10:13 2014] [error] [client 186.13.5.5] Invalid URI in request ;v\xdel\x96\xc6\x97@\t2\xa0f\x8b\xd3u(tx@\xd5?\xa2\xee\x82@\x9b\x8e\xb9
+[Mon Mar 31 13:39:12 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Mon Mar 31 13:39:12 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Mon Mar 31 13:39:12 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Mon Mar 31 13:39:12 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Mon Mar 31 13:39:12 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Mon Mar 31 13:39:12 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Mon Mar 31 13:39:12 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Mon Mar 31 13:39:12 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Mon Mar 31 13:39:12 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Mon Mar 31 13:39:12 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Mon Mar 31 13:39:12 2014] [error] [client 192.168.1.151] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina/index_.php
+[Mon Mar 31 13:39:12 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 5274, referer: http://multinomina/index_.php
+[Mon Mar 31 13:39:12 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Mon Mar 31 13:42:56 2014] [error] [client 189.79.165.244] request failed: error reading the headers
+[Mon Mar 31 13:43:25 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Mon Mar 31 13:43:26 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Mon Mar 31 13:43:26 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Mon Mar 31 13:43:26 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Mon Mar 31 13:43:26 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Mon Mar 31 13:43:26 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Mon Mar 31 13:43:26 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Mon Mar 31 13:43:26 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Mon Mar 31 13:43:26 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Mon Mar 31 13:43:26 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Mon Mar 31 13:43:26 2014] [error] [client 192.168.1.151] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina/index_.php
+[Mon Mar 31 13:43:26 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 5274, referer: http://multinomina/index_.php
+[Mon Mar 31 13:43:26 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Mon Mar 31 13:47:00 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Mon Mar 31 13:47:00 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Mon Mar 31 13:47:00 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Mon Mar 31 13:47:00 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Mon Mar 31 13:47:00 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Mon Mar 31 13:47:00 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Mon Mar 31 13:47:00 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Mon Mar 31 13:47:00 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Mon Mar 31 13:47:00 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Mon Mar 31 13:47:00 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Mon Mar 31 13:47:00 2014] [error] [client 192.168.1.151] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina/index_.php
+[Mon Mar 31 13:47:00 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 5274, referer: http://multinomina/index_.php
+[Mon Mar 31 13:47:00 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Mon Mar 31 13:49:03 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Mon Mar 31 13:49:03 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Mon Mar 31 13:49:03 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Mon Mar 31 13:49:03 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Mon Mar 31 13:49:03 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Mon Mar 31 13:49:03 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Mon Mar 31 13:49:03 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Mon Mar 31 13:49:03 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Mon Mar 31 13:49:03 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Mon Mar 31 13:49:03 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Mon Mar 31 13:49:03 2014] [error] [client 192.168.1.151] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina/index_.php
+[Mon Mar 31 13:49:03 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 5274, referer: http://multinomina/index_.php
+[Mon Mar 31 13:49:03 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Mon Mar 31 15:30:23 2014] [error] [client 201.3.239.235] Invalid URI in request W\xe8\xd7\xed\x99\xd9\x0c\x16\xc5\x8d\xb9\xa9S\x1e\xf8\xe04_#\x13}\xcc\x01
+[Mon Mar 31 15:33:10 2014] [error] [client 189.12.215.250] Invalid URI in request \xfb\xb9o\x81\x0c ^
+[Mon Mar 31 16:16:22 2014] [error] [client 187.210.78.5] Invalid URI in request \xd9Z\x84h\xfe\x92~r-y\t\x94\x03\xe5,(\xf1\x86\xf8z\x02\xd4\xb2\xc8\xde\xba\xc0\xb6
+[Mon Mar 31 16:38:51 2014] [error] [client 187.237.107.39] Invalid URI in request \x9a\v`_\x14\b#N'C\x82{\xcb
+[Mon Mar 31 16:41:50 2014] [error] [client 186.78.82.123] request failed: error reading the headers
+[Mon Mar 31 16:55:19 2014] [error] [client 201.79.19.197] request failed: error reading the headers
+[Mon Mar 31 17:12:01 2014] [error] [client 94.8.24.131] Invalid URI in request \t\x9c4\x89\xd6\xa0\x10/+C\xe8
+[Mon Mar 31 18:59:35 2014] [error] [client 201.139.202.36] request failed: error reading the headers
+[Mon Mar 31 20:08:12 2014] [error] [client 189.138.104.159] request failed: error reading the headers
+[Mon Mar 31 20:10:47 2014] [error] [client 189.161.60.254] Invalid URI in request I'\xdd/"\x92\xd1n\x83\x1f\x85E\x07\xde\xe1\x85\xf3\xc5\xe3O\xcb\xa2k<\x8c\x04\x18$\x12\xbd\x16LiY\xda\x87;}\t\x0f\x91\xbcN
+[Mon Mar 31 20:51:22 2014] [error] [client 189.203.252.185] Invalid URI in request kAd\xc8\xb2\xebe\xda\x1b\xe5\xcb\xc6\v\x15\xabq
+[Mon Mar 31 20:51:53 2014] [error] [client 189.149.203.103] request failed: error reading the headers
+[Mon Mar 31 21:13:09 2014] [error] [client 61.19.29.3] File does not exist: /var/www/web/multinomina/phpTest
+[Mon Mar 31 21:13:10 2014] [error] [client 61.19.29.3] File does not exist: /usr/share/phpMyAdmin/scripts
+[Mon Mar 31 21:13:10 2014] [error] [client 61.19.29.3] File does not exist: /var/www/web/multinomina/pma
+[Mon Mar 31 21:13:11 2014] [error] [client 61.19.29.3] File does not exist: /var/www/web/multinomina/myadmin
+[Mon Mar 31 21:48:28 2014] [error] [client 120.114.72.106] File does not exist: /var/www/web/multinomina/phpTest
+[Mon Mar 31 21:48:31 2014] [error] [client 120.114.72.106] File does not exist: /usr/share/phpMyAdmin/scripts
+[Mon Mar 31 21:48:32 2014] [error] [client 120.114.72.106] File does not exist: /var/www/web/multinomina/pma
+[Mon Mar 31 21:48:34 2014] [error] [client 120.114.72.106] File does not exist: /var/www/web/multinomina/myadmin
+[Tue Apr 01 03:15:28 2014] [error] [client 62.109.28.22] File does not exist: /var/www/web/multinomina/phpTest
+[Tue Apr 01 03:15:28 2014] [error] [client 62.109.28.22] File does not exist: /usr/share/phpMyAdmin/scripts
+[Tue Apr 01 03:15:29 2014] [error] [client 62.109.28.22] File does not exist: /var/www/web/multinomina/pma
+[Tue Apr 01 03:15:30 2014] [error] [client 62.109.28.22] File does not exist: /var/www/web/multinomina/myadmin
+[Tue Apr 01 03:54:15 2014] [error] [client 185.17.159.119] File does not exist: /var/www/web/multinomina/phpTest
+[Tue Apr 01 03:54:17 2014] [error] [client 185.17.159.119] File does not exist: /usr/share/phpMyAdmin/scripts
+[Tue Apr 01 03:54:18 2014] [error] [client 185.17.159.119] File does not exist: /var/www/web/multinomina/pma
+[Tue Apr 01 03:54:19 2014] [error] [client 185.17.159.119] File does not exist: /var/www/web/multinomina/myadmin
+[Tue Apr 01 05:04:32 2014] [error] [client 219.95.217.233] File does not exist: /var/www/web/multinomina/phpTest
+[Tue Apr 01 05:04:32 2014] [error] [client 219.95.217.233] File does not exist: /usr/share/phpMyAdmin/scripts
+[Tue Apr 01 05:04:33 2014] [error] [client 219.95.217.233] File does not exist: /var/www/web/multinomina/pma
+[Tue Apr 01 05:04:34 2014] [error] [client 219.95.217.233] File does not exist: /var/www/web/multinomina/myadmin
+[Tue Apr 01 05:53:07 2014] [error] [client 125.24.150.102] File does not exist: /var/www/web/multinomina/phpTest
+[Tue Apr 01 05:53:08 2014] [error] [client 125.24.150.102] File does not exist: /usr/share/phpMyAdmin/scripts
+[Tue Apr 01 05:53:09 2014] [error] [client 125.24.150.102] File does not exist: /var/www/web/multinomina/pma
+[Tue Apr 01 05:53:10 2014] [error] [client 125.24.150.102] File does not exist: /var/www/web/multinomina/myadmin
+[Tue Apr 01 07:11:08 2014] [error] [client 96.29.212.64] File does not exist: /var/www/web/multinomina/HNAP1, referer: http://189.148.241.57/
+[Tue Apr 01 10:22:48 2014] [error] [client 148.234.29.170] request failed: error reading the headers
+[Tue Apr 01 11:23:44 2014] [error] [client 83.20.19.173] Invalid URI in request \xe4c\xf7\x9a\x88\xfd"\x181'\x12\xb8e\xae\xe7=\v^N\x02W
+[Tue Apr 01 12:14:35 2014] [error] [client 59.127.214.196] File does not exist: /var/www/web/multinomina/phpTest
+[Tue Apr 01 12:14:36 2014] [error] [client 59.127.214.196] File does not exist: /usr/share/phpMyAdmin/scripts
+[Tue Apr 01 12:14:38 2014] [error] [client 59.127.214.196] File does not exist: /var/www/web/multinomina/pma
+[Tue Apr 01 12:14:43 2014] [error] [client 59.127.214.196] File does not exist: /var/www/web/multinomina/myadmin
+[Tue Apr 01 12:23:42 2014] [error] [client 60.241.146.215] Invalid URI in request T2\x8fL\x87\xbb\x9c\xb8\x92\x8c\xc6^+uR\xf5\xdf\xa0;K9\xfa\xeeD\xd0a0x\to|w\xfb\xc1\xd23e\xc7\x97\xbb)\xf9q\x98\xcc
+[Tue Apr 01 14:49:12 2014] [error] [client 62.238.87.229] Invalid URI in request \xa1\x92-5{\xeaUY\x04~\x8b\xc1\x9f\xa6\x16\vuH
+[Tue Apr 01 18:58:20 2014] [error] [client 76.175.162.195] Invalid URI in request f\xbc?\v^,\x81U\b5\x90\xab\xe9#lo\xaf\x12Dy\x8a\xe8\xf1\x85\xa2
+[Tue Apr 01 19:52:55 2014] [error] [client 187.134.194.92] request failed: error reading the headers
+[Wed Apr 02 01:47:00 2014] [error] [client 189.128.123.77] File does not exist: /var/www/web/multinomina/phpTest
+[Wed Apr 02 01:47:00 2014] [error] [client 189.128.123.77] File does not exist: /usr/share/phpMyAdmin/scripts
+[Wed Apr 02 01:47:01 2014] [error] [client 189.128.123.77] File does not exist: /var/www/web/multinomina/pma
+[Wed Apr 02 01:47:01 2014] [error] [client 189.128.123.77] File does not exist: /var/www/web/multinomina/myadmin
+[Wed Apr 02 11:44:40 2014] [error] [client 41.234.6.202] request failed: error reading the headers
+[Wed Apr 02 11:46:13 2014] [error] [client 187.153.154.48] request failed: error reading the headers
+[Wed Apr 02 11:49:34 2014] [error] [client 41.234.6.202] Invalid URI in request \x91;\xf4\xef="\xaf\xc8*\xd3;\v\xc1\xa4\xfc\xf5M\xa3
+[Wed Apr 02 12:29:04 2014] [error] [client 189.149.92.157] Invalid URI in request \xe5\v\x8c$S4\xeb.\xf8\xf8bo\xfc\x1dor\x10^\xd9'U\x13A\xd4\xadF\xfb\x0f\xa0\x04\xf6\xee\x9a\xa1_\xa2,\xd4
+[Wed Apr 02 13:51:17 2014] [error] [client 203.172.142.30] File does not exist: /var/www/web/multinomina/phpTest
+[Wed Apr 02 13:51:18 2014] [error] [client 203.172.142.30] File does not exist: /usr/share/phpMyAdmin/scripts
+[Wed Apr 02 13:51:18 2014] [error] [client 203.172.142.30] File does not exist: /var/www/web/multinomina/pma
+[Wed Apr 02 13:51:19 2014] [error] [client 203.172.142.30] File does not exist: /var/www/web/multinomina/myadmin
+[Wed Apr 02 13:52:53 2014] [error] [client 202.29.235.42] script not found or unable to stat: /var/www/cgi-bin/php
+[Wed Apr 02 13:52:54 2014] [error] [client 202.29.235.42] script not found or unable to stat: /var/www/cgi-bin/php5
+[Wed Apr 02 13:52:55 2014] [error] [client 202.29.235.42] script not found or unable to stat: /var/www/cgi-bin/php-cgi
+[Wed Apr 02 13:52:56 2014] [error] [client 202.29.235.42] script not found or unable to stat: /var/www/cgi-bin/php.cgi
+[Wed Apr 02 13:52:57 2014] [error] [client 202.29.235.42] script not found or unable to stat: /var/www/cgi-bin/php4
+[Wed Apr 02 14:34:13 2014] [error] [client 192.168.1.151] PHP Fatal error:  Uncaught SoapFault exception: [HTTP] Could not connect to host in /var/www/web/multinomina/cfdi_trabajador.php:635\nStack trace:\n#0 [internal function]: SoapClient->__doRequest('<?xml version="...', 'https://factura...', 'stamp', 1, 0)\n#1 /var/www/web/multinomina/cfdi_trabajador.php(635): SoapClient->__soapCall('stamp', Array)\n#2 /var/www/web/multinomina/cfdi_trabajador.php(621): CFDI_Trabajador->Timbrar('<?xml version="...', 'Nomina')\n#3 /var/www/web/multinomina/nomina.php(7041): CFDI_Trabajador->CFDINomina(Array, true, 'Nomina')\n#4 /var/www/web/multinomina/nomina.php(6969): Nomina->timbrar_nomina_asalariados()\n#5 /var/www/web/multinomina/timbrar_nomina.php(5): Nomina->timbrar_nomina()\n#6 {main}\n  thrown in /var/www/web/multinomina/cfdi_trabajador.php on line 635, referer: http://multinomina/index_.php
+[Wed Apr 02 16:53:51 2014] [error] [client 93.161.101.86] request failed: error reading the headers
+[Wed Apr 02 19:09:07 2014] [error] [client 76.104.113.199] File does not exist: /var/www/web/multinomina/HNAP1, referer: http://189.151.18.6/
+[Thu Apr 03 10:11:23 2014] [error] [client 89.173.114.16] Invalid URI in request \xe2v\xf9,\x96J\xd6\xfa\x9bq\x06\xb0\x92\x06\xf5\xe4u\x02\x92\xd6Y4\xb7\x1b\xa2\xe1\xa6B\xcd\xd9+b\x8e\x98\xddp\xe5\r\x8ed\xaf\x18}p&\x93\xd0\xfdg=\x05x\xac\xc3\xfe<p
+[Thu Apr 03 12:07:47 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined property: stdClass::$Folio in /var/www/web/multinomina/cfdi_trabajador.php on line 781, referer: http://multinomina/index_.php
+[Thu Apr 03 12:07:47 2014] [error] [client 192.168.1.151] PHP Notice:  Trying to get property of non-object in /var/www/web/multinomina/cfdi_trabajador.php on line 781, referer: http://multinomina/index_.php
+[Thu Apr 03 12:07:47 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined property: stdClass::$Folio in /var/www/web/multinomina/cfdi_trabajador.php on line 796, referer: http://multinomina/index_.php
+[Thu Apr 03 12:07:47 2014] [error] [client 192.168.1.151] PHP Notice:  Trying to get property of non-object in /var/www/web/multinomina/cfdi_trabajador.php on line 796, referer: http://multinomina/index_.php
+[Thu Apr 03 12:08:44 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined property: stdClass::$Folio in /var/www/web/multinomina/cfdi_trabajador.php on line 781, referer: http://multinomina/index_.php
+[Thu Apr 03 12:08:44 2014] [error] [client 192.168.1.151] PHP Notice:  Trying to get property of non-object in /var/www/web/multinomina/cfdi_trabajador.php on line 781, referer: http://multinomina/index_.php
+[Thu Apr 03 12:08:44 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined property: stdClass::$Folio in /var/www/web/multinomina/cfdi_trabajador.php on line 796, referer: http://multinomina/index_.php
+[Thu Apr 03 12:08:44 2014] [error] [client 192.168.1.151] PHP Notice:  Trying to get property of non-object in /var/www/web/multinomina/cfdi_trabajador.php on line 796, referer: http://multinomina/index_.php
+[Thu Apr 03 14:09:19 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index: cuenta in /var/www/web/multinomina/get_logo.php on line 9
+[Fri Apr 04 11:31:59 2014] [error] [client 188.168.52.106] request failed: error reading the headers
+[Fri Apr 04 11:48:10 2014] [error] [client 59.47.167.201] script not found or unable to stat: /var/www/cgi-bin/rtpd.cgi
+[Fri Apr 04 13:10:41 2014] [error] [client 178.140.161.207] Invalid URI in request \x9f\xed\xf6$\xfcz\xb6z\x05\r\xd0'\x04|\xe6<M
+[Fri Apr 04 16:23:21 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:23:21 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 56, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:23:21 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:23:21 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_data_seek() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 46, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:23:21 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:23:21 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:23:22 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:23:22 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:23:25 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:23:25 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 56, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:23:25 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:23:25 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_data_seek() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 46, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:23:25 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:23:25 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:23:25 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:23:25 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:23:25 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:23:25 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:23:25 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:23:25 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:23:25 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:23:25 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:23:25 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:23:25 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:23:25 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:23:25 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:23:25 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:23:25 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:23:30 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:23:30 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 56, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:23:30 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:23:30 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_data_seek() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 46, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:23:30 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:23:30 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:23:30 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 56, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:23:30 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:23:30 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_data_seek() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 46, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:23:30 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:23:30 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:23:30 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:23:30 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:23:30 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:23:30 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:23:30 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:23:30 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:38 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:38 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:38 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:38 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:38 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:38 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:38 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:38 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:38 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:38 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:39 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:39 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:39 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:39 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:39 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:39 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:39 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:39 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:39 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 56, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:39 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:39 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_data_seek() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 46, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:39 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:39 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:39 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 56, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:39 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:39 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_data_seek() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 46, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:39 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:39 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:39 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4969, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:40 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:40 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:40 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:40 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:40 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:40 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:40 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:40 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:40 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:40 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:40 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:40 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:41 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:41 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:41 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:41 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:41 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:41 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:41 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:41 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:41 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:41 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:41 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:41 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:42 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 5048, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:42 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 5134, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:42 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:42 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:42 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:42 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:42 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 56, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:42 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:42 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_data_seek() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 46, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:42 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:42 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 5221, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:43 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:43 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:43 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 16:25:43 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:21:45 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:21:45 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 56, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:21:45 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:21:45 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_data_seek() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 46, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:21:45 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:21:45 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:21:45 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:21:45 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:21:49 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:21:49 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 56, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:21:49 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:21:49 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_data_seek() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 46, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:21:49 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:21:49 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:21:49 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:21:49 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:21:49 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:21:49 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:21:49 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:21:49 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:21:49 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:21:49 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:21:49 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:21:49 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:21:49 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:21:49 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:21:49 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:21:49 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:21:53 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:21:53 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 56, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:21:53 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:21:53 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_data_seek() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 46, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:21:53 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:21:53 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:21:53 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 56, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:21:53 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:21:53 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_data_seek() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 46, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:21:53 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:21:53 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:21:53 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:21:53 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:21:53 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:21:53 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:21:53 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:21:53 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:55 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:55 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:55 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:55 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:55 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:55 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:55 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:55 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:55 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:56 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:56 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:56 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:56 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:56 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:56 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:56 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:56 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:57 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:57 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 56, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:57 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:57 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_data_seek() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 46, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:57 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:57 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:57 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 56, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:57 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:57 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_data_seek() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 46, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:57 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:57 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:57 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4969, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:57 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:57 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:57 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:57 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:57 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:57 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:57 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:58 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:58 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:58 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:58 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:58 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:58 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:58 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:58 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:58 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:58 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:58 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:58 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:59 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:59 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:59 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:59 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:59 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:59 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 5048, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:59 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 5134, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:59 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:22:59 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:23:00 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:23:00 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:23:00 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 56, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:23:00 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:23:00 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_data_seek() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 46, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:23:00 2014] [error] [client 189.132.191.165] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:23:00 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 5221, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:23:00 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:23:00 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:23:00 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Fri Apr 04 19:23:00 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina.servehttp.com/index_.php
+[Sun Apr 06 23:41:20 2014] [error] [client 209.172.0.85] File does not exist: /var/www/web/multinomina/w00tw00t.at.blackhats.romanian.anti-sec:)
+[Sun Apr 06 23:41:20 2014] [error] [client 209.172.0.85] File does not exist: /usr/share/phpMyAdmin/scripts
+[Sun Apr 06 23:41:20 2014] [error] [client 209.172.0.85] File does not exist: /usr/share/phpMyAdmin/scripts
+[Sun Apr 06 23:41:21 2014] [error] [client 209.172.0.85] File does not exist: /var/www/web/multinomina/pma
+[Sun Apr 06 23:41:21 2014] [error] [client 209.172.0.85] File does not exist: /var/www/web/multinomina/myadmin
+[Sun Apr 06 23:41:21 2014] [error] [client 209.172.0.85] File does not exist: /var/www/web/multinomina/MyAdmin
+[Mon Apr 07 06:46:58 2014] [error] [client 202.53.8.82] File does not exist: /var/www/web/multinomina/CFIDE
+[Mon Apr 07 10:39:56 2014] [error] [client 80.162.195.93] request failed: error reading the headers
+[Mon Apr 07 14:21:04 2014] [error] [client 50.150.19.216] Invalid URI in request \x9f\xa2\xaa`u\xcc\xc5\xdcx'\x1d3\xa7?\x9b\x9e"\xb0\x95\x1c\xfe\v\xee\xd6\xf1\xddC|
+[Mon Apr 07 16:40:41 2014] [error] [client 69.174.245.163] File does not exist: /var/www/web/multinomina/w00tw00t.at.blackhats.romanian.anti-sec:)
+[Mon Apr 07 16:40:41 2014] [error] [client 69.174.245.163] File does not exist: /usr/share/phpMyAdmin/scripts
+[Mon Apr 07 16:40:42 2014] [error] [client 69.174.245.163] File does not exist: /usr/share/phpMyAdmin/scripts
+[Mon Apr 07 16:40:42 2014] [error] [client 69.174.245.163] File does not exist: /var/www/web/multinomina/pma
+[Mon Apr 07 16:40:42 2014] [error] [client 69.174.245.163] File does not exist: /var/www/web/multinomina/myadmin
+[Mon Apr 07 16:40:42 2014] [error] [client 69.174.245.163] File does not exist: /var/www/web/multinomina/MyAdmin
+[Mon Apr 07 20:21:08 2014] [error] [client 93.174.93.62] request failed: error reading the headers
+[Tue Apr 08 09:16:09 2014] [error] [client 76.74.159.240] File does not exist: /var/www/web/multinomina/phppath
+[Tue Apr 08 09:17:37 2014] [error] [client 109.99.77.38] Invalid URI in request \xd8\x96\xcbr\xbd\xac\x1d6p\x99]\xac<EP\x14\xfc\xa8\x87\xa4 &\xcfBD\xc0d\xf9J\x90e9~p5N\xbd\x89*\x13\xdf\xe8\xdb\xf4\xd2\x8c\x80S|x\xf5T\x9e\xd2\x89\x9b\xdd\xa7\x84\x99\xa9
+[Tue Apr 08 12:04:16 2014] [error] [client 189.59.61.214] File does not exist: /var/www/web/multinomina/phpTest
+[Tue Apr 08 12:04:17 2014] [error] [client 189.59.61.214] File does not exist: /usr/share/phpMyAdmin/scripts
+[Tue Apr 08 12:04:17 2014] [error] [client 189.59.61.214] File does not exist: /var/www/web/multinomina/pma
+[Tue Apr 08 12:04:18 2014] [error] [client 189.59.61.214] File does not exist: /var/www/web/multinomina/myadmin
+[Tue Apr 08 13:46:57 2014] [error] [client 95.154.17.251] Invalid URI in request C\xdd\x1etA\xf8\xf0\xb4Z\xa6\x12\xae\x82;\xed\xae{tk\t\xd5bO\xae
+[Tue Apr 08 15:07:28 2014] [error] [client 74.117.58.2] File does not exist: /var/www/web/multinomina/admin
+[Tue Apr 08 15:28:01 2014] [error] [client 179.179.19.105] request failed: error reading the headers
+[Tue Apr 08 17:25:33 2014] [error] [client 187.52.52.131] script not found or unable to stat: /var/www/cgi-bin/php
+[Tue Apr 08 17:25:34 2014] [error] [client 187.52.52.131] script not found or unable to stat: /var/www/cgi-bin/php5
+[Tue Apr 08 17:25:34 2014] [error] [client 187.52.52.131] script not found or unable to stat: /var/www/cgi-bin/php-cgi
+[Tue Apr 08 17:25:35 2014] [error] [client 187.52.52.131] script not found or unable to stat: /var/www/cgi-bin/php.cgi
+[Tue Apr 08 17:25:36 2014] [error] [client 187.52.52.131] script not found or unable to stat: /var/www/cgi-bin/php4
+[Tue Apr 08 21:54:25 2014] [error] [client 189.220.243.171] PHP Parse error:  syntax error, unexpected ';', expecting ',' or ')' in /var/www/web/multinomina/logo_sizes.php on line 9, referer: http://multinomina.servehttp.com/index_.php
+[Tue Apr 08 21:56:20 2014] [error] [client 189.220.243.171] PHP Parse error:  syntax error, unexpected ';', expecting ',' or ')' in /var/www/web/multinomina/logo_sizes.php on line 9, referer: http://multinomina.servehttp.com/index_.php
+[Tue Apr 08 21:57:35 2014] [error] [client 189.220.243.171] PHP Parse error:  syntax error, unexpected ';', expecting ',' or ')' in /var/www/web/multinomina/logo_sizes.php on line 9, referer: http://multinomina.servehttp.com/index_.php
+[Tue Apr 08 21:58:18 2014] [error] [client 189.220.243.171] PHP Parse error:  syntax error, unexpected ';', expecting ',' or ')' in /var/www/web/multinomina/logo_sizes.php on line 9, referer: http://multinomina.servehttp.com/index_.php
+[Wed Apr 09 03:22:02 2014] [error] [client 65.111.165.14] File does not exist: /var/www/web/multinomina/w00tw00t.at.blackhats.romanian.anti-sec:)
+[Wed Apr 09 03:22:02 2014] [error] [client 65.111.165.14] File does not exist: /usr/share/phpMyAdmin/scripts
+[Wed Apr 09 03:22:02 2014] [error] [client 65.111.165.14] File does not exist: /usr/share/phpMyAdmin/scripts
+[Wed Apr 09 03:22:03 2014] [error] [client 65.111.165.14] File does not exist: /var/www/web/multinomina/pma
+[Wed Apr 09 03:22:03 2014] [error] [client 65.111.165.14] File does not exist: /var/www/web/multinomina/myadmin
+[Wed Apr 09 03:22:03 2014] [error] [client 65.111.165.14] File does not exist: /var/www/web/multinomina/MyAdmin
+[Wed Apr 09 13:24:33 2014] [error] [client 177.158.246.195] Invalid URI in request =\x0c\x90\x1e,>\xceb_A[N]\x90}J3h,\xc8\x02\xf8r\x8b\xa9\x95f\x88G\x16\xc3NU\x01,\xe6n]\x04\xcf\x8f
+[Wed Apr 09 14:28:42 2014] [error] [client 77.127.189.221] script not found or unable to stat: /var/www/cgi-bin/php
+[Wed Apr 09 14:28:43 2014] [error] [client 77.127.189.221] script not found or unable to stat: /var/www/cgi-bin/php5
+[Wed Apr 09 14:28:44 2014] [error] [client 77.127.189.221] script not found or unable to stat: /var/www/cgi-bin/php-cgi
+[Wed Apr 09 14:28:46 2014] [error] [client 77.127.189.221] script not found or unable to stat: /var/www/cgi-bin/php.cgi
+[Wed Apr 09 14:28:46 2014] [error] [client 77.127.189.221] script not found or unable to stat: /var/www/cgi-bin/php4
+[Wed Apr 09 16:47:18 2014] [error] [client 110.77.181.144] File does not exist: /var/www/web/multinomina/phpTest
+[Wed Apr 09 16:47:19 2014] [error] [client 110.77.181.144] File does not exist: /usr/share/phpMyAdmin/scripts
+[Wed Apr 09 16:47:20 2014] [error] [client 110.77.181.144] File does not exist: /var/www/web/multinomina/pma
+[Wed Apr 09 16:47:20 2014] [error] [client 110.77.181.144] File does not exist: /var/www/web/multinomina/myadmin
+[Wed Apr 09 19:12:26 2014] [error] [client 84.251.155.142] request failed: error reading the headers
+[Thu Apr 10 00:50:43 2014] [error] [client 61.19.224.186] script not found or unable to stat: /var/www/cgi-bin/php
+[Thu Apr 10 00:50:44 2014] [error] [client 61.19.224.186] script not found or unable to stat: /var/www/cgi-bin/php5
+[Thu Apr 10 00:50:48 2014] [error] [client 61.19.224.186] script not found or unable to stat: /var/www/cgi-bin/php-cgi
+[Thu Apr 10 00:50:51 2014] [error] [client 61.19.224.186] script not found or unable to stat: /var/www/cgi-bin/php.cgi
+[Thu Apr 10 00:50:55 2014] [error] [client 61.19.224.186] script not found or unable to stat: /var/www/cgi-bin/php4
+[Thu Apr 10 12:24:52 2014] [error] [client 114.80.119.207] File does not exist: /var/www/web/multinomina/phpTest
+[Thu Apr 10 12:24:53 2014] [error] [client 114.80.119.207] File does not exist: /usr/share/phpMyAdmin/scripts
+[Thu Apr 10 12:24:55 2014] [error] [client 114.80.119.207] File does not exist: /var/www/web/multinomina/pma
+[Thu Apr 10 12:24:57 2014] [error] [client 114.80.119.207] File does not exist: /var/www/web/multinomina/myadmin
+[Thu Apr 10 13:55:11 2014] [error] [client 114.179.13.180] File does not exist: /var/www/web/multinomina/w00tw00t.at.blackhats.romanian.anti-sec:)
+[Thu Apr 10 13:55:12 2014] [error] [client 114.179.13.180] File does not exist: /usr/share/phpMyAdmin/scripts
+[Thu Apr 10 13:55:13 2014] [error] [client 114.179.13.180] File does not exist: /usr/share/phpMyAdmin/scripts
+[Thu Apr 10 13:55:14 2014] [error] [client 114.179.13.180] File does not exist: /var/www/web/multinomina/pma
+[Thu Apr 10 13:55:16 2014] [error] [client 114.179.13.180] File does not exist: /var/www/web/multinomina/myadmin
+[Thu Apr 10 13:55:21 2014] [error] [client 114.179.13.180] File does not exist: /var/www/web/multinomina/MyAdmin
+[Fri Apr 11 09:12:46 2014] [error] [client 61.19.29.50] File does not exist: /var/www/web/multinomina/phpTest
+[Fri Apr 11 09:12:46 2014] [error] [client 61.19.29.50] File does not exist: /usr/share/phpMyAdmin/scripts
+[Fri Apr 11 09:12:47 2014] [error] [client 61.19.29.50] File does not exist: /var/www/web/multinomina/pma
+[Fri Apr 11 09:12:48 2014] [error] [client 61.19.29.50] File does not exist: /var/www/web/multinomina/myadmin
+[Fri Apr 11 12:08:34 2014] [error] [client 200.54.164.83] File does not exist: /var/www/web/multinomina/phpTest
+[Fri Apr 11 12:08:35 2014] [error] [client 200.54.164.83] File does not exist: /usr/share/phpMyAdmin/scripts
+[Fri Apr 11 12:08:35 2014] [error] [client 200.54.164.83] File does not exist: /var/www/web/multinomina/pma
+[Fri Apr 11 12:08:36 2014] [error] [client 200.54.164.83] File does not exist: /var/www/web/multinomina/myadmin
+[Fri Apr 11 13:03:47 2014] [error] [client 94.242.52.58] Invalid URI in request \x0e\xd8\x99A\xe5\r\x16\xb8\xd0\x9e\xd6\xacB\b\xcep
+[Fri Apr 11 13:07:50 2014] [error] [client 46.0.44.210] request failed: error reading the headers
+[Fri Apr 11 15:22:14 2014] [error] [client 187.246.243.20] request failed: error reading the headers
+[Sat Apr 12 13:32:52 2014] [error] [client 70.81.26.23] request failed: error reading the headers
+[Sat Apr 12 14:25:01 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined offset: 1 in /var/www/web/multinomina/recibo_de_vacaciones.php on line 356, referer: http://multinomina.servehttp.com/index_.php
+[Sat Apr 12 14:25:01 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined offset: 1 in /var/www/web/multinomina/recibo_de_vacaciones.php on line 356, referer: http://multinomina.servehttp.com/index_.php
+[Sat Apr 12 15:03:56 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined offset: 1 in /var/www/web/multinomina/recibo_de_vacaciones.php on line 354, referer: http://multinomina.servehttp.com/index_.php
+[Sat Apr 12 15:03:56 2014] [error] [client 189.132.191.165] PHP Notice:  Undefined offset: 1 in /var/www/web/multinomina/recibo_de_vacaciones.php on line 354, referer: http://multinomina.servehttp.com/index_.php
+[Sat Apr 12 16:04:11 2014] [error] [client 124.194.65.123] Invalid URI in request GET HTTP/1.1 HTTP/1.1
+[Sat Apr 12 16:04:20 2014] [error] [client 124.194.65.123] File does not exist: /var/www/web/multinomina/phpadmin
+[Sat Apr 12 16:04:22 2014] [error] [client 124.194.65.123] File does not exist: /usr/share/phpMyAdmin/scripts
+[Sat Apr 12 16:04:23 2014] [error] [client 124.194.65.123] File does not exist: /var/www/web/multinomina/pma
+[Sat Apr 12 20:38:35 2014] [error] [client 46.165.203.130] File does not exist: /var/www/web/multinomina/phpTest
+[Sat Apr 12 20:38:36 2014] [error] [client 46.165.203.130] File does not exist: /usr/share/phpMyAdmin/scripts
+[Sat Apr 12 20:38:36 2014] [error] [client 46.165.203.130] File does not exist: /var/www/web/multinomina/pma
+[Sat Apr 12 20:38:37 2014] [error] [client 46.165.203.130] File does not exist: /var/www/web/multinomina/myadmin
+[Sat Apr 12 20:54:11 2014] [error] [client 109.235.50.135] File does not exist: /var/www/web/multinomina/admin
+[Sun Apr 13 00:25:13 2014] [error] [client 198.20.99.130] File does not exist: /var/www/web/multinomina/robots.txt
+[Sun Apr 13 03:53:12 2014] [error] [client 103.13.31.156] File does not exist: /var/www/web/multinomina/phpTest
+[Sun Apr 13 03:53:13 2014] [error] [client 103.13.31.156] File does not exist: /usr/share/phpMyAdmin/scripts
+[Sun Apr 13 03:53:13 2014] [error] [client 103.13.31.156] File does not exist: /var/www/web/multinomina/pma
+[Sun Apr 13 03:53:14 2014] [error] [client 103.13.31.156] File does not exist: /var/www/web/multinomina/myadmin
+[Mon Apr 14 00:00:55 2014] [error] [client 114.34.221.189] File does not exist: /var/www/web/multinomina/phpTest
+[Mon Apr 14 00:00:56 2014] [error] [client 114.34.221.189] File does not exist: /usr/share/phpMyAdmin/scripts
+[Mon Apr 14 00:00:56 2014] [error] [client 114.34.221.189] File does not exist: /var/www/web/multinomina/pma
+[Mon Apr 14 00:00:57 2014] [error] [client 114.34.221.189] File does not exist: /var/www/web/multinomina/myadmin
+[Mon Apr 14 05:14:35 2014] [error] [client 82.221.105.6] File does not exist: /var/www/web/multinomina/robots.txt
+[Mon Apr 14 06:39:32 2014] [error] [client 61.19.29.50] File does not exist: /var/www/web/multinomina/phpTest
+[Mon Apr 14 06:39:44 2014] [error] [client 61.19.29.50] File does not exist: /usr/share/phpMyAdmin/scripts
+[Mon Apr 14 11:49:51 2014] [error] [client 91.234.88.152] request failed: error reading the headers
+[Mon Apr 14 15:17:44 2014] [error] [client 46.12.22.253] Invalid URI in request ?\xcc\xeeOKn\x8e\tQ\xe8&"\xaa\xbb
+[Mon Apr 14 17:36:07 2014] [error] [client 186.56.130.161] Invalid URI in request c\xd3\xf0\x8a\xe5\x80\xd2\xab\xff\xd4\xf5&*\xe1:p\v\x9dPA
+[Mon Apr 14 18:39:26 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined property: stdClass::$Folio in /var/www/web/multinomina/cfdi_trabajador.php on line 800, referer: http://multinomina/index_.php
+[Mon Apr 14 18:39:26 2014] [error] [client 192.168.1.151] PHP Notice:  Trying to get property of non-object in /var/www/web/multinomina/cfdi_trabajador.php on line 800, referer: http://multinomina/index_.php
+[Mon Apr 14 18:39:26 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined property: stdClass::$Folio in /var/www/web/multinomina/cfdi_trabajador.php on line 815, referer: http://multinomina/index_.php
+[Mon Apr 14 18:39:26 2014] [error] [client 192.168.1.151] PHP Notice:  Trying to get property of non-object in /var/www/web/multinomina/cfdi_trabajador.php on line 815, referer: http://multinomina/index_.php
+[Tue Apr 15 01:31:50 2014] [error] [client 211.115.195.15] File does not exist: /var/www/web/multinomina/user
+[Tue Apr 15 04:24:00 2014] [error] [client 62.45.135.178] File does not exist: /var/www/web/multinomina/HNAP1, referer: http://189.151.16.229/
+[Tue Apr 15 07:41:16 2014] [error] [client 216.18.193.109] File does not exist: /var/www/web/multinomina/muieblackcat
+[Tue Apr 15 07:41:16 2014] [error] [client 216.18.193.109] File does not exist: /usr/share/phpMyAdmin/scripts
+[Tue Apr 15 07:41:16 2014] [error] [client 216.18.193.109] File does not exist: /usr/share/phpMyAdmin/scripts
+[Tue Apr 15 07:41:17 2014] [error] [client 216.18.193.109] File does not exist: /var/www/web/multinomina/pma
+[Tue Apr 15 07:41:17 2014] [error] [client 216.18.193.109] File does not exist: /var/www/web/multinomina/myadmin
+[Tue Apr 15 07:41:17 2014] [error] [client 216.18.193.109] File does not exist: /var/www/web/multinomina/MyAdmin
+[Tue Apr 15 09:10:13 2014] [error] [client 124.186.223.40] Invalid URI in request \x84\xd4\xcb\x1dq\x9a\xbc\x1c~\x02yT \xa0%3\x94e(L\xcd\xc1\xe2dwC\xcc\xbd\xad0\xd4\xfd:\xab\x8dM>\x19\x88\x18\xa7h
+[Tue Apr 15 09:54:48 2014] [error] [client 211.115.195.15] File does not exist: /var/www/web/multinomina/user
+[Tue Apr 15 12:39:59 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Tue Apr 15 13:03:14 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Tue Apr 15 13:03:14 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Tue Apr 15 13:03:14 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Tue Apr 15 13:03:14 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Tue Apr 15 13:03:14 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Tue Apr 15 13:03:14 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Tue Apr 15 13:03:14 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Tue Apr 15 13:03:14 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Tue Apr 15 13:03:14 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Tue Apr 15 13:03:14 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Tue Apr 15 13:03:15 2014] [error] [client 192.168.1.151] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina/index_.php
+[Tue Apr 15 13:03:15 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 5274, referer: http://multinomina/index_.php
+[Tue Apr 15 13:03:15 2014] [error] [client 192.168.1.151] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina/index_.php
+[Tue Apr 15 13:03:15 2014] [error] [client 192.168.1.151] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina/index_.php
+[Tue Apr 15 13:03:15 2014] [error] [client 192.168.1.151] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina/index_.php
+[Tue Apr 15 13:03:15 2014] [error] [client 192.168.1.151] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina/index_.php
+[Tue Apr 15 13:03:15 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Tue Apr 15 13:29:15 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Tue Apr 15 13:29:15 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Tue Apr 15 13:29:15 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Tue Apr 15 13:29:15 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Tue Apr 15 13:29:15 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Tue Apr 15 13:29:15 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Tue Apr 15 13:29:15 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Tue Apr 15 13:29:15 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Tue Apr 15 13:29:15 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Tue Apr 15 13:29:15 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Tue Apr 15 13:29:15 2014] [error] [client 192.168.1.151] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina/index_.php
+[Tue Apr 15 13:29:15 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 5274, referer: http://multinomina/index_.php
+[Tue Apr 15 13:29:16 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined index:  in /var/www/web/multinomina/nomina.php on line 4757, referer: http://multinomina/index_.php
+[Tue Apr 15 15:10:58 2014] [error] [client 202.89.186.210] request failed: error reading the headers
+[Tue Apr 15 17:14:04 2014] [error] [client 186.49.107.120] Invalid URI in request x\x9a\xd8JC'x,\xd8\x1c\t\xa0\xfa
+[Tue Apr 15 17:22:16 2014] [error] [client 91.195.232.67] File does not exist: /var/www/web/multinomina/w00tw00t.at.blackhats.romanian.anti-sec:)
+[Tue Apr 15 17:22:17 2014] [error] [client 91.195.232.67] File does not exist: /usr/share/phpMyAdmin/scripts
+[Tue Apr 15 17:22:17 2014] [error] [client 91.195.232.67] File does not exist: /usr/share/phpMyAdmin/scripts
+[Tue Apr 15 17:22:18 2014] [error] [client 91.195.232.67] File does not exist: /var/www/web/multinomina/pma
+[Tue Apr 15 17:22:18 2014] [error] [client 91.195.232.67] File does not exist: /var/www/web/multinomina/myadmin
+[Tue Apr 15 17:22:19 2014] [error] [client 91.195.232.67] File does not exist: /var/www/web/multinomina/MyAdmin
+[Tue Apr 15 20:35:34 2014] [error] [client 179.107.41.6] script not found or unable to stat: /var/www/cgi-bin/php
+[Tue Apr 15 20:35:34 2014] [error] [client 179.107.41.6] script not found or unable to stat: /var/www/cgi-bin/php5
+[Tue Apr 15 20:35:35 2014] [error] [client 179.107.41.6] script not found or unable to stat: /var/www/cgi-bin/php-cgi
+[Tue Apr 15 20:35:35 2014] [error] [client 179.107.41.6] script not found or unable to stat: /var/www/cgi-bin/php.cgi
+[Tue Apr 15 20:35:36 2014] [error] [client 179.107.41.6] script not found or unable to stat: /var/www/cgi-bin/php4
+[Wed Apr 16 06:40:50 2014] [error] [client 128.173.237.162] File does not exist: /var/www/web/multinomina/phpTest
+[Wed Apr 16 06:40:51 2014] [error] [client 128.173.237.162] File does not exist: /usr/share/phpMyAdmin/scripts
+[Wed Apr 16 06:40:51 2014] [error] [client 128.173.237.162] File does not exist: /var/www/web/multinomina/pma
+[Wed Apr 16 06:40:51 2014] [error] [client 128.173.237.162] File does not exist: /var/www/web/multinomina/myadmin
+[Wed Apr 16 09:28:37 2014] [error] [client 187.106.60.102] Invalid URI in request \r\xb1\x1b\xb5\x7f\x1e\xfb\x97J1\x88\xae\xb5U\xc7\x7f[\x06\xc4\x17$\x83\xcfyj\x98\xa4,
+[Wed Apr 16 10:23:19 2014] [error] [client 120.105.1.132] File does not exist: /var/www/web/multinomina/phpTest
+[Wed Apr 16 10:23:20 2014] [error] [client 120.105.1.132] File does not exist: /usr/share/phpMyAdmin/scripts
+[Wed Apr 16 10:23:20 2014] [error] [client 120.105.1.132] File does not exist: /var/www/web/multinomina/pma
+[Wed Apr 16 10:23:21 2014] [error] [client 120.105.1.132] File does not exist: /var/www/web/multinomina/myadmin
+[Wed Apr 16 15:27:04 2014] [error] [client 220.133.9.139] File does not exist: /var/www/web/multinomina/phpTest
+[Wed Apr 16 15:27:04 2014] [error] [client 220.133.9.139] File does not exist: /usr/share/phpMyAdmin/scripts
+[Wed Apr 16 15:27:05 2014] [error] [client 220.133.9.139] File does not exist: /var/www/web/multinomina/pma
+[Wed Apr 16 15:27:06 2014] [error] [client 220.133.9.139] File does not exist: /var/www/web/multinomina/myadmin
+[Thu Apr 17 09:58:54 2014] [error] [client 176.8.63.172] Invalid URI in request 6\xfc\x85E\xd6\xcd\x0fz\xfd\x84p\xe0&\x17\xb6|\x7f[#\xb2\x0c]\xec+\x90P\xd2~\x8a\xe445\x8f\xe5\xcf\xbf\x87Z
+[Thu Apr 17 10:42:14 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined offset: 1 in /var/www/web/multinomina/recibo_de_vacaciones.php on line 354, referer: http://multinomina/index_.php
+[Thu Apr 17 10:42:14 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined offset: 1 in /var/www/web/multinomina/recibo_de_vacaciones.php on line 354, referer: http://multinomina/index_.php
+[Thu Apr 17 11:03:50 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined offset: 1 in /var/www/web/multinomina/recibo_de_vacaciones.php on line 354, referer: http://multinomina/index_.php
+[Thu Apr 17 11:03:50 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined offset: 1 in /var/www/web/multinomina/recibo_de_vacaciones.php on line 354, referer: http://multinomina/index_.php
+[Thu Apr 17 11:18:19 2014] [error] [client 192.168.1.151] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina/index_.php
+[Thu Apr 17 11:18:19 2014] [error] [client 192.168.1.151] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina/index_.php
+[Thu Apr 17 11:18:19 2014] [error] [client 192.168.1.151] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina/index_.php
+[Thu Apr 17 11:18:19 2014] [error] [client 192.168.1.151] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina/index_.php
+[Thu Apr 17 11:18:19 2014] [error] [client 192.168.1.151] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina/index_.php
+[Thu Apr 17 11:18:32 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined property: Finiquito::$Lugar in /var/www/web/multinomina/finiquito.php on line 1239, referer: http://multinomina/index_.php
+[Thu Apr 17 11:18:35 2014] [error] [client 192.168.1.151] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina/index_.php
+[Thu Apr 17 11:19:21 2014] [error] [client 192.168.1.151] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina/index_.php
+[Thu Apr 17 11:20:23 2014] [error] [client 192.168.1.151] PHP Notice:  Undefined property: Finiquito::$Lugar in /var/www/web/multinomina/finiquito.php on line 1239, referer: http://multinomina/index_.php
+[Thu Apr 17 11:20:25 2014] [error] [client 192.168.1.151] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/web/multinomina/connection.php on line 33, referer: http://multinomina/index_.php

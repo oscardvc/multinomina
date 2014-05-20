@@ -1,0 +1,105 @@
+<?php //This page is called by a javascript function named view at nomina.js?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+	<head>
+		<style type="text/css">
+			body
+			{
+				color:#555;
+			}
+			.font
+			{
+				font:normal normal normal 12px Arial , sans-serif;
+			}
+			.title_font
+			{
+				font:bold normal normal 12px Arial , sans-serif;
+			}
+			.titles
+			{
+				font:bold normal normal 12px Arial , sans-serif;
+				color:#fff;
+				background:#3399cc;
+				text-align:center;
+			}
+
+			table
+			{
+				text-align:right;
+				border:1px solid #555;
+				border-radius:10px;
+				-moz-border-radius:10px;
+				-webkit-border-radius:10px;
+				padding:10px;
+				margin:10px;
+				float:left;
+			}
+		</style>
+	</head>
+
+	<body class = "font">
+		<?php
+			include_once('connection.php');
+
+			if(!isset($_SESSION))
+				session_start();
+
+			$conn = new Connection();
+			$trabajador = $_GET['trabajador'];
+			$result = $conn->query("SELECT Nombre FROM Trabajador WHERE RFC = '$trabajador' AND Cuenta = '{$_SESSION['cuenta']}'");
+			list($nombre) = $conn->fetchRow($result);
+			echo "<img src = 'images/logo_blanco.jpg'/>";
+			echo "<br/><br/><span class = 'title_font' style = 'display:block; text-align:center;'>Estado de crédito FONACOT</span>";
+			echo "<br/><span style = 'display:block; text-align:center'>$nombre</span><br/>";
+			$result = $conn->query("SELECT id FROM Retencion_FONACOT WHERE Trabajador = '$trabajador' AND Cuenta = '{$_SESSION['cuenta']}'");
+
+			while(list($id) = $conn->fetchRow($result))
+			{
+				$result1 = $conn->query("SELECT Numero_de_credito, Importe_total FROM Retencion_FONACOT WHERE id = '$id' AND Cuenta = '{$_SESSION['cuenta']}'");
+				list($numero_de_credito, $importe_total) = $conn->fetchRow($result1);
+				$txt = '<table>';
+				$txt .= "<tr><td colspan = 3 style = 'text-align:left'>Crédito número: $numero_de_credito</td></tr>";
+				$txt .= "<tr><td colspan = 3 style = 'text-align:left'>Importe total: $" . number_format($importe_total, 2, '.', ',') . "</td></tr>";
+				$txt .= '<tr class = \'titles\'><td>#</td><td>Nómina</td><td>Monto</td></tr>';
+				$result2 = $conn->query("SELECT Nomina, Retencion_FONACOT FROM nomina_asalariados WHERE Trabajador = '$trabajador' AND Cuenta = '{$_SESSION['cuenta']}' ORDER BY Nomina ASC");
+				$i = 1;
+				$total = 0;
+
+				while(list($nomina, $retencion_FONACOT) = $conn->fetchRow($result2))
+				{
+					$retenciones = explode(',',$retencion_FONACOT);
+					$len = count($retenciones);
+
+					for($j=0; $j<$len; $j++)
+					{
+						$data = explode('</span>',$retenciones[$j]);
+						$_len = count($data);
+						preg_match('/\d+/', $data[0], $matches);
+
+						if($_len > 1 && $matches[0] == $id)
+						{
+							$result3 = $conn->query("SELECT Limite_inferior_del_periodo, Limite_superior_del_periodo FROM Nomina WHERE id = '$nomina'");
+							list($limite_inferior, $limite_superior) = $conn->fetchRow($result3);
+							$monto = str_replace('<span>','',$data[1]);
+							$monto = number_format($monto, 2, '.', ',');
+							$txt .= "<tr" . ($i % 2 == 0 ? " style = 'background:#eee;'" : "") . "><td style = 'text-align:center'>$i</td><td>$limite_inferior/$limite_superior</td><td>$monto</td></tr>";
+							$total += $monto;
+							$i++;
+						}
+						
+					}
+
+				}
+
+				$txt .= "<tr><td></td><td style = 'text-align:center'>Monto pagado</td><td style = 'border-top:1px solid #555;'>$". number_format($total,2,'.',',') . "</td></tr>";
+				$diferencia = $importe_total - $total;
+				$diferencia = number_format($diferencia,2,'.',',');
+				$txt .= "<tr><td></td><td style = 'text-align:center'>Monto a pagar</td><td>$" . $diferencia . "</td></tr>";
+				$txt .= '</table>';
+				echo $txt;
+			}
+
+		?>
+	</body>
+</html>

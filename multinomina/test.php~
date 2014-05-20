@@ -1,0 +1,10 @@
+<?php
+	$path = 'temp/CFDI_531a7ba9f0a23';
+	$dir = $path . '/ROJAS CALVO ROGELIO GUALBERTO';
+	$html_filename = $dir . '/RepresentacionImpresa.html';
+	$pdf_filename = $dir . '/CFDI.pdf';
+	$cmd = "wkhtmltopdf --margin-bottom 0 --margin-left 0 --margin-right 0 --margin-top 0 '$html_filename' '$pdf_filename'";
+	system($cmd, $retval);
+	echo $retval . '<br/>';
+	echo $cmd;
+?>

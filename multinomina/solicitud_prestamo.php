@@ -1,0 +1,202 @@
+<?php //This page is called by a javascript function named view at nomina.js?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+	<head>
+		<script type="text/javascript" src="moneda.js"></script>
+		<script type="text/javascript">
+			if( typeof( window.innerWidth ) == 'number' )
+			{ 
+				//Non-IE
+				window_width = window.innerWidth;
+				window_height = window.innerHeight;
+				window.moveTo(0,0);
+				window.resizeTo(screen.availWidth, screen.availHeight);
+			}
+			else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) )
+			{
+				//IE 6+ in 'standards compliant mode'
+				window_width = document.documentElement.clientWidth; 
+				window_height = document.documentElement.clientHeight;
+				window.moveTo(0,0);
+				window.resizeTo(screen.availWidth, screen.availHeight);
+			}
+			else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) )
+			{
+				//IE 4 compatible
+				window_width = document.body.clientWidth;
+				window_height = document.body.clientHeight;
+				window.moveTo(0,0);
+				window.resizeTo(screen.availWidth, screen.availHeight);
+			}
+
+			var font = 'normal normal normal 2.6mm Arial , sans-serif'; //weight, style, variant, size, family name, generic family
+			var title_font = 'bold normal normal 2.6mm Arial , sans-serif';
+
+			function _load()
+			{
+				var textareas = document.getElementsByTagName('textarea');
+				var lugar = textareas[0].value;
+				var fecha = textareas[1].value;
+				var nombre_empresa = textareas[2].value;
+				var monto = textareas[3].value;
+				var descuento = textareas[4].value;
+				var periodo = textareas[5].value;
+				var nombre_trabajador = textareas[6].value;
+
+				while(textareas.length > 0)
+					textareas[0].parentNode.removeChild(textareas[0]);
+
+				//body settings
+				document.body.style.padding = '0mm';
+				document.body.style.margin = '0mm';
+				document.body.style.border = 'none';
+				//container
+				var container = document.createElement('div');
+				container.style.display = 'block';
+				container.style.position = 'relative';
+				container.style.padding = '0mm';
+				container.style.margin = '0mm';
+				container.style.border = 'none';
+				container.style.width = '215.9mm';
+				container.style.height = '139.7mm';
+				container.style.overflow = 'hidden';
+				document.body.appendChild(container);
+				//logo
+				var image = document.createElement('img');
+				container.appendChild(image);
+				image.style.display = 'block';
+				image.style.position = 'relative';
+				image.style.top = '5mm';
+				image.style.left = '5mm';
+				image.style.width = '56mm';
+				image.style.height = '10mm';
+				image.style.padding = '0mm';
+				image.style.margin = '0mm';
+				image.style.border = 'none';
+				image.style.background = 'none';
+				image.src = 'images/logo_blanco.jpg';
+				var images = document.getElementsByTagName('IMG');
+
+				if(images.length % 2 == 0)
+					var _break = true;
+				else
+					var _break = false;
+
+				//title
+				var _title = document.createElement('span');
+				container.appendChild(_title);
+				_title.innerHTML = 'Solicitud de préstamo';
+				_title.style.display = 'block';
+				_title.style.position = 'relative';
+				_title.style.width = '205.9mm';
+				_title.style.height = '9mm';
+				_title.style.top = '10mm';
+				_title.style.left = '5mm';
+				_title.style.padding = '0mm';
+				_title.style.margin = '0mm';
+				_title.style.border = 'none';
+				_title.style.background = '#fff';
+				_title.style.font = title_font;
+				_title.style.textAlign = 'center';
+				_title.style.color = '#555';
+				//lugar y fecha
+				var _lyf = document.createElement('span');
+				container.appendChild(_lyf);
+				_lyf.innerHTML = lugar + ' ' + fecha;
+				_lyf.style.display = 'block';
+				_lyf.style.position = 'relative';
+				_lyf.style.padding = '0mm';
+				_lyf.style.margin = '0mm';
+				_lyf.style.border = 'none';
+				_lyf.style.background = '#fff';
+				_lyf.style.top = '10mm';
+				_lyf.style.left = '5mm';
+				_lyf.style.width = '205.9mm';
+				_lyf.style.height = '3mm';
+				_lyf.style.font = font;
+				_lyf.style.textAlign = 'center';
+				_lyf.style.color = '#555';
+				//"texto"
+				var _text = document.createElement('span');
+				container.appendChild(_text);
+				_text.innerHTML = 'Yo ' + nombre_trabajador + ' trabajador asignado a ' + nombre_empresa + ' solicito me otorgue un préstamo personal por la cantidad de $' + _format(monto) + ' ' + covertirNumLetras(monto) + ' por el cual autorizo un descuento ' + periodo + ' de $' + descuento + covertirNumLetras(descuento);
+				_text.style.display = 'block';
+				_text.style.position = 'relative';
+				_text.style.padding = '0mm';
+				_text.style.margin = '0mm';
+				_text.style.border = 'none';
+				_text.style.background = '#fff';
+				_text.style.top = '27mm';
+				_text.style.left = '5mm';
+				_text.style.width = '205.9mm';
+				_text.style.height = '20mm';
+				_text.style.font = font;
+				_text.style.textAlign = 'justify';
+				_text.style.color = '#555';
+				var _trabajador = document.createElement('div');
+				_trabajador.innerHTML = nombre_trabajador;
+				_trabajador.style.display = 'block';
+				_trabajador.style.position = 'relative';
+				_trabajador.style.padding = '0mm';
+				_trabajador.style.margin = '0mm';
+				_trabajador.style.background = 'none';
+				_trabajador.style.font = font;
+				_trabajador.style.top = '88.7mm';
+				_trabajador.style.left = '0mm';
+				_trabajador.style.width = '215.9mm';
+				_trabajador.style.height = '8mm';
+				_trabajador.style.color = '#666';
+				_trabajador.style.textAlign = 'center';
+				_trabajador.style.borderBottom = '1px dotted #666';
+				container.appendChild(_trabajador);
+			}
+
+		</script>
+	</head>
+
+	<body onload = "_load()">
+		<?php
+			include_once('connection.php');
+			include_once('prestamo_cliente.php');
+
+			if(!isset($_SESSION))
+				session_start();
+
+			$conn = new Connection();
+			$prestamo = new Prestamo_cliente();
+			$prestamo->set('Numero_de_prestamo',$_GET['numero']);
+			$prestamo->setFromDb();
+			//getting enterprice
+			$result = $conn->query("SELECT Empresa.Nombre, Empresa.RFC FROM Trabajador_Prestamo_cliente LEFT JOIN Servicio ON Trabajador_Prestamo_cliente.Servicio = Servicio.id LEFT JOIN Servicio_Empresa ON Servicio.id = Servicio_Empresa.Servicio LEFT JOIN Empresa ON Servicio_Empresa.Empresa = Empresa.RFC WHERE Trabajador_Prestamo_cliente.Prestamo_cliente = '{$prestamo->get('Numero_de_prestamo')}' AND Trabajador_Prestamo_cliente.Cuenta = '{$_SESSION['cuenta']}' AND Servicio.Cuenta = '{$_SESSION['cuenta']}' AND Servicio_Empresa.Cuenta = '{$_SESSION['cuenta']}' AND Empresa.Cuenta = '{$_SESSION['cuenta']}' AND DATEDIFF('{$prestamo->get('Fecha')}', Servicio_Empresa.Fecha_de_asignacion) >= 0 ORDER BY Servicio_Empresa.Fecha_de_asignacion DESC LIMIT 1");
+			list($nombre_empresa, $rfc_empresa) = $conn->fetchRow($result);
+			$conn->freeResult($result);
+			//getting place
+			$result = $conn->query("SELECT Nombre FROM Sucursal WHERE Empresa = '$rfc_empresa' AND Cuenta = '{$_SESSION['cuenta']}'");
+			$n = $conn->num_rows($result);
+
+			if($n > 0)//there are branches
+				$result1 = $conn->query("SELECT Sucursal.Localidad FROM Trabajador_Sucursal LEFT JOIN Sucursal ON Trabajador_Sucursal.Nombre = Sucursal.Nombre AND Trabajador_Sucursal.Empresa = Sucursal.Empresa WHERE Trabajador_Sucursal.Trabajador = '{$prestamo->get('Trabajador')}' AND Trabajador_Sucursal.Servicio = '{$prestamo->get('Servicio')}' AND Trabajador_Sucursal.Cuenta = '{$_SESSION['cuenta']}' AND Sucursal.Cuenta = '{$_SESSION['cuenta']}' AND DATEDIFF('{$prestamo->get('Fecha')}', Trabajador_Sucursal.Fecha_de_ingreso) >= 0 ORDER BY Trabajador_Sucursal.Fecha_de_ingreso DESC LIMIT 1");
+			else
+				$result1 = $conn->query("SELECT Localidad FROM Empresa WHERE RFC = '$rfc_empresa' AND Cuenta = '{$_SESSION['cuenta']}'");
+
+			list($lugar) = $conn->fetchRow($result1);
+			$conn->freeResult($result1);
+			//getting worker
+			$result = $conn->query("SELECT Nombre FROM Trabajador WHERE RFC = '{$prestamo->get('Trabajador')}' AND Cuenta = '{$_SESSION['cuenta']}'");
+			list($nombre_trabajador) = $conn->fetchRow($result);
+			$conn->freeResult($result);
+			//getting period
+			$result = $conn->query("SELECT Periodicidad_de_la_nomina FROM Servicio WHERE id = '{$prestamo->get('Servicio')}' AND Cuenta = '{$_SESSION['cuenta']}'");
+			list($periodo) = $conn->fetchRow($result);
+			$conn->freeResult($result);
+			echo "<textarea style='visibility:hidden'>$lugar</textarea>";
+			echo "<textarea style='visibility:hidden'>{$prestamo->get('Fecha')}</textarea>";
+			echo "<textarea style='visibility:hidden'>$nombre_empresa</textarea>";
+			echo "<textarea style='visibility:hidden'>{$prestamo->get('Monto')}</textarea>";
+			echo "<textarea style='visibility:hidden'>{$prestamo->get('Descuento')}</textarea>";
+			echo "<textarea style='visibility:hidden'>$periodo</textarea>";
+			echo "<textarea style='visibility:hidden'>$nombre_trabajador</textarea>";
+		?>
+	</body>
+</html>

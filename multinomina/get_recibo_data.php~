@@ -1,0 +1,29 @@
+<?php //this page is called from an ajax function at recibos.php and returns data about a service and a worker 
+	include_once('connection.php');
+	$conn = new Connection('multinomina');
+	$txt = '';
+	$nomina = $_GET['nomina'];
+	$trabajador = $_GET['trabajador'];
+	$_class = $_GET['_class'];
+	$result = $conn->query("SELECT Servicio FROM Nomina WHERE id = '$nomina'");
+	list($servicio) = $conn->fetchRow($result);
+	$conn->freeResult($result);
+
+	if($_class == 'Nomina_asalariados')
+	{
+		$result = $conn->query("SELECT Salario_diario FROM ISRasalariados WHERE Trabajador = '$trabajador' AND Nomina = '$nomina'");
+		list($salario) = $conn->fetchRow($result);
+		$conn->freeResult($result);
+		$txt .= "<span>$salario</span>";
+	}
+
+	if($_class == 'Pensiones')
+	{
+		$result = $conn->query("SELECT Beneficiario, Folio_IFE FROM Pension_alimenticia WHERE Trabajador = '$trabajador'");
+		list($beneficiario, $folio) = $conn->fetchRow($result);
+		$txt .= "<span>$beneficiario</span><span>$folio</span>";
+		$conn->freeResult($result);
+	}
+
+	echo $txt;
+?>

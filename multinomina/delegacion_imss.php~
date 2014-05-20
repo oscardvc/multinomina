@@ -1,0 +1,126 @@
+<?php
+	include_once('connection.php');
+
+//Class Delegacion_IMSS definition
+
+	class Delegacion_IMSS
+	{
+		//class properties
+		//data
+		private $Nombre;
+		private $id;//used to store the last Nombre to be able to edit it
+		//database connection
+		private $conn;
+
+		//class methods
+		public function __construct()
+		{
+
+			if(!isset($_SESSION))
+				session_start();
+
+			$this->conn = new Connection();
+		}
+
+		public function __destruct()
+		{
+		}
+
+		public function set($name, $value) //sets property named $name with value $value
+		{
+			$this->$name = $value;
+		}
+
+		public function get($name)//gets property named $name
+		{
+			return $this->$name;
+		}
+
+		public function setFromBrowser()//sets properties from superglobal $_POST
+		{
+
+			foreach($this as $key => $value)
+
+				if(isset($_POST["$key"]))
+					$this->$key = trim($_POST["$key"]);
+
+		}
+
+		public function showProperties()//prints properties values
+		{
+
+			foreach($this as $key => $value)
+
+				if($key != 'conn')
+					echo "$key = $value <br />";
+
+		}
+
+		public function setFromDb()//sets properties from data base, but $Nombre has to be set before
+		{
+			$result = $this->conn->query("SELECT * FROM Delegacion_IMSS WHERE Nombre = '{$this->Nombre}' AND Cuenta = '{$_SESSION['cuenta']}'");
+
+			while($row = $this->conn->fetchRow($result,'ASSOC'))
+
+				foreach($row as $key => $value)
+
+					if($key != 'Cuenta')
+						$this->$key = $value;
+
+		}
+
+		public function dbStore($update)//if $update is false it stores a new database register with $this' properties
+		{				   //if $update is true it updates all database registers (professedly one) with $this' Nombre
+
+			if(isset($this->Nombre))
+			{
+				if($update == 'false')
+				{
+					$result = $this->conn->query("SELECT Nombre FROM Delegacion_IMSS WHERE Cuenta = '{$_SESSION['cuenta']}'");
+
+					while($row = $this->conn->fetchRow($result, 'ASSOC'))
+
+						foreach($row as $key => $value)
+
+							if($value == $this->Nombre)
+								return false;
+
+					$this->conn->query("INSERT INTO Delegacion_IMSS(Nombre, Cuenta) VALUES('{$this->Nombre}', '{$_SESSION['cuenta']}')");
+				}
+				else
+					$this->conn->query("UPDATE Delegacion_IMSS SET Nombre  = '{$this->Nombre}' WHERE Nombre = '{$this->id}' AND Cuenta = '{$_SESSION['cuenta']}'");
+
+				return true;
+			}
+
+			return false;
+		}
+
+		public function dbDelete()//delete this entity from database but Nombre has to be set before
+		{
+
+			if(isset($this->Nombre))
+				$this->conn->query("DELETE FROM Delegacion_IMSS WHERE Nombre = '{$this->Nombre}'");
+
+		}
+
+		public function draw($act)//draws $this Delegacion_IMSS. if $act == 'EDIT' or $act == 'ADD' the fields can be edited and the form is submitted. if $act == 'DRAW' the fields can't be edited and the form is not submitted
+		{
+			echo "<div class = \"datos_tab\">Datos</div>";
+			echo '<form class = "show_form">';
+				echo "<fieldset class = \"Datos_fieldset\" style = \"visibility:visible\"\>";
+					echo "<textarea rows = 5 cols = 20 name = \"id\" class=\"hidden_textarea\" readonly=true>"."$this->Nombre</textarea>";
+					echo "<label class = \"nombre_label\">Nombre</label>";
+					echo "<textarea rows = 5 cols = 20 class = \"nombre_textarea\" name = \"Nombre\" title = \"Nombre\" onblur = \"chKey(this.value,'Delegacion_IMSS','$act')\" ". ($act == 'EDIT' || $act == 'ADD'?"required=true>":"readonly=true>")."$this->Nombre</textarea>";
+				echo "</fieldset>";
+
+			if($act == 'EDIT' || $act == 'ADD')
+				echo "<img title = \"Guardar\"class = \"submit_button\" onclick = \"_submit('$act',this.parentNode,'Delegacion_IMSS')\" />";//_submit() at common_entities.js
+			
+			echo "</form>";
+
+		}
+
+	}
+
+?>
